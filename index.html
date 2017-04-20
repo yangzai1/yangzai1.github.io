@@ -249,6 +249,65 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-基础node" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/04/20/基础node/" class="article-date">
+      <time datetime="2017-04-20T12:25:06.000Z" itemprop="datePublished">2017-04-20</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/04/20/基础node/">基础node</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+              <h1 id="关于Node-js基础"><a href="#关于Node-js基础" class="headerlink" title="关于Node.js基础"></a>关于Node.js基础</h1><h5 id="Node-是一个服务器端-JavaScript-解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。"><a href="#Node-是一个服务器端-JavaScript-解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。" class="headerlink" title="Node 是一个服务器端 JavaScript 解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。"></a>Node 是一个服务器端 JavaScript 解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。</h5>
+          
+      
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+      
+        <p class="article-more-link">
+          <a  href="/2017/04/20/基础node/#more">大航海 >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
     <article id="post-关于Node" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -265,108 +324,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="关于Node-js基础"><a href="#关于Node-js基础" class="headerlink" title="关于Node.js基础"></a>关于Node.js基础</h1><h5 id="Node-是一个服务器端-JavaScript-解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。"><a href="#Node-是一个服务器端-JavaScript-解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。" class="headerlink" title="Node 是一个服务器端 JavaScript 解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。"></a>Node 是一个服务器端 JavaScript 解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。</h5><h5 id="nodeJS-基于chrome-v8引擎"><a href="#nodeJS-基于chrome-v8引擎" class="headerlink" title="nodeJS: 基于chrome  v8引擎"></a>nodeJS: 基于chrome  v8引擎</h5><pre><code>学习node的好处：
-1.理解后台的流程
-2.全栈工程师的道路打基础
-</code></pre><h6 id="关于node的基本安转要求："><a href="#关于node的基本安转要求：" class="headerlink" title="关于node的基本安转要求："></a>关于node的基本安转要求：</h6><p>1.最好安转最新版本：下载地址–<a href="http://nodejs.cn/" target="_blank" rel="external">http://nodejs.cn/</a><br>2.使用cmd安转淘宝镜像：cnpm npm install -g cnpm –-registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
-<h5 id="以上安装好后还要在下载一些必要的工程模块（使用cmd）："><a href="#以上安装好后还要在下载一些必要的工程模块（使用cmd）：" class="headerlink" title="以上安装好后还要在下载一些必要的工程模块（使用cmd）："></a>以上安装好后还要在下载一些必要的工程模块（使用cmd）：</h5><h5 id="1-express"><a href="#1-express" class="headerlink" title="1.express"></a>1.express</h5><pre><code>安装:cnpm  install  express 
-简写:cnpm i express 
-cnpm i express --save   把包信息保存到package.json
-</code></pre><h5 id="2-jq-使用cmd安装的方式"><a href="#2-jq-使用cmd安装的方式" class="headerlink" title="2.jq:(使用cmd安装的方式)"></a>2.jq:(使用cmd安装的方式)</h5><pre><code>cnpm i jquery @*   //推荐的最新版本
-cnpm i jquery@1.7.2//指定的版本
-</code></pre><h5 id="3-安装-cnpm-i-express-static"><a href="#3-安装-cnpm-i-express-static" class="headerlink" title="3.安装:cnpm i express-static"></a>3.安装:cnpm i express-static</h5><h4 id="node语句简单写法："><a href="#node语句简单写法：" class="headerlink" title="node语句简单写法："></a>node语句简单写法：</h4><p> server.use(static(‘路径名’))   路径名 静态可以请求，一个斜杠表示文件的根路径(/ )根路径。<br>        名字:中间件<br>            成功:{err:0,data:[{a:1,b:2}]};    </p>
-<h4 id="关于node和wamp的www文件夹的区别"><a href="#关于node和wamp的www文件夹的区别" class="headerlink" title="关于node和wamp的www文件夹的区别"></a>关于node和wamp的www文件夹的区别</h4><pre><code>wamp:www(文件要放在www里面，其中www的文件夹名是不可更改的。)    
-node:www(文件也放在www下，和wamp不同点是这个www的文件夹名是可以自定义)
-</code></pre><h4 id="关于Dos-cmd-窗口的简单操作"><a href="#关于Dos-cmd-窗口的简单操作" class="headerlink" title="关于Dos(cmd)窗口的简单操作:"></a>关于Dos(cmd)窗口的简单操作:</h4><pre><code>1.window+R是打开cmd面板
-2.变更大盘符:  F:(D: E:)
-3.dir 是指打印本级所有文件夹   
-4.cd+路径  是指进入某个文件夹
-5.cd .. 是指返回上一级
-6.tab  自动补全剩余文件夹名
-7.cls   清屏
-8.ctrl+c 停掉服务
-</code></pre><h4 id="Nonde-js自己制作服务器写法："><a href="#Nonde-js自己制作服务器写法：" class="headerlink" title="Nonde.js自己制作服务器写法："></a>Nonde.js自己制作服务器写法：</h4><pre><code>Conts express=require(‘express’);
-Conts static=require(‘express-static);
-    Let server=express();
-    Srever.linsten(4000);//要监听的端口号
-    Server.get(‘根路径’,(req,res)=&gt;{
-         Res.sed({err:0,data:[{//要请求的数据
-                              //写入的数据
-                        {name:’’,age:’’,job:’’},
-      }]});
-  Res.end();//响应要请求的数据
-  });
-  Server.use(static(‘www’));//万能的可请求get和post请求或者其他请求
-</code></pre><h3 id="Nonde-js自己制作服务器时还要配合Ajax-js来使用（为了方便我用的是JQAjax方法）"><a href="#Nonde-js自己制作服务器时还要配合Ajax-js来使用（为了方便我用的是JQAjax方法）" class="headerlink" title="Nonde.js自己制作服务器时还要配合Ajax.js来使用（为了方便我用的是JQAjax方法）"></a>Nonde.js自己制作服务器时还要配合Ajax.js来使用（为了方便我用的是JQAjax方法）</h3><h6 id="Jquery-ajax请求："><a href="#Jquery-ajax请求：" class="headerlink" title="Jquery-ajax请求："></a>Jquery-ajax请求：</h6><pre><code>  $(()=&gt;{
-        $.ajax({
-             Url:’路径名’
-             dataType:’json’,//文件类型
-             Cache:false,//清除缓存
-             Success:r=&gt;{
-                   alert(‘请求成功返回值’);
-             },error:r=&gt;{
-          alert(‘请求失败返回值’);
-             }
-       });
-});
-</code></pre><h4 id="node和数据库链接及简单操作"><a href="#node和数据库链接及简单操作" class="headerlink" title="node和数据库链接及简单操作:"></a>node和数据库链接及简单操作:</h4><h6 id="一：数据库结构"><a href="#一：数据库结构" class="headerlink" title="一：数据库结构:"></a>一：数据库结构:</h6><pre><code>数据库---表---结构---数据
-</code></pre><h6 id="二：连接mysql"><a href="#二：连接mysql" class="headerlink" title="二：连接mysql"></a>二：连接mysql</h6><pre><code>1. 连接名:随便起
-    主机名或者ip:localhost
-    端口:3306
-    用户名root
-    密码:
-
-2.右键新建数据库
-   数据库名:2017
-   字符集:utf8 -- UTF-8 Unicode
-   排序规则:utf8_general_ci
-
-3.右键新建表
-   int 整数
-   varchar 字符串
-   主键的好处:唯一和高效
-   自动递增
-   无符号
-
-4.右键设计表
-</code></pre><h5 id="sql语句"><a href="#sql语句" class="headerlink" title="sql语句:"></a>sql语句:</h5><pre><code>增
-   INSERT INTO users VALUES ();
-删
-   DELETE FROM users WHERE 条件;
-改 
-   UPDATE users SET 改成什么样 WHERE 条件;
-查:
-   SELECT * FROM 表名
-   SELECT * FROM 表名 WHERE 条件;
-   SELECT * FROM 表名 WHERE 条件AND条件; 并且
-   SELECT * FROM 表名 WHERE 条件OR条件;  或者
-</code></pre><h5 id="怎么使用代码连数据库"><a href="#怎么使用代码连数据库" class="headerlink" title="怎么使用代码连数据库:"></a>怎么使用代码连数据库:</h5><pre><code>const mysql=require(&apos;mysql&apos;);
-let db=mysql.createConnection({
-       host:&apos;localhost&apos;,//服务器名字
-       port:3306//默认的可以不用写
-       user:&apos;root&apos;,//名字
-       password:&apos;&apos;,//密码
-       database:&apos;2017&apos;
-});
-db.query(&apos;sql语句&apos;,(err,data)=&gt;{
-   //err 错误了
-   //data 返回的数据
-});
-select * from users where username=&apos;${req.query.username}&apos;
-if(查库err){
-   链接数据库失败
-}else{
-   if(data.length&gt;0){
-      用户已注册
-   }else{
-      sq语句增加数据
-         if(err){
-            数据库有问题增不进去数据
-         }else{
-            成功  
-         }
-   }
-</code></pre>
+              <h1 id="关于Node-js基础"><a href="#关于Node-js基础" class="headerlink" title="关于Node.js基础"></a>关于Node.js基础</h1><h5 id="Node-是一个服务器端-JavaScript-解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。"><a href="#Node-是一个服务器端-JavaScript-解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。" class="headerlink" title="Node 是一个服务器端 JavaScript 解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。"></a>Node 是一个服务器端 JavaScript 解释器，它将改变服务器应该如何工作的概念。它的目标是帮助程序员构建高度可伸缩的应用程序，编写能够处理数万条同时连接到一个（只有一个）物理机的连接代码。</h5>
+          
       
       
     </div>
@@ -376,6 +335,10 @@ if(查库err){
       
 
       
+      
+        <p class="article-more-link">
+          <a  href="/2017/04/19/关于Node/#more">大航海 >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
