@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的第一次文章 | 洋仔</title>
+  <title>JS知识点小整合 | 洋仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一次文章">
-<meta property="og:url" content="http://yoursite.com/2017/03/13/我的第一次文章/index.html">
+  <meta name="description" content="JS基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JS知识点小整合">
+<meta property="og:url" content="http://yoursite.com/2017/04/21/JS知识点小整合/index.html">
 <meta property="og:site_name" content="洋仔">
-<meta property="og:updated_time" content="2017-04-19T00:29:44.769Z">
+<meta property="og:description" content="JS基础">
+<meta property="og:updated_time" content="2017-04-21T07:11:34.653Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一次文章">
+<meta name="twitter:title" content="JS知识点小整合">
+<meta name="twitter:description" content="JS基础">
   
     <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
   
@@ -245,11 +248,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-我的第一次文章" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-JS知识点小整合" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/13/我的第一次文章/" class="article-date">
-      <time datetime="2017-03-13T13:45:10.000Z" itemprop="datePublished">2017-03-13</time>
+      <a href="/2017/04/21/JS知识点小整合/" class="article-date">
+      <time datetime="2017-04-21T04:41:17.000Z" itemprop="datePublished">2017-04-21</time>
 </a>
     </div>
   
@@ -262,7 +265,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一次文章
+      JS知识点小整合
     </h1>
   
 
@@ -279,7 +282,276 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h1 id="JS基础"><a href="#JS基础" class="headerlink" title="JS基础"></a>JS基础</h1><a id="more"></a>
+<h3 id="JS基础："><a href="#JS基础：" class="headerlink" title="JS基础："></a>JS基础：</h3><p>(一)<strong>如何获取元素</strong></p>
+<pre><code>1:document.getElementById(&apos;id名&apos;);    
+2:document.getElementsByTagName(&apos;获取一组标签&apos;);
+3:document.getElementsByClassName(&apos;按class名获取&apos;);                 
+4:getByClass
+5:document.getElementsByName(&apos;按name名获取&apos;);
+</code></pre><p>(二)<strong>关于变量</strong></p>
+<pre><code>1:var name = value;(变量名不可以是数字,不可以使用系统保留名,不可以使用特殊符号);                
+2:var _this = this;
+ var $this = this;除外.
+</code></pre><p>(三)<strong>什么是函数</strong></p>
+<pre><code>1:匿名函数--function(){}                
+2:命名函数--function show(){}  
+ 注:当找不到赋值对象时默认的都是window
+</code></pre><p>(四)<strong>流程控制语句几种形式</strong></p>
+<pre><code>1:
+    if(条件){
+        执行的语句
+    }else{
+        执行的语句
+    }
+2:
+    if(条件){
+        执行的语句
+    }else if(条件){
+        执行的语句
+    }
+3:
+    if(条件){
+        执行的语句
+    }else if(条件){
+        执行的语句
+    }else{
+        执行的语句
+    }
+
+4:
+    if(条件){
+        执行的语句
+    }
+
+5:三目 
+    条件?语句1:语句2;
+
+6:并且
+    条件 &amp;&amp; 语句1;
+
+7:
+    if(条件)
+
+8:switch判断
+    switch(值){
+        case :
+        语句
+        break;
+        case :
+        语句
+        break;
+        case :
+        语句
+        break;
+     default:
+        break;
+    }
+</code></pre><p>(五)<strong>循环</strong></p>
+<pre><code>1:
+    for(初始值,条件,自增){
+        语句
+    }
+2:
+    for(var name in json){
+        语句json的循环专用
+    }
+3:
+    while(条件){
+        要重复做的事情
+        改变条件
+    }
+</code></pre><p>(六)<strong>表单元素和非表单元素的区别</strong></p>
+<blockquote>
+<p> 表单元素的值:用value 获取；<br>     非表单元素的内容:用 innerHTML 获取</p>
+</blockquote>
+<p>(七):数据的基本类型</p>
+<pre><code>使用 typeof(要测试的数据); 来测试数据类型
+1:基本数字类型: 
+number 数字类型   string 字符串类型   boolean（布尔类型  返回 true   false）  undefin 未定义
+
+2:复合数据类型: 
+object 对象类型
+
+3:function -- 是一个特殊的,既可以是基本类型,也可以是复合型,但会划分到复合类型里.
+</code></pre><ul>
+<li><p><strong>关于数据类型的前缀：</strong></p>
+<pre><code>类型               前缀        类型                    实   
+
+对象               o         Object                  oDiv1                                
+数组               a         Array                   aItems                                    
+字符串             s         String                  sUserName                                   
+整数               i         Integer                 iItemCount                                
+布尔值             b         Boolean                 bIsComplete                                 
+浮点数             f         Float                   fPrice                                 
+函数               fn        Function                fnHandler                             
+正则表达式          re        RegExp                  reEmailCheck                              
+变体变量            v         Variant                 vAnything
+</code></pre></li>
+</ul>
+<p>(八)<strong>数据类型的转换(显示型转换或者强制类型转换)</strong></p>
+<pre><code>1:parseInt()    转整数  
+2:parseFloat()  转浮点数   
+3:Number        转数字
+4:NaN  属于数字类型,是一个数字类型,NaN和谁都不想等包括自己.(判断非数字时使用:isNaN());
+</code></pre><p>(九)<strong>几种运算符的分类</strong> （<code>运算符：优先级控制要使用小括号 --&gt;()</code>)</p>
+<pre><code>1:算术运算符：+ - * / %
+2:赋值运算：= += -= /= *= %=
+3:比较运算：== &lt; &lt;= &gt; &gt;=  != 不等   === 严格的比较，是不是相等，先比较类型    !== 严格的比较，是不是不相等
+4:逻辑运算：与 或 非   || 表示或 只要一个成立，则为真    &amp;&amp;表示并且 全部成立,则为真   !叹号表示取反
+</code></pre><p>(十)<strong>什么是真和假</strong></p>
+<pre><code>1:什么是真 true  非空字符串  非零数字  非空对象
+2:什么是假 false 空字符串    数字0    null或undefined   
+ （2==true -&gt;false 在计算机里是二进制去运行流程,所以当是二的时候为假).
+</code></pre><p>(十一)<strong>关于作用域</strong></p>
+<pre><code>1:全局     是指在所有的函数以外的变量    
+2:局部变量  函数内部的变量(window.onload 下的变量是局部变量)  
+3:闭包     子函数可以使用父函数的变量(在函数上套一层).
+</code></pre><p>(十二)<strong>关于js的括号和分号应该什么时候添加?</strong></p>
+<pre><code>1:括号    在定时器里不能使用括号  例如{ setInterval(fn,time);
+         在事件函数里不能使用括号  例如{ oBtn.onclick = fn;}
+2:分号    赋值语句要使用分号  执行语句结束后要使用分号
+</code></pre><p>(十三)<strong>随机数:</strong><code>Math.random</code></p>
+<pre><code>随机数的封装:
+    function rnd(n,m){
+      return Math.floor(Math.random()*(n-m)+m);
+    }
+</code></pre><p>(十四)<strong>什么是返回值</strong>:<br>     函数返回值:return 返回值是指返回给调用者,谁调用就返回给谁.能返回什么,只要你愿意什么都可以返回</p>
+<p>(十五)<strong>什么是eval</strong><br> 是把字符串变成可执行的语句 <code>*注:具有注入式攻击</code></p>
+<p>(十六)<strong>数组的操作</strong></p>
+<pre><code>1）增加       arr.push(数)指放到后面     arr.unshift(数)指放到前面
+2）删除       arr.pop()指删除后面        arr.shift()指删除前面
+3) 删除第几个  arr.splice(开始位置，删除几个[，元素1，元素2])
+4) 转字符串    arr.join(连接的东西) 
+5) 拼接数组    arr. concat(数组的链接) 
+6) 数组排序    arr.sort() 
+7) 反转数组    arr.reverse()
+</code></pre><p>(十七)<strong>字符串的操作</strong></p>
+<blockquote>
+<p>1:查找字符串的位置   <code>str.indexOf(&#39;字符串&#39;)</code> 指找某个东西在字符串中出现的位置,区分大小写.<br>   2:查找字符串的位置    <code>str.lastIndexOf(小字符串)</code> 从右往左看，确定一个位置后就不再找,区分大小写.<br>   3:字符串截取               <code>str.substring(开始位置,结束位置);</code><br>   4:切分字符串              <code>str.split(切的方式)</code> 切分的结果：数组<br>   5:大小写转换             <code>str.toUpperCase()</code> 把整个字符串转成大写<br>   6:大小写转换             <code>str.toLowerCase()</code> 把整个字符串转成小写<br>   7:charAt()</p>
+</blockquote>
+<p>(十八)<strong>常用的Math对象</strong></p>
+<blockquote>
+<p>1:Math.random()  随机数<br>   2:Math.abs()<br>   3:Math.max()<br>   4:Math.min()<br>   5:Math.pow()<br>   6:Math.sqrt()<br>   7:Math.ceil()<br>   8:Math.floor()<br>   9:Math.round()</p>
+</blockquote>
+<p>(十九)<strong>时间Date对象</strong>:</p>
+<p><code>var oDate = new Date();</code>  创造一个时间函数</p>
+<pre><code>1:小时：getHours();
+2:分钟：getMinutes();
+3:秒：   getSeconds();
+4:年：   getFullYear()
+5:月：   getMonth()+1 -- 从0月开始
+6:日：   getDate()
+7:星期：getDay() --- 星期日是 0
+8:毫秒: getMilliseconds();
+9:时间戳 getTime() 
+10:setFullYear(年,月,日);
+11:setHours(时,分,秒,毫秒);
+12:setFullYear(年,月-1);
+13:setFullYear(年);
+</code></pre><p>   <strong>定时器</strong>：</p>
+<pre><code>*原则：定时器要先清除，再打开。
+       另一个定时器setTimeout
+       setInterval 一直执行，连续不断的
+       setTimeout 只执行一次
+       setTimeout(函数名，时间) 
+       清除：clearTimerout();
+</code></pre><p>(二十)<strong>关于<code>i</code>值的问题:</strong></p>
+<blockquote>
+<p>1:使用封闭空间()(i): 1）解决了变量冲突的问题    2）i值的问题   3)循环里面加事件，事件里的i不能用<br>  2:自定义属性</p>
+</blockquote>
+<p>(二十一)<strong>数组</strong>:1:arr = []; 2:json = {};</p>
+<p>(二十二)<strong>DOM的操作:</strong></p>
+<pre><code>&gt;1. 获取元素--`obj.tagName();`
+2. 父级获取子级 `children;`
+3. 父级元素的子结点数组 `childNodes;`
+4. 首节点：1) `oParent.firstChild`    2)`oParent.children[0];`    
+        兼容写法:  `var oFirst = oParent.fristElementChild || oParent.firstChild;`
+5. 尾节点  1)`oParent.lastChild`  2)`oParent.children[oParent.children.length -1];`
+         兼容写法: `var oLast = oParent.lastElementChild || oParent.lastChild;`
+6. 兄弟节点：
+     上一个兄弟节点：`var oPrev = obj.previousElementSibling || obj.previousSibling`  
+     下一个兄弟节点：`var oNext = obj.nextElementSibling || obj.nextSibling`                
+7. 创建元素： `document.createElement(&apos;标签名&apos;)`;动态创建的元素和原来就存在的元素，没有任何区别
+8. 添加元素：`document.body.appendChild(obj);`
+9. 父`.appendChild(obj);` 表示:添加到父元素的最后面
+10. 添加前面：父`.insertBefore(obj,谁的前面);`
+11. 删除元素: 父`.removeChild(obj);`
+</code></pre><p>(二十三)<strong>如何获取位置</strong></p>
+<blockquote>
+<p>a:<strong>获取可视区宽高</strong><br>    1:可视区高度:（写法）<code>document.documentElement.clientHeight</code><br>    2:可视区的宽度:(写法) <code>document.documentElement.clientWidth</code><br>    b<strong>:获取盒模型宽高</strong><br>    1:盒模型高度：<code>offsetHeight</code><br>    2:盒模型宽度：<code>offsetWidth</code><br>    c:<strong>定位父级距离</strong><br>    1:左：<code>obj.offsetLeft</code><br>    2:上：<code>obj.offstTop</code><br>    d<strong>:绝对位置:getPost</strong><br>    1:<code>getBoundingClientRect().left</code><br>    2:<code>getBoundingClientRect().top</code><br>    3:<code>getBoundingClientRect().right</code><br>    4:<code>getBoundingClientRect().bottom</code></p>
+</blockquote>
+<p>(二十四)<strong>如何属性操作：</strong></p>
+<pre><code>getAttribute(属性名)        获取自定义属性
+setAttribute(属性名，值)    设置自定义属性
+removeAttribute(属性名)    删除属性
+</code></pre><p>(二十五)<strong>常用事件</strong></p>
+<pre><code>1:onclick 点击事件
+2:onmouseover  鼠标移入
+3:onmouseout   鼠标移出
+4:onmousedown  鼠标按下
+5:onmousemove  鼠标移动
+6:onmouseup    鼠标抬起
+7:onmouseenter 鼠标指针移入对象内时触发 
+8:onmouseleave 鼠标指针移出
+9:onmousewheel   鼠标滚轮事件
+10:DOMMouseScroll  兼容火狐的滚轮事件写法
+11:oncontextmenu  鼠标右键菜单事件
+12:ondblclick 鼠标双击事件
+13:onchange  域的内容发生改变
+14:oninput
+15:onblur   失去焦点
+16:obj.focus();强制设置焦点： 
+17:onfocus  获取焦点
+18:obj.blur();强制失去焦点:   
+19:onkeydown 键盘按下时
+20:onkeyup  键盘抬起
+21:onload  载入网页
+22:onerror
+23:onresize 窗口缩小
+24:onscroll 鼠轮滚动执行
+滚动条：
+    高： document.documentElement.scrollTop || document.body.scrollTop
+    宽：document.documentElement.scrollLeft || document.body.scrollLeft
+</code></pre><p>(二十六)<strong>事件对象</strong>:<code>ev</code></p>
+<pre><code>var　ｏＥvent = ev || Event;
+</code></pre><p>(二十七)<strong>什么是事件流:</strong></p>
+<pre><code>obj.addEventListener(&apos;click&apos;,fn,false);
+    false       事件冒泡
+    true        事件捕获（事件下沉）
+只存在高版本浏览器上:obj.attachEvent(&apos;onclick&apos;,fn);
+面试题:解释一下IE事件流和chrome事件流
+    1:IE 只存在事件冒泡
+    2:chrome  可以是事件冒泡可以是捕获（true false）
+事件绑定:
+1:obj.addEventListener(事件,函数,是否捕获);
+    事件：不能带 on
+    兼容性： chrome ff ie9+
+2:obj.attachEvent(事件,函数);
+    事件：必须带on
+    兼容性：ie 系列
+3:处理兼容性：
+    if(obj.addEventListener){
+        obj.addEventListener(事件,函数,是否捕获);
+    }
+    else{
+        obj.attachEvent(事件,函数);
+
+    事件解绑：
+        obj.addEventListener(sEv,fn,false);
+            removeEventListener(sEv,fn,false)
+        obj.attachEvent(事件,函数);
+            obj.detachEvent(事件，函数);                    
+    DOMReady();
+        1:window.onload所有资源加载完才会加载JS
+            html css img video audio flash..  js
+        2:DOMReady
+            html css js
+</code></pre><p>(二十八)<strong>cookie:</strong></p>
+<blockquote>
+<p>特性:<br>1:在服务器环境下，跟随服务器发送<br>           2:大小只有4K大<br>           3:默认会话结束（指关闭浏览器时会话结束）<br>           4:name=value 成对出现<br>           5:name不能重复,否则会覆盖</p>
+</blockquote>
+
       
       
         <div class="page-reward">
@@ -333,13 +605,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/03/13/我的第一次文章/">我的第一次文章</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/21/JS知识点小整合/">JS知识点小整合</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
-        <p><span>发布时间:</span>2017年03月13日 - 21时45分</p>
-        <p><span>最后更新:</span>2017年04月19日 - 08时29分</p>
+        <p><span>发布时间:</span>2017年04月21日 - 12时41分</p>
+        <p><span>最后更新:</span>2017年04月21日 - 15时11分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/03/13/我的第一次文章/" title="我的第一次文章">http://yoursite.com/2017/03/13/我的第一次文章/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/13/我的第一次文章/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/21/JS知识点小整合/" title="JS知识点小整合">http://yoursite.com/2017/04/21/JS知识点小整合/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/21/JS知识点小整合/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -352,15 +624,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/04/19/关于Node/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
+    <a href="/2017/04/21/关于H5基础（4）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于H5基础（4）</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -369,7 +637,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#JS基础"><span class="toc-number">1.</span> <span class="toc-text">JS基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#JS基础："><span class="toc-number">1.0.1.</span> <span class="toc-text">JS基础：</span></a></li></ol></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -489,7 +757,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/03/13/我的第一次文章/" data-title="我的第一次文章" data-url="http://yoursite.com/2017/03/13/我的第一次文章/"></div>
+    <div class="ds-thread" data-thread-key="2017/04/21/JS知识点小整合/" data-title="JS知识点小整合" data-url="http://yoursite.com/2017/04/21/JS知识点小整合/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -512,13 +780,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/19/关于Node/" title="上一篇: ">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/04/21/关于H5基础（4）/" title="下一篇: 关于H5基础（4）">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/JS知识点小整合/">JS知识点小整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（4）/">关于H5基础（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（3）/">关于H5基础（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（2）/">关于H5基础（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/关于H5基础（1）/">关于H5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/关于Node/">关于Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/我的第一次文章/">我的第一次文章</a></li></ul>
