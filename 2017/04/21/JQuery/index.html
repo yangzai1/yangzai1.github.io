@@ -5,13 +5,16 @@
   
   <title>JQuery | 洋仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
+  <meta name="description" content="Jquery�Ļ�����">
+<meta property="og:type" content="article">
 <meta property="og:title" content="JQuery">
 <meta property="og:url" content="http://yoursite.com/2017/04/21/JQuery/index.html">
 <meta property="og:site_name" content="洋仔">
-<meta property="og:updated_time" content="2017-04-21T07:13:39.827Z">
+<meta property="og:description" content="Jquery�Ļ�����">
+<meta property="og:updated_time" content="2017-04-21T09:19:06.456Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JQuery">
+<meta name="twitter:description" content="Jquery�Ļ�����">
   
     <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
   
@@ -279,7 +282,221 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h2 id="Jquery�L�����"><a href="#Jquery�L�����" class="headerlink" title="Jquery�Ļ�����"></a>Jquery�Ļ�����</h2><a id="more"></a>
+<h4 id="jquery-��js-��һ�����ܿ��Aܶ�JS���ܼ�����һ������jsд������"><a href="#jquery-��js-��һ�����ܿ��Aܶ�JS���ܼ�����һ������jsд������" class="headerlink" title="jquery:��js ��һ�����ܿ��Ǻܶ�JS���ܼ�����һ������jsд������"></a>jquery:��js ��һ�����ܿ��Ǻܶ�JS���ܼ�����һ������jsд������</h4><p><strong>��move.js jsonp.js –�Լ���װ��һЩ�⣩</strong></p>
+<ul>
+<li>�������ص�ַ��<a href="http://jquery.com/" target="_blank" rel="external">http://jquery.com/</a><ul>
+<li>���أ�download</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li>v3.1.1 - ���°汾</li>
+<li>3.x�汾</li>
+<li>2.x�汾</li>
+<li>1.x�汾</li>
+</ol>
+<ul>
+<li>Past Releases – ��ָ��ȥ�����İ汾<ul>
+<li>See all versions of jQuery Core. – ��ָ�鿴���а汾<br><strong>jQuery���ص�ַ��<a href="https://code.jquery.com/jquery/" target="_blank" rel="external">https://code.jquery.com/jquery/</a></strong></li>
+</ul>
+</li>
+<li><strong>�����õģ�jQuery Core 1.7.2 ��Ϊ�ǹ���ʹ�õģ����ȶ��İ汾</strong></li>
+<li>�汾�ŵ���˼��<ol>
+<li>x : ��ʾ�Ƿ���������Ҫ��Ϊ���ݣ�ie 6 7 8 9 ff chrome</li>
+<li>x : ��ʾŷ��������Ϊ������ie 6 7 8</li>
+<li>x �������µ�</li>
+</ol>
+</li>
+<li><p><strong><code>jQuery</code>������ѧ����js��ʲô����</strong></p>
+<ol>
+<li><strong>jquery:</strong>���û�Ⱥ��Ҫ�ǲ�̫��JS����(ֻ����ͼ��ǰ�˻���̨����Ա)</li>
+<li><strong>ԭ��js��</strong>JS:�û�Ⱥ��רҵ��ǰ�˹���ʦ<br><code>�ص�</code>��jquery������ԭ��JS������������֮����Ȼ��<ol>
+<li><strong>ԭ��JS��ͷд��</strong>��<code>window.onload domReay</code></li>
+<li><strong>jQuery��ͷд��</strong>��<code>$(function(){ //.... });</code><br> <code>$(document).ready</code><br> <code>$:</code><em>*��jquery����</em>��д�κ�jquery���صĶ���������Ҫ�õ�<br> <code>$</code>��ȡԪ�أ� <code>document.getElementById // ByTagName--$(&#39;input&#39;)</code>����css�е�д��<pre><code>jquery����ȡԪ�أ�css����ôд jquery����ôд
+`ԭ��JS�onclickjq��:click�¼�����on`
+</code></pre></li>
+<li><strong>ѡ��������</strong>��<br>��1�����ݱ�ǩ����<code>$(&#39;input&#39;)</code><br>��2������ID��<code>$(&#39;#btn1&#39;)</code><br>��3������class: <code>$(&#39;.classname&#39;)</code><br><strong>������������ȡ��[������=’����ֵ’] // ‘ “ �����ã��ⵥ����˫������˫���ﵥ��</strong><br>��4������������<code>.eq(2)</code> ��������Ԫ��</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><em>*jQuery����α��</em>��</p>
+<blockquote>
+<p>:first    ��һ��<br>  :last       ����һ��<br>  :even   ż����<br>  :odd      ������<br>  :eq(����ֵ)  ������ȡ�ڼ��� – ��0��ʼ<br>  :lt    С������ֵ<br>  :gt    ��������ֵ<br>  :contains(text)  �������а���<br>  li:has(��ǩ��)     ��ǩ����li�µ� ѡ�е���li<br>  $(‘#box input’)  Ƕ��ѡ��<br>  .eq(����ֵ)    ��ȡָ������ֵ��Ԫ��</p>
+</blockquote>
+</li>
+<li><p><strong>����css����ʽ����</strong>��<br>  <strong>��ʽ������</strong></p>
+<pre><code>&gt;��ȡ��      .css(&apos;��ʽ��&apos;);  
+���ã�      .css(&apos;��ʽ��&apos;,&apos;ֵ&apos;);
+�������ã�.css({������ʽ����ֵ});
+</code></pre><p>  <strong>���Բ�����</strong></p>
+<pre><code>&gt;��ȡ���ԣ�     .attr(&apos;������&apos;);
+�������ԣ�     .attr(&apos;������&apos;,&apos;ֵ&apos;);
+�����������ԣ� .attr({������������ֵ});
+</code></pre></li>
+</ul>
+<p><strong>class�Ĳ�����</strong></p>
+<pre><code>&gt;����    addClass(&apos;class��&apos;);
+ɾ��    removeClass(&apos;class��&apos;);
+</code></pre><p><strong>���ݵĲ�����</strong></p>
+<pre><code>����Ԫ�ص����ݣ�
+    ԭ���� .value
+    jq:  
+        ��ȡ��.val()
+        ���ã�.val(&apos;���õ�ֵ&apos;);    
+��ǩ�����ݣ�
+    ԭ���� innerHTML
+    jq:
+        ��ȡ�� .html()
+        ���ã� .html(&apos;���õ�����&apos;);
+</code></pre><p><strong>����ԭ����JQ������</strong></p>
+<pre><code>ԭ�����󣬲�����jq�ķ����Ĳ���
+jq���󣬲�����ԭ���ķ�������
+
+��jq����ת��ԭ��������  $(&apos;div&apos;)[0]
+��ԭ������ת��jq������  $(oDiv)
+    jquey�this��ͨ��������(�ڶ���������)��ָ����ԭ������(����jq����)��
+    ***��ʽ����
+��ȡ����ֵ�� .index()
+</code></pre><ul>
+<li><p><strong>���ݲ�����</strong></p>
+<p>  ��1��<strong>�Ǳ���Ԫ�ص����ݣ�</strong><br>  <code>.html() ��ȡ</code><br>  <code>innerHTML.html(���õ�����) ����</code><br>  ��2��<strong>������ǩ��</strong><br>  <code>.val() ��ȡ����</code><br>  <code>.val(���õ�����) ����</code><br>  <code>this:һ�������£�this ����ԭ��js �е�this</code></p>
+</li>
+<li><p><strong>ԭ�������� jquery����</strong><br><code>*ԭ�����������Ժͷ���������ֱ������jquery����</code><br><code>jquery���������Ժͷ����� ���� ֱ������ ԭ������</code><br>ԭ�� –&gt; jquery $(ԭ��)<br>jquery –&gt;ԭ�� [0]������.index();</p>
+</li>
+<li><p><strong>����DOM�ڵ�</strong></p>
+<pre><code>**λ�ã�**
+
+    ԭ����
+        ����λ������
+            oDiv.offsetLeft
+            oDiv.offsetTop
+        ����λ�ã�
+            getPos(oDiv).left
+            getPos(oDiv).top
+    jquery:
+        ����λ������
+            $(this).position().left 
+            $(this).position().top
+        ����λ�ã�
+            $(this).offset().left
+            $(this).offset().top
+</code></pre><p><strong>��С��</strong></p>
+<pre><code>ԭ����
+    ��ģ�ͣ�
+        offsetWidth
+        offsetHeight
+jquery:
+    ��ͨ����$(this).width()  //��ͨ,������border�� padding
+    ��ͨ�ߣ�$(this).height()
+
+    $(this).innerWidth() //���� ��ͨ+ padding
+    $(this).innerHeight() 
+
+    $(this).outerWidth() //������ͨ+ padding+ border
+    $(this).outerHeight()  
+</code></pre><p><strong>��������С��</strong></p>
+<pre><code>����$(window).width()
+�ߣ�$(window).height()
+</code></pre></li>
+<li><p><strong>DOM����</strong>��<br>  ����Ԫ�أ� <code>$(&#39;&lt;p&gt;fffff&lt;/p&gt;&#39;)</code><br>  <strong><code>append:</code></strong></p>
+<pre><code>`A.append(B);`     //**��A����׷��B (����)**
+</code></pre><p>  <strong><code>appendTo:</code></strong></p>
+<pre><code>`A.appendTo(B);`   //**��A�ŵ�B���棨���棩**
+</code></pre><p>  <strong><code>prepend:</code></strong></p>
+<pre><code>`A.prepend(B);` // **��A����׷��B ��ǰ��)**
+</code></pre><p>  <strong><code>prependTo:</code></strong></p>
+<pre><code>`A.prependTo(B);`  //**��A�ŵ�B���棨ǰ�棩**
+</code></pre><p>  <strong><code>after:</code></strong></p>
+<pre><code>`A.after(B);`        //**��B�ŵ�A���� �����棩**
+</code></pre><p>  <strong><code>before:</code></strong></p>
+<pre><code>`A.before(B);`       //**��B�ŵ�Aǰ�� �����棩**
+</code></pre><p>  <strong><code>insertAfter:</code></strong></p>
+<pre><code>`A.insertAfter(B);`   //**��A�ŵ�B���� �����棩**
+</code></pre><p>  <strong><code>insertBefore:</code></strong></p>
+<pre><code>`A.insertBefore(B);`  //**��A�ŵ�Bǰ�棨����)**
+</code></pre><p>  ɾ��Ԫ�أ�</p>
+<pre><code>**`remove:`**
+    `$(&apos;ѡ�е�Ԫ��&apos;).remove(&apos;id/css/tag/Ƕ��/...&apos;); ` 
+</code></pre></li>
+<li><p>�¼���</p>
+<h2 id="��jquery����е��¼������j󶨵g�-���а������󶨣�������ί�У�"><a href="#��jquery����е��¼������j󶨵g�-���а������󶨣�������ί�У�" class="headerlink" title="  ��jquery����е��¼������ǰ󶨵ġ�(���а������󶨣�������ί�У�)    "></a>  ��jquery����е��¼������ǰ󶨵ġ�(���а������󶨣�������ί�У�)    </h2><pre><code>`1.7 ��ʼ�������ķ�ʽ��������
+    bind()      unbind()   ֱ�Ӱ���
+    live()        die()   ͨ��ð��
+    delegate    undelegate ����ȷ��С��Χʹ���¼�ί��`
+--------------------------------------
+</code></pre></li>
+<li><p>�󶨣�  on<br>  <strong>�򵥰���</strong>�� <code>$(obj).on(&#39;�¼���&#39;,function(){});</code></p>
+<p>  <strong>�������ݣ�</strong> </p>
+<pre><code>$(obj).on(&apos;�¼���&apos;,{����},function(ev){
+     ev.data // ���Ǵ�����������
+});
+</code></pre><p>  <strong>�����¼���</strong>  </p>
+<pre><code>`$(obj).on(&apos;�¼���1 �¼���2...&apos;,function(){});`
+                   **`�����¼��ÿո��ֿ�`**
+</code></pre></li>
+</ul>
+<p><strong>�¼�ί�У�</strong> <code>on</code></p>
+<pre><code>$(obj).on(&apos;�¼���&apos;,&apos;ѡ����&apos;,function(ev){
+            **����������this��ѡ����(������jq�κ�ѡ����)
+           //var aaa=ev.target||ev.srcElement
+           //**$(aaa)ת��jq���� ���ܲ���
+});
+</code></pre><p><strong>���󶨣�</strong> <code>off</code></p>
+<pre><code>$(obj).off();          //ȫ���¼�����ʧ��
+$(obj).off(&apos;�¼���&apos;);  //ָ�����¼���ʧ
+</code></pre><p><strong><code>one:</code></strong></p>
+<pre><code>$(obj).one(&apos;�¼���&apos;,function(){});  һ�����¼�
+ģ��һ�����¼�:
+    $(obj).on(&apos;�¼���&apos;,function(){
+        alert(123)
+        $(obj).off();
+    })
+</code></pre><p><strong>�Ҽ���</strong><br>    <code>contextmenu</code><br>    <strong><code>return false:</code></strong><br>    <strong>��ֹĬ����Ϊ ���� ��ֹð��</strong></p>
+<pre><code>������ֹĬ����Ϊ��ev.preventDefault()
+������ֹð�ݣ�ev.stopPropagation()
+</code></pre><p><code>*jquery�����¼����� ev �����˼��ݴ��������� ev||event</code></p>
+<ul>
+<li><p>ѭ��������д��</p>
+<pre><code>$(&apos;li&apos;).each(function(index,element){
+    //index --  i
+    //element  --  aLi[i]
+      element  ԭ������
+    $(element) jq ����
+})
+$.each(Ҫѭ���Ķ�����function(i,v){
+    //Ҫѭ���Ķ��� ������ԭ������
+});
+</code></pre><p><strong>С���ߣ�</strong></p>
+<blockquote>
+<p><code>$.browser.msie  �Ƿ���ie  false/true
+  $.trim(str)        ȥ����β�ո�
+  $.type        ��������</code></p>
+</blockquote>
+</li>
+<li><p><strong>jquery:</strong></p>
+<pre><code>�Զ���������
+    $.fn.toRed = function(){
+        //ʵ�ֲ����Ĵ���
+        �ڲ����this  �� jquery������
+    }
+
+����д������
+    $.fn.extend({
+        toRed:function(){
+            this.css(&apos;&apos;,&apos;&apos;)
+        },
+        toBlue:function(){
+            this.css(&apos;&apos;,&apos;&apos;)
+        }
+    });
+//���Ե�������js�ļ�����
+</code></pre><p><strong><code>ע���Զ�����������window.onload($()) ����</code></strong> </p>
+</li>
+</ul>
+<p><code>animateʵ���˶���ʱ����ֻ���˶� ������ʽ ��������������ֻ��ͨ����������ʽ��</code> </p>
+
       
       
         <div class="page-reward">
@@ -336,7 +553,7 @@
         <p><span>本文标题:</span><a href="/2017/04/21/JQuery/">JQuery</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
         <p><span>发布时间:</span>2017年04月21日 - 15时13分</p>
-        <p><span>最后更新:</span>2017年04月21日 - 15时13分</p>
+        <p><span>最后更新:</span>2017年04月21日 - 17时19分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2017/04/21/JQuery/" title="JQuery">http://yoursite.com/2017/04/21/JQuery/</a>
             <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/21/JQuery/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -365,7 +582,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Jquery�L�����"><span class="toc-number">1.</span> <span class="toc-text">Jquery�Ļ�����</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jquery-��js-��һ�����ܿ��Aܶ�JS���ܼ�����һ������jsд������"><span class="toc-number">1.0.1.</span> <span class="toc-text">jquery:��js ��һ�����ܿ��Ǻܶ�JS���ܼ�����һ������jsд������</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#��jquery����е��¼������j󶨵g�-���а������󶨣�������ί�У�"><span class="toc-number">2.</span> <span class="toc-text">  ��jquery����е��¼������ǰ󶨵ġ�(���а������󶨣�������ί�У�)    </span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
