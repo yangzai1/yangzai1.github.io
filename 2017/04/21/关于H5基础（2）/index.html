@@ -3,15 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>我的第一次文章 | 洋仔</title>
+  <title>关于H5基础（2） | 洋仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="我的第一次文章">
-<meta property="og:url" content="http://yoursite.com/2017/03/13/我的第一次文章/index.html">
+  <meta name="description" content="关于H5基础（2）">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于H5基础（2）">
+<meta property="og:url" content="http://yoursite.com/2017/04/21/关于H5基础（2）/index.html">
 <meta property="og:site_name" content="洋仔">
-<meta property="og:updated_time" content="2017-04-19T00:29:44.769Z">
+<meta property="og:description" content="关于H5基础（2）">
+<meta property="og:updated_time" content="2017-04-21T01:03:00.347Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="我的第一次文章">
+<meta name="twitter:title" content="关于H5基础（2）">
+<meta name="twitter:description" content="关于H5基础（2）">
   
     <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
   
@@ -245,11 +248,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-我的第一次文章" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于H5基础（2）" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/03/13/我的第一次文章/" class="article-date">
-      <time datetime="2017-03-13T13:45:10.000Z" itemprop="datePublished">2017-03-13</time>
+      <a href="/2017/04/21/关于H5基础（2）/" class="article-date">
+      <time datetime="2017-04-21T00:42:42.000Z" itemprop="datePublished">2017-04-21</time>
 </a>
     </div>
   
@@ -262,7 +265,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      我的第一次文章
+      关于H5基础（2）
     </h1>
   
 
@@ -279,7 +282,86 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        
+        <h2 id="关于H5基础（2）"><a href="#关于H5基础（2）" class="headerlink" title="关于H5基础（2）"></a>关于H5基础（2）</h2><a id="more"></a>
+<h4 id="有关H5的CSS小效果："><a href="#有关H5的CSS小效果：" class="headerlink" title="有关H5的CSS小效果："></a>有关H5的CSS小效果：</h4><ol>
+<li>背景图生效位置的三种写法：<ol>
+<li><code>background-origin:border-box;</code>    边框生效位置</li>
+<li><code>background-origin:content-box;</code>    内容生效位置</li>
+<li><code>background-origin:padding-box;</code>    默认位置</li>
+</ol>
+</li>
+<li>文本开切位置的写法：<br> （写文本开切位置时，<code>-webkit-background-clip:text;  color:rgba(0,0,0,0) 要都写才可以）</code><br>   <code>-webkit-background-clip:text;</code><pre><code>`color:rgba(0,0,0,0);`     配合使用
+</code></pre></li>
+<li>倒影的写法：<br> <code>-webkit-box-reflect:below 10px -webkit-linear-gradient(rgba(0,0,0,0) 40%,rgba(0,0,0,1));</code><ol>
+<li><code>below</code>   表示为：<strong>向下</strong></li>
+<li><code>above</code>   表示为：<strong>向上</strong></li>
+<li><code>left</code>    表示为：<strong>向左</strong></li>
+<li><code>right</code>   表示为：<strong>向右</strong></li>
+<li><code>10px</code>    表示为：<strong>间距</strong>（这个值根据自己需求随便定义）</li>
+</ol>
+</li>
+<li>滤镜的写法：<pre><code>` -webkit-filter:blur(0px);`
+</code></pre></li>
+<li>:块的缩放大小写法：<pre><code>`resize:both;`
+</code></pre></li>
+<li>缩放大小完整写法：<pre><code>`resize:both; overflow:hidden;`
+</code></pre></li>
+<li>文本排序的写法：<pre><code>`direction:rtl; unicode-bidi:bidi-override;`
+</code></pre></li>
+<li><p>变形的写法：</p>
+<ol>
+<li><code>transform:</code><br> a：skew(X轴值，Y轴值)        <strong>倾斜度数    单位使用（deg）</strong><br> b：scale(X轴值，Y轴值)        <strong>缩放比例</strong><br> c：translate(X轴值，Y轴值)     <strong>平移像素     单位使用（px）</strong><br> d：rotate                     <strong>旋转度数    单位使用（deg）</strong></li>
+<li>变形样式是从后往前读<br> <code>transform:skew(30deg,10deg) scale(2,2) translate(100px,20px) rotate(45deg);</code></li>
+</ol>
+</li>
+<li><p>旋转控制中心点的写法：<br> <code>transform-origin:X轴值Y轴值;</code></p>
+<pre><code>1. left
+2. Right
+3. top
+4. bottom
+  20px 20px
+</code></pre></li>
+<li><p>景深的写法（<strong>用来配合3D效果</strong>）<br><code>transform:perspective(800px);</code><br>   括号里的值为<strong>800-1200</strong>之间值时效果最好。<br><code>perspective:800px;</code></p>
+</li>
+<li><p><strong>3d</strong>的写法：（<strong>注意：当写3D效果时要加给父级，3D效果是不可以继承的</strong>）<br><code>transform-style:preserver-3d;</code></p>
+</li>
+<li><p>物体的变形写法：<br><code>transform:</code></p>
+<pre><code>1. `scale`        X轴值  Y轴值 
+2. `rotate`      X轴值  Y轴值  Z轴值
+3. `translate`   X轴值  Y轴值  Z轴值
+4. `skew`         X轴值  Y轴值
+</code></pre></li>
+<li><p>判断运动结束后的监听事件：<br><code>transitionend</code>（<strong>要配合事件绑定使用</strong>）<br><code>obj.addEventListener(&#39;transitionend&#39;,fn,false);</code></p>
+</li>
+<li><p>H5里有关<strong>滚动条的写法</strong> <code>pageX pageY</code>获取鼠标位置自带滚动距离</p>
+<blockquote>
+<ol>
+<li>表单:<br>   1:email<br>   2:number<br>   3:color<br>   4:range<br>   5:date<br>   6:week<br>   7:month<br>   8:url<br>   9:tel<br>   10:search</li>
+<li>表单新增属性<br>   1:required         必填<br>   2:pattern          里面放正则<br>   3:step             一次加几个<br>   4:placeholder      提示文字<br>   5:autofocus        自动获取焦点<br>   6:autocomplete    <pre><code>on             开启提示文字
+off            关闭提示文字
+</code></pre>   7:title            改变提示框提示文字</li>
+</ol>
+</blockquote>
+</li>
+<li><p><strong>序列化:</strong></p>
+<ol>
+<li>{a:1,b:5}      <strong>不标准格式</strong>                                    </li>
+<li>序列化        <strong>变成标准格式json</strong><br> JSON.stringify(json)</li>
+</ol>
+</li>
+<li><p>反序列化</p>
+<ul>
+<li>JSON.parse(json)     把字符串转成正常json格式</li>
+<li>注意：<strong>交互解析字符串一共三种方法</strong><ol>
+<li>parse</li>
+<li>eval</li>
+<li>new Function(‘return abc’);</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+
       
       
         <div class="page-reward">
@@ -333,13 +415,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/03/13/我的第一次文章/">我的第一次文章</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/21/关于H5基础（2）/">关于H5基础（2）</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
-        <p><span>发布时间:</span>2017年03月13日 - 21时45分</p>
-        <p><span>最后更新:</span>2017年04月19日 - 08时29分</p>
+        <p><span>发布时间:</span>2017年04月21日 - 08时42分</p>
+        <p><span>最后更新:</span>2017年04月21日 - 09时03分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/03/13/我的第一次文章/" title="我的第一次文章">http://yoursite.com/2017/03/13/我的第一次文章/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/13/我的第一次文章/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/21/关于H5基础（2）/" title="关于H5基础（2）">http://yoursite.com/2017/04/21/关于H5基础（2）/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/21/关于H5基础（2）/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -352,15 +434,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2017/04/19/关于Node/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          (no title)
-        
-      </div>
-    </a>
   
+    <a href="/2017/04/20/关于H5基础（1）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于H5</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
   
 </nav>
 
@@ -369,7 +447,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于H5基础（2）"><span class="toc-number">1.</span> <span class="toc-text">关于H5基础（2）</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#有关H5的CSS小效果："><span class="toc-number">1.0.1.</span> <span class="toc-text">有关H5的CSS小效果：</span></a></li></ol></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -489,7 +567,7 @@
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/03/13/我的第一次文章/" data-title="我的第一次文章" data-url="http://yoursite.com/2017/03/13/我的第一次文章/"></div>
+    <div class="ds-thread" data-thread-key="2017/04/21/关于H5基础（2）/" data-title="关于H5基础（2）" data-url="http://yoursite.com/2017/04/21/关于H5基础（2）/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -512,13 +590,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/19/关于Node/" title="上一篇: ">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2017/04/20/关于H5基础（1）/" title="下一篇: 关于H5">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
     <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（2）/">关于H5基础（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/关于H5基础（1）/">关于H5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/关于Node/">关于Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/我的第一次文章/">我的第一次文章</a></li></ul>
