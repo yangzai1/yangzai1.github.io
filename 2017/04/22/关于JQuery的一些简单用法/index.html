@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于H5基础（4） | 洋仔</title>
+  <title>关于JQuery的一些简单用法 | 洋仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于H5-CSS3(4)">
+  <meta name="description" content="jQuery的一些用法">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于H5基础（4）">
-<meta property="og:url" content="http://yoursite.com/2017/04/21/关于H5基础（4）/index.html">
+<meta property="og:title" content="关于JQuery的一些简单用法">
+<meta property="og:url" content="http://yoursite.com/2017/04/22/关于JQuery的一些简单用法/index.html">
 <meta property="og:site_name" content="洋仔">
-<meta property="og:description" content="关于H5-CSS3(4)">
-<meta property="og:updated_time" content="2017-04-21T02:54:18.350Z">
+<meta property="og:description" content="jQuery的一些用法">
+<meta property="og:updated_time" content="2017-04-22T02:11:24.348Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于H5基础（4）">
-<meta name="twitter:description" content="关于H5-CSS3(4)">
+<meta name="twitter:title" content="关于JQuery的一些简单用法">
+<meta name="twitter:description" content="jQuery的一些用法">
   
     <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
   
@@ -248,11 +248,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-关于H5基础（4）" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于JQuery的一些简单用法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/21/关于H5基础（4）/" class="article-date">
-      <time datetime="2017-04-21T02:19:29.000Z" itemprop="datePublished">2017-04-21</time>
+      <a href="/2017/04/22/关于JQuery的一些简单用法/" class="article-date">
+      <time datetime="2017-04-22T02:06:51.000Z" itemprop="datePublished">2017-04-22</time>
 </a>
     </div>
   
@@ -265,7 +265,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于H5基础（4）
+      关于JQuery的一些简单用法
     </h1>
   
 
@@ -282,180 +282,42 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="关于H5-CSS3-4"><a href="#关于H5-CSS3-4" class="headerlink" title="关于H5-CSS3(4)"></a>关于H5-CSS3(4)</h2><a id="more"></a>
-<h3 id="关于H5-CSS3"><a href="#关于H5-CSS3" class="headerlink" title="关于H5-CSS3"></a>关于H5-CSS3</h3><ol>
-<li><p><strong>CSS3</strong>基础运动: <code>transition:1s all ease 2s;</code></p>
-</li>
-<li><p><strong>高级运动</strong></p>
-<ol>
-<li><p>自定动画(一些样式库：<code>csdn</code> <code>w3cplus</code> <code>daqianduan</code>)</p>
-<pre><code>@keyframes test{
-   from{}
-   to{}
-   0%{}
-   100%{}
-}
-animation:test linear 1s infinite;
+        <h3 id="jQuery的一些用法"><a href="#jQuery的一些用法" class="headerlink" title="jQuery的一些用法"></a>jQuery的一些用法</h3><a id="more"></a>
+<p>（一）：获取可视区和物体的宽高</p>
+<pre><code>获取览器显示区域的高度：$(window).height();
+获取浏览器显示区域的宽度：$(window).width();
+获取页面的文档高度：$(document).height();
+获取页面的文档宽度：$(document).width();
+获取滚动条到顶部的垂直高度：$(document).scrollTop();
+获取滚动条到左边的垂直宽度：$(document).scrollLeft();
+</code></pre><p>（二）：jQuery的循环</p>
+<pre><code>1：For原生： for(var i = 0; i&lt;10;i++){}
+2：jQuery：$.each循环一些有意义的事情
+</code></pre><p>A: 循环处理一组元素</p>
+<pre><code>$(&apos;li&apos;)       $(&apos;.on&apos;) 
+[]--&gt;表示为数组 {}———&gt;表示为JSON
+$.each(要循环的东西,function(index,element){  });
+$.each({name1:v1,name2,v2},function(i,v){i  --  json中的  namev --  json中的 value});
+</code></pre><p>B: 关于each循环，另外一种写法：</p>
+<pre><code>$(&apos;li&apos;).each(function(i,v){//每一个做处理});
+</code></pre><p>（三）：字符串：</p>
+<p>原生js: charAt() substring split indexOf lastIndexOf toLowerCase……</p>
+<pre><code>1:原生：trim()   --  去除空格，只去除首尾的空格
+2:jQuery:  $.trim(str2)    --  去除空格，只去除首尾的空格
+</code></pre><p>（四）jQuery的get请求</p>
+<pre><code>1：$.ajax(); 
+2：$.get();  //发get请求  
+3：$.post(); //发post请求 
+4：$.getJSON();
+</code></pre><p>（五）：jquery插件：<a href="http://jqueryui.com/（jQuery的一个插件地址）" target="_blank" rel="external">http://jqueryui.com/（jQuery的一个插件地址）</a></p>
+<pre><code> 1：自己想写插件：
+ A: $.fn.名字= function(){  }
+ B: this  --  插件中的就是jquery对象 ，不再是一般情况下的原生对象
 
-animation-duration:1s;                    运动时间
-animation-name:test;                      名字
-animation-timing-function:linear;         运动形式
-animation-iteration-count:2;              运动次数
-          infinite                        无限次数
-animation-delay:2s;                       延迟执行
-animation-play-state:paused;              暂停
-animate.css(样式文档)
-</code></pre><p> 文档：<a href="http://www.jq22.com/demo/animate-141106223642/" target="_blank" rel="external">http://www.jq22.com/demo/animate-141106223642/</a></p>
-</li>
-<li><p>地理信息</p>
-<ol>
-<li><strong>移动端的都有</strong>：<br> 社交    微信 微博 陌陌 QQ<br> 团购    美团 外卖 滴滴 优步<br> 大数据——分析</li>
-<li><p><strong>定位原理</strong><br> phone     GPS<br> pc         IP地址</p>
-</li>
-<li><p><strong>获取具体失败原因</strong></p>
-<pre><code>ev.code    错误代码
-    0     未知错误
-    1     用户拒绝
-    2     获取失败     goole api
-    3     超时
-</code></pre></li>
-<li><p><strong><code>ev.message</code>     错误信息描述</strong></p>
-<pre><code> 1.**设备是否支持**
-   &gt;  if(navigator.geolocation){
-         alert(&apos;此设备支持&apos;);
-     }else{
-         alert(&apos;此设备不支持&apos;);
-     }
+2:批量写插件：
+  $.fn.extend({  toRed:function(){},..});
+</code></pre><p><strong>注意： jquery 1.4 版本以后，JSON中不允许使用单引号</strong><br><strong>注意： document.write以后，页面上就没东西了，不要再试图获取元素了</strong></p>
 
-2.**获取位置**
-   &gt;  if(navigator.geolocation){
-         navigator.geolocation.getCurrentPosition(fn,fn);
-     }else{
-         alert(&apos;此设备不支持&apos;);
-     }
-</code></pre></li>
-<li><p>获取信息</p>
-<pre><code>&gt; alert(ev.coords);
- alert(ev.coords.longitude);           //经度
- alert(ev.coords.latitude);            //纬度
- alert(ev.coords.accuracy);            //精确度 少于60不可用
- alert(ev.coords.altitude);            //海拔高度
- alert(ev.coords.altitudeAccuracy);    //海拔精确度
- alert(ev.coords.heading);             //朝向
- alert(ev.coords.speed);              //速度
- clearwatch()                         //清除位置
-</code></pre></li>
-</ol>
-</li>
-</ol>
-</li>
-<li><p>####百度地图<br><strong>连接地址</strong>：<a href="http://lbsyun.baidu.com/" target="_blank" rel="external">http://lbsyun.baidu.com/</a><br><strong>百度地图秘钥</strong>：<code>EAc9690e060a06cfe50a260d491afd15</code><br><strong>地图<code>JS</code>部分写法</strong>：</p>
-<pre><code>window.onload=function (){
-    var oBox=document.getElementById(&apos;box&apos;);
-      if(navigator.geolocation){
-          navigator.geolocation.getCurrentPosition(function (ev){
-              //生成地图
-              var map=new BMap.Map(&apos;box&apos;);
-              //设置中心点 以及缩放
-              var point=new BMap.Point(ev.coords.longitude,ev.coords.latitude);
-              map.centerAndZoom(point,15);
-              //添加标注
-              var marker=new BMap.Marker(point);
-              map.addOverlay(marker);
-          },function (){
-              alert(&apos;获取失败&apos;);
-          });
-      }else{
-          alert(&apos;您的设备不支&apos;);
-      }
-  };
-</code></pre></li>
-<li><p><strong>多线程</strong>——<code>webWorker</code></p>
-<p> 1:单线程：前一个操作没做完，后一个没发开始<br> 2:多线程：可以同时进行多个操作. 好处：充分利用cpu资源</p>
-<p> 主线程：加载页面，渲染，css渲染，jsDOM树生成<br> 子线程：由webWorker创建出，进行一些计算</p>
-<pre><code>创建子线程
-    var oW=new Worker(&apos;文件名&apos;);
-给子级传数据
-    oW.postMessage(data);
-子级接收数据
-    this.onmessage=function (ev){
-        ev.data         接收到的数据
-        给父级传数据
-        this.postMessage(ev.data+5);
-    };
-父级接收
-    oW.onmessage=function (ev){
-        ev.data
-    };
-子线程里面不能操以下两个东西
-    DOM
-    BOM
-子线程里面不能再去创建子线程
-不能跨域
-主线程和子线程之间数据不是共享，每次都是复制一份数据
-
-结束子线程操作：oW.terminate();
-</code></pre></li>
-<li><p><strong>webSql ——前端数据库</strong></p>
-<p> 数据库安全吗？ 数据库一点都不安全<br> webSql数据库 大小5M</p>
-</li>
-<li><p>开启一个数据</p>
-<pre><code>var db=openDatabase(数据库名,数据库版本,数据库描述,数据库申请容量);
-</code></pre></li>
-<li><p>开启事务<br>事务：原子性<br> 要么成功，要么失败</p>
-</li>
-<li><p>SQL语句</p>
-<blockquote>
-<p> CREATE  //创建<br> INSERT  //插入<br> SELECT  //删除</p>
-</blockquote>
-</li>
-<li><p>websql的代码写法如下：</p>
-<pre><code>var db=openDatabase(&apos;test&apos;,&apos;1.0.0&apos;,&apos;play and test&apos;,200);
-db.transaction(function (tx){
-      //tx     事务上下文
-    tx.executeSql(&apos;SELECT * FROM news&apos;,[],function (tx,result){
-
-         document.write(&apos;&lt;ul&gt;&apos;);
-
-           for(var i=0; i&lt;result.rows.length; i++){
-            document.write(&apos;&lt;li&gt;&lt;strong&gt;&apos;+result.rows[i].user+&apos;&lt;/strong&gt;&lt;span&gt;&apos;+result.rows[i].pass+&apos;&lt;/span&gt;&lt;/li&gt;&apos;);
-            }
-
-         document.write(&apos;&lt;/ul&gt;&apos;);
-
-    },function (tx,err){
-        console.log(err);
-    };
-});
-</code></pre></li>
-</ol>
-<p>6.<strong>重力感应</strong> ————需要在手机端测试</p>
-<pre><code>window.DeviceMotionEvent
-方向有：x轴 y轴 z轴
-window.addEventListener(&apos;devicemotion&apos;,function (ev){
-    var acc=ev.accelerationIncludingGravity;
-    acc.x
-    acc.y
-    acc.z
-},false);
-简单的重力感应代码：
-
-CSS写法代码如下：
-      div{ width:200px; height:200px; background:#ccc; position:absolute; left:50%; top:50%; 
-            margin:-100px 0 0 -100px; color:#fff; text-align:center; line-height:66px; }    
-JS写法代码如下：    
-  window.onload=function (){
-      var oDiv=document.getElementById(&apos;div1&apos;);
-      if(window.DeviceMotionEvent){
-          window.addEventListener(&apos;devicemotion&apos;,function (ev){
-              var acc=ev.accelerationIncludingGravity;
-              oDiv.innerHTML=&apos;X:&apos;+acc.x+&apos;&lt;br /&gt;Y:&apos;+acc.y+&apos;&lt;br /&gt;Z:&apos;+acc.x;
-          },false);
-      }else{
-          alert(&apos;您的设备不支持重力感应&apos;);
-      }
-  };
-</code></pre>
       
       
         <div class="page-reward">
@@ -509,13 +371,13 @@ JS写法代码如下：
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/21/关于H5基础（4）/">关于H5基础（4）</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/22/关于JQuery的一些简单用法/">关于JQuery的一些简单用法</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
-        <p><span>发布时间:</span>2017年04月21日 - 10时19分</p>
-        <p><span>最后更新:</span>2017年04月21日 - 10时54分</p>
+        <p><span>发布时间:</span>2017年04月22日 - 10时06分</p>
+        <p><span>最后更新:</span>2017年04月22日 - 10时11分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/21/关于H5基础（4）/" title="关于H5基础（4）">http://yoursite.com/2017/04/21/关于H5基础（4）/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/21/关于H5基础（4）/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/22/关于JQuery的一些简单用法/" title="关于JQuery的一些简单用法">http://yoursite.com/2017/04/22/关于JQuery的一些简单用法/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/22/关于JQuery的一些简单用法/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -528,18 +390,9 @@ JS写法代码如下：
 
 <nav id="article-nav">
   
-    <a href="/2017/04/21/JS知识点小整合/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          JS知识点小整合
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/04/21/关于H5基础（3）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于H5基础（3）</div>
+    <a href="/2017/04/21/关于JQuery一些东西/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于JQuery一些东西</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -550,7 +403,7 @@ JS写法代码如下：
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于H5-CSS3-4"><span class="toc-number">1.</span> <span class="toc-text">关于H5-CSS3(4)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于H5-CSS3"><span class="toc-number">1.1.</span> <span class="toc-text">关于H5-CSS3</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#jQuery的一些用法"><span class="toc-number">1.</span> <span class="toc-text">jQuery的一些用法</span></a></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -670,7 +523,7 @@ JS写法代码如下：
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/04/21/关于H5基础（4）/" data-title="关于H5基础（4）" data-url="http://yoursite.com/2017/04/21/关于H5基础（4）/"></div>
+    <div class="ds-thread" data-thread-key="2017/04/22/关于JQuery的一些简单用法/" data-title="关于JQuery的一些简单用法" data-url="http://yoursite.com/2017/04/22/关于JQuery的一些简单用法/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -693,13 +546,11 @@ JS写法代码如下：
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/21/JS知识点小整合/" title="上一篇: JS知识点小整合">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/04/21/关于H5基础（3）/" title="下一篇: 关于H5基础（3）">
+            <a href="/2017/04/21/关于JQuery一些东西/" title="下一篇: 关于JQuery一些东西">
                 <i class="fa fa-angle-right"></i>
             </a>
         
