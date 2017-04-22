@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于JQuery的一些简单用法 | 洋仔</title>
+  <title>关于cookie于Ajax | 洋仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="jQuery的一些用法">
+  <meta name="description" content="关于cookie">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于JQuery的一些简单用法">
-<meta property="og:url" content="http://yoursite.com/2017/04/22/关于JQuery的一些简单用法/index.html">
+<meta property="og:title" content="关于cookie于Ajax">
+<meta property="og:url" content="http://yoursite.com/2017/04/22/关于cookie于Ajax/index.html">
 <meta property="og:site_name" content="洋仔">
-<meta property="og:description" content="jQuery的一些用法">
-<meta property="og:updated_time" content="2017-04-22T04:19:42.305Z">
+<meta property="og:description" content="关于cookie">
+<meta property="og:updated_time" content="2017-04-22T05:24:18.187Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于JQuery的一些简单用法">
-<meta name="twitter:description" content="jQuery的一些用法">
+<meta name="twitter:title" content="关于cookie于Ajax">
+<meta name="twitter:description" content="关于cookie">
   
     <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
   
@@ -248,11 +248,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-关于JQuery的一些简单用法" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于cookie于Ajax" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/22/关于JQuery的一些简单用法/" class="article-date">
-      <time datetime="2017-04-22T02:06:51.000Z" itemprop="datePublished">2017-04-22</time>
+      <a href="/2017/04/22/关于cookie于Ajax/" class="article-date">
+      <time datetime="2017-04-22T04:29:39.000Z" itemprop="datePublished">2017-04-22</time>
 </a>
     </div>
   
@@ -265,7 +265,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于JQuery的一些简单用法
+      关于cookie于Ajax
     </h1>
   
 
@@ -282,41 +282,315 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="jQuery的一些用法"><a href="#jQuery的一些用法" class="headerlink" title="jQuery的一些用法"></a>jQuery的一些用法</h2><a id="more"></a>
-<h4 id="jQuery的一些用法-1"><a href="#jQuery的一些用法-1" class="headerlink" title="jQuery的一些用法"></a>jQuery的一些用法</h4><p>（一）：获取可视区和物体的宽高</p>
-<pre><code>获取览器显示区域的高度：$(window).height();
-获取浏览器显示区域的宽度：$(window).width();
-获取页面的文档高度：$(document).height();
-获取页面的文档宽度：$(document).width();
-获取滚动条到顶部的垂直高度：$(document).scrollTop();
-获取滚动条到左边的垂直宽度：$(document).scrollLeft();
-</code></pre><p>（二）：jQuery的循环</p>
-<pre><code>1：For原生： for(var i = 0; i&lt;10;i++){}
-2：jQuery：$.each循环一些有意义的事情
-</code></pre><p>A: 循环处理一组元素</p>
-<pre><code>$(&apos;li&apos;)       $(&apos;.on&apos;) 
-[]--&gt;表示为数组 {}———&gt;表示为JSON
-$.each(要循环的东西,function(index,element){  });
-$.each({name1:v1,name2,v2},function(i,v){i  --  json中的  namev --  json中的 value});
-</code></pre><p>B: 关于each循环，另外一种写法：</p>
-<pre><code>$(&apos;li&apos;).each(function(i,v){//每一个做处理});
-</code></pre><p>（三）：字符串：</p>
-<p>原生js: charAt() substring split indexOf lastIndexOf toLowerCase……</p>
-<pre><code>1:原生：trim()   --  去除空格，只去除首尾的空格
-2:jQuery:  $.trim(str2)    --  去除空格，只去除首尾的空格
-</code></pre><p>（四）jQuery的get请求</p>
-<pre><code>1：$.ajax(); 
-2：$.get();  //发get请求  
-3：$.post(); //发post请求 
-4：$.getJSON();
-</code></pre><p>（五）：jquery插件：<a href="http://jqueryui.com/（jQuery的一个插件地址）" target="_blank" rel="external">http://jqueryui.com/（jQuery的一个插件地址）</a></p>
-<pre><code> 1：自己想写插件：
- A: $.fn.名字= function(){  }
- B: this  --  插件中的就是jquery对象 ，不再是一般情况下的原生对象
+        <h2 id="关于cookie"><a href="#关于cookie" class="headerlink" title="关于cookie"></a>关于cookie</h2><a id="more"></a>
+<h3 id="关于cookie于Ajax"><a href="#关于cookie于Ajax" class="headerlink" title="关于cookie于Ajax"></a>关于cookie于Ajax</h3><ol>
+<li><p><strong>网址的构成</strong>：<a href="https://www.baidu.com/" target="_blank" rel="external">https://www.baidu.com/</a> , <a href="http://www.sohu.com/" target="_blank" rel="external">http://www.sohu.com/</a><br> 协议：<code>file:///</code>表示：<code>文件协议</code><br> http:// 表示html-超文本标记语言（超文本传输协议）<br> https:// 表示安全的超文本传输协议（其中：s - 是指SSL加密的意思）</p>
+</li>
+<li><p><strong>什么是服务器：类似于高级的电脑</strong><br> 服务器用途：1）响应用户请求 2）存储 程序，页面，数据….</p>
+<p> 用户访问 –&gt; web服务器 – 程序、页面、JS</p>
+<p> 文件服务器 – 用户上传的文件</p>
+<p> 图片服务器 – 用户上传的，或者是网站本身用到的图片</p>
+<p> 数据库服务器 – 数据库</p>
+<p> wamp服务器环境软件：<br> WAMP是一个 软件，类似虚拟的服务器环境<br> W: Windows<br> A: Apache 服务器软件（tomcat，IIS）<br> M: MySql 数据库软件 (sqlserver，oracle，postgre )<br> P: PHP 编程语言（脚本语言，后台应用很广泛）</p>
+<p> 安装wamp以后访问文件的时候：</p>
+<pre><code>&gt; 运行浏览器--&gt;地址栏输入地址: http://localhost/2016-11-17/1.html
+ localhost是指:本地域名
+ 80为默认端口  localhost端口一般为:8888    8888端口
+</code></pre></li>
+<li><p><strong><code>cookie</code>是指:网站为了实现一定的功能，在用户本地机器上存储一些数据。</strong></p>
+<ol>
+<li><p><strong>服务器环境下</strong></p>
+<blockquote>
+<p>解决cookie两个问题：1》如何存起来的2》如何取出来的<br>读：alret(document.cookie); cookie格式: 用分号+空格隔开<br>写：document.cookie = xyz;<br>也叫写一个cookie或者种一个cookie</p>
+</blockquote>
+</li>
+<li><p><strong>cookie不安全性</strong></p>
+<blockquote>
+<p>cookie格式：name=value<br>document.title – 覆盖<br>document.cookie – 追加</p>
+</blockquote>
+</li>
+<li><p><strong>过期时间，默认 session 会话cookie</strong><br><code>Expires</code>:表示过期时间<br><code>Session</code> 是表示：会话（当关闭浏览器，会话结束，cookid到期）<br>以上两种叫做会话<code>cookie</code></p>
+<pre><code>注意:文件路径：
+    |-1117
+        cookie.html (写一个cookie)
+        read.html  (读不到子级文件写的cookie)
 
-2:批量写插件：
-  $.fn.extend({  toRed:function(){},..});
-</code></pre><p><strong>注意： jquery 1.4 版本以后，JSON中不允许使用单引号</strong><br><strong>注意： document.write以后，页面上就没东西了，不要再试图获取元素了</strong></p>
+        |-cookie2
+            readCookie.html (读了一个cookie)   
+            writeCookie.html (写了一个cookie)
+
+*一个网站，共享一套cookie （一个域下）域：domain
+注意cookie的四种特性：
+    1）服务器环境下
+    2）不安全
+    3）过期时间，默认 session 会话cookie
+    4）cookie 是有大小的   4K  有些浏览器还有条数限制 --cookie是珍贵资源
+    5）cookie类型，不管你看到的是什么，都是字符串
+</code></pre></li>
+<li><p><strong>cookie封装</strong></p>
+<blockquote>
+<p>1：设置（添加、种）一个cookie<br>2： para:name:cookie名<br>3：value:cookie 值<br>4：iDay: 过期日期 - 天数/</p>
+</blockquote>
+<pre><code>&lt;!--种一个cookie--&gt;
+function setCookie(name,value,iDay){
+    var str = name + &apos;=&apos;+value+&apos;;path=/&apos;;
+    //如果传入了过期天数
+    if(iDay){
+        var oDate = new Date();
+        oDate.setDate(oDate.getDate()+iDay);
+        str += &apos;;expires=&apos;+oDate;
+    }
+    document.cookie = str;
+}
+&lt;!--读取cookie--&gt;
+function getCookie(name){
+    var arr = document.cookie.split(&apos;; &apos;);
+    for(var i = 0; i &lt; arr.length;i++){
+        var arr2 = arr[i].split(&apos;=&apos;);
+        if(name == arr2[0]){
+            return arr2[1];
+        }
+    }
+    return &apos;&apos;;
+}
+&lt;!--删除：cookie--&gt;
+function removeCookie(name){
+    setCookie(name,&apos;zns&apos;,-2)
+}
+</code></pre></li>
+</ol>
+</li>
+<li><p><strong>form 表单提交</strong>：</p>
+<pre><code>1 ：form表单中的数据提交到后台
+       action:   提交地址
+ 2：表单标签： input  select  textarea 
+          表单中必须有  name 
+          表单提交上去的是  value值
+ 3：提交方式：method:   get   post
+
+  a:get方式提交:地址栏 url提交 ?提交   安全性：不安全  大小限制：几十K  缓存：有
+
+  b:？数据：ie=utf-8&amp;f=8&amp;rsv_bp=0
+
+ c:大小：参数非常大
+  414 Request-URI Too Large
+ 作用于：分享   收藏
+
+ 3：post: 安全性：相对安全  大小：1G左右   post:没有缓存
+         缓存：对于同一个URL地址，浏览器只请求一次。
+         post 问题:1）从后台取数据   2）会刷新页面
+</code></pre></li>
+<li><p><strong>Asynchronous Javascript And XML</strong></p>
+<pre><code>Asynchronous：异步     XML:    数据格式
+    1：AJAX: 阿贾克斯
+       无刷新（异步） 取数据 （可以顺带着提交一些数据）
+    引入  ajax.js
+    用法： ajax(URL,function(){},function(){});
+    URL:   请求的地址
+      http://www.weibo.com?我想要热门话题
+    1:function(){}表示请求成功之后的回调函数
+    2:function(){}  --可以不写，表示请求失败时的回调函数
+    注意：
+       1）返回值，都是字符串
+       2）缓存
+          用url缓存
+             https://www.baidu.com?wd=123
+             https://www.baidu.com
+          解决：在URL身上加一个随机数作参数，导致每次请求  URL，都是不一样的
+          t = Math.random();
+          随机因子
+       3）编码：你自己的文件 和 请求的文件   编码不一致导致
+          解决： 保持一致
+       4）不关心后缀
+          习惯： .json   .data  .zns
+</code></pre><p>**`（小例子）<br> 数组随机排序：</p>
+<pre><code>dataList.sort(function(){
+   return 0.5 - Math.random();
+});`**
+</code></pre></li>
+<li><p><strong>自己写Ajax:工作流程、原理，分几步，和现实世界一个例子</strong></p>
+<pre><code>1）Ajax:
+      1）要有一个 Ajax 对象
+      2）建立连接
+      3）打开连接，请求数据
+      4）接收
+2）oAjax.open(&apos;GET&apos;,url,true);
+     参数：1-方式   GET  POST
+           2-请求地址   ULR
+           3-是否异步   true
+       oAjax.readyState == 4  --  当前这次ajax请求的一个通信状态
+          0 - 对象建立，打开连接
+          1 - 数据发送成功
+          2 - 原始数据接收成功
+          3 - 数据解析、处理
+          4 - 完成
+</code></pre></li>
+<li><p><strong>oAjax.status</strong><br> <strong>http  状态码</strong></p>
+<pre><code>200  OK
+302 Move temporarily   重定向
+403 Forbidden
+404 Not Found
+414 Request-URI Too Large
+500 Internal Server Error   服务器错
+</code></pre></li>
+<li><p><strong>cookie:是指网站，为了实现一些功能，在用户的机器上存储一些数据。</strong></p>
+<pre><code>1. 服务器环境本地环境
+    domain   域  域名
+2. 不安全  （因为它存到了本地，用户的机器）
+3. 大小   4k    条数的限制(最好用一条来存储一个信息)  --珍贵
+4. 过期时间   
+    默认时间 session   --  会话 cookie   --关闭浏览器就消失了。expires  -  设置过期时间   一定要用Data:对象oDate
+5. 无论你看到的是什么，取出来后都是字符串
+    eval();
+    new Function(&apos;return &apos; + str)();
+</code></pre></li>
+<li><p><strong>封装：</strong></p>
+<ul>
+<li><p><strong>种一个cookie</strong></p>
+<pre><code>setCookie(name,value,iDay)
+    if(iDay){
+        document.cookie = &apos;name=value;path=/;expires=&apos;+iDay;
+    }else{
+        document.cookie = &apos;name=value;path=/&apos;;
+}
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p><strong>取cookie</strong></p>
+<pre><code>getCookie(name)
+     var arr = split(&apos;; &apos;);
+     for(arr){
+         var arr2 = arr[i].split(&apos;=&apos;);
+         if(arr2[0] == name)
+             return arr2[1];
+     }
+     return &apos;&apos;;
+</code></pre></li>
+<li><p><strong>删除cookie</strong></p>
+<pre><code>removeCookie(name);
+    --expires = -10;
+注意：取：第一次取的时候，有可能取出来都是空的，取出来后一定要进行判断，如果是你想要的东西，再使用
+</code></pre></li>
+</ul>
+<ol>
+<li><p><code>ajax:</code><strong>无刷新从后台数据 （也可以提交）</strong><br><strong>全名：Asynchronous Javascript And XML</strong><br>异步的js和xml -数据格式–已经被json 所取代</p>
+<ul>
+<li><p><strong><code>注意：</code></strong></p>
+<blockquote>
+<p>1）无论服务器是什么,取出来的数据，都是字符串 eval();</p>
+<pre><code>2）缓存解决方法加随机因子
+      t = Math.random();  √
+      t = oDate.getTime();
+3）编码：要求所有的文件编码一致，-  utf-8编码
+4）后缀：ajax请求的时候，不区分后缀
+</code></pre></blockquote>
+</li>
+<li><p><strong>使用别人的ajax:</strong></p>
+<pre><code>ajax(url,function(){
+      //成功回调
+  },function(){
+      //失败回调
+  });
+</code></pre></li>
+<li><p><strong>回调函数：</strong></p>
+</li>
+<li><pre><code>我们调用别的函数，去做一些事情，当事情做完后，你要告诉我 --回调
+我们，只负责回调函数的定义，具体什么时候调用，我们不管
+addWheel(obj,function(bDown){
+    //当你确定滚轮方向的时候，告诉我
+    //我要做些有用的事
+   });
+move(obj,{width..height},{
+    complete:function(){
+    }
+});
+</code></pre></li>
+</ul>
+</li>
+<li><p><strong>自己写：</strong></p>
+<ol>
+<li><p><strong>创建一个ajax对象</strong></p>
+<pre><code>var oAjax = new XMLHttpRequest();
+var oAjax = new ActiveXObject(&apos;Microsft.XMLHTTP&apos;);
+if(window.XMLHttpRequest)
+*当你访问一个不存在的变量-报错
+   当你不访问一个不存在的属性- undefined
+</code></pre></li>
+<li><p><strong>oAjax.open(‘GET’,url,true);</strong></p>
+<pre><code>a.请求方式
+b.请求地址
+c.是否异步
+</code></pre></li>
+<li><p><strong>oAjax.send();</strong></p>
+</li>
+<li><p><strong>接收</strong></p>
+<pre><code>oAjax.onreadystatechange = function(){
+    oAjax.reasyState == 4  //完成 通信息状态
+        oAjax.status&gt;=200 &amp;&amp; oAjax.status&lt;300 || oAjax.status == 304
+            //304  没有修改
+            成功
+};
+</code></pre></li>
+</ol>
+</li>
+<li><p><strong><code>oAjax.readyState</code>通信状态，只读的，不能修改(赋值)</strong></p>
+<pre><code>0    UNSEND    ajax对象已经准备完毕，但是还没有打开连接
+1    OPENDED    已经打开连接(建立好连接)
+2    HEADERS-RECEVICED    发送请求完毕，头部信息也接收完毕了
+3    LOADING    下载内容(接收内容)
+4    DONE        操作完毕
+</code></pre></li>
+<li><p><strong><code>http</code>状态码：</strong></p>
+<pre><code>200     OK
+302     Move temporarily   重定向
+304     Not Modified
+403     Forbidden
+404     Not Found
+405     Method Not Allowed 
+414     Request-URI Too Long
+500     Internal Server Error   后台代码写问题
+502     Bad Gateway
+</code></pre></li>
+<li><p><strong>什么是ajax的接口文档：</strong></p>
+<pre><code>接口：协议文档，url地址zns_qd_2016
+文档：文件 内部网址接口文档，包括：
+    1） 功能说明
+    2） 需要的参数
+    3） 返回值的说明
+</code></pre></li>
+<li><p><strong>ajax交互时，文档中有一个东西不会写：</strong></p>
+<pre><code>t=.... （timer时间）
+</code></pre></li>
+<li><p><strong>注册登录：</strong></p>
+<pre><code>  接口地址（格式）：
+   user.php?act=xxx&amp;user=用户名&amp;pass=密码
+  *服务器环境下， 地址
+    url，不要用中文
+    alert();
+   window.alert();  ---   提示信息
+   confirm();   --  确认
+   ajax改进：
+
+1）POST（请求）
+
+   //设置请求头
+           时间：超时时间
+      setTimeout();
+      function ajax(url,data,type,time,fnSucc,fnFail)
+            ajax(url,function(){    });
+            ajax({
+                url:&apos;post.php&apos;,
+                success:function(){},
+                error:function(){},
+                data:{},
+                type:&apos;post&apos;,
+               time:&apos;1000&apos;
+            });
+     };
+</code></pre></li>
+</ol>
 
       
       
@@ -371,13 +645,13 @@ $.each({name1:v1,name2,v2},function(i,v){i  --  json中的  namev --  json中的
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/22/关于JQuery的一些简单用法/">关于JQuery的一些简单用法</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/22/关于cookie于Ajax/">关于cookie于Ajax</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
-        <p><span>发布时间:</span>2017年04月22日 - 10时06分</p>
-        <p><span>最后更新:</span>2017年04月22日 - 12时19分</p>
+        <p><span>发布时间:</span>2017年04月22日 - 12时29分</p>
+        <p><span>最后更新:</span>2017年04月22日 - 13时24分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/22/关于JQuery的一些简单用法/" title="关于JQuery的一些简单用法">http://yoursite.com/2017/04/22/关于JQuery的一些简单用法/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/22/关于JQuery的一些简单用法/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/22/关于cookie于Ajax/" title="关于cookie于Ajax">http://yoursite.com/2017/04/22/关于cookie于Ajax/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/22/关于cookie于Ajax/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -390,18 +664,9 @@ $.each({name1:v1,name2,v2},function(i,v){i  --  json中的  namev --  json中的
 
 <nav id="article-nav">
   
-    <a href="/2017/04/22/关于HTML简单理解与应用/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          关于HTML简单理解与应用
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/04/21/关于JQuery一些东西/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于JQuery一些东西</div>
+    <a href="/2017/04/22/关于HTML简单理解与应用/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于HTML简单理解与应用</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -412,7 +677,7 @@ $.each({name1:v1,name2,v2},function(i,v){i  --  json中的  namev --  json中的
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#jQuery的一些用法"><span class="toc-number">1.</span> <span class="toc-text">jQuery的一些用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#jQuery的一些用法-1"><span class="toc-number">1.0.1.</span> <span class="toc-text">jQuery的一些用法</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于cookie"><span class="toc-number">1.</span> <span class="toc-text">关于cookie</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于cookie于Ajax"><span class="toc-number">1.1.</span> <span class="toc-text">关于cookie于Ajax</span></a></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -532,7 +797,7 @@ $.each({name1:v1,name2,v2},function(i,v){i  --  json中的  namev --  json中的
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/04/22/关于JQuery的一些简单用法/" data-title="关于JQuery的一些简单用法" data-url="http://yoursite.com/2017/04/22/关于JQuery的一些简单用法/"></div>
+    <div class="ds-thread" data-thread-key="2017/04/22/关于cookie于Ajax/" data-title="关于cookie于Ajax" data-url="http://yoursite.com/2017/04/22/关于cookie于Ajax/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -555,13 +820,11 @@ $.each({name1:v1,name2,v2},function(i,v){i  --  json中的  namev --  json中的
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/22/关于HTML简单理解与应用/" title="上一篇: 关于HTML简单理解与应用">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/04/21/关于JQuery一些东西/" title="下一篇: 关于JQuery一些东西">
+            <a href="/2017/04/22/关于HTML简单理解与应用/" title="下一篇: 关于HTML简单理解与应用">
                 <i class="fa fa-angle-right"></i>
             </a>
         
