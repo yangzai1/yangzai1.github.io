@@ -612,8 +612,8 @@ $.each({name1:v1,name2,v2},function(i,v){i  --  json中的  namev --  json中的
 
     <script>
         $(document).ready(function() {
-            var backgroundnum = 109;
-            var backgroundimg = "url(/background/bg-" + backgroundnum +".jpg)";
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
             $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
             $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
         })
