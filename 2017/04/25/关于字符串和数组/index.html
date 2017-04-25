@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>关于H5基础（4） | 洋仔</title>
+  <title>关于字符串和数组 | 洋仔</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="关于H5-CSS3(4)">
+  <meta name="description" content="关于字符串和数组的基础运用：">
 <meta property="og:type" content="article">
-<meta property="og:title" content="关于H5基础（4）">
-<meta property="og:url" content="http://yoursite.com/2017/04/21/关于H5基础（4）/index.html">
+<meta property="og:title" content="关于字符串和数组">
+<meta property="og:url" content="http://yoursite.com/2017/04/25/关于字符串和数组/index.html">
 <meta property="og:site_name" content="洋仔">
-<meta property="og:description" content="关于H5-CSS3(4)">
-<meta property="og:updated_time" content="2017-04-21T02:54:18.350Z">
+<meta property="og:description" content="关于字符串和数组的基础运用：">
+<meta property="og:updated_time" content="2017-04-25T09:05:12.886Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="关于H5基础（4）">
-<meta name="twitter:description" content="关于H5-CSS3(4)">
+<meta name="twitter:title" content="关于字符串和数组">
+<meta name="twitter:description" content="关于字符串和数组的基础运用：">
   
     <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
   
@@ -248,11 +248,11 @@
         </header>                
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-关于H5基础（4）" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-关于字符串和数组" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/04/21/关于H5基础（4）/" class="article-date">
-      <time datetime="2017-04-21T02:19:29.000Z" itemprop="datePublished">2017-04-21</time>
+      <a href="/2017/04/25/关于字符串和数组/" class="article-date">
+      <time datetime="2017-04-25T02:53:44.000Z" itemprop="datePublished">2017-04-25</time>
 </a>
     </div>
   
@@ -265,7 +265,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      关于H5基础（4）
+      关于字符串和数组
     </h1>
   
 
@@ -282,180 +282,264 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="关于H5-CSS3-4"><a href="#关于H5-CSS3-4" class="headerlink" title="关于H5-CSS3(4)"></a>关于H5-CSS3(4)</h2><a id="more"></a>
-<h3 id="关于H5-CSS3"><a href="#关于H5-CSS3" class="headerlink" title="关于H5-CSS3"></a>关于H5-CSS3</h3><ol>
-<li><p><strong>CSS3</strong>基础运动: <code>transition:1s all ease 2s;</code></p>
+        <h2 id="关于字符串和数组的基础运用："><a href="#关于字符串和数组的基础运用：" class="headerlink" title="关于字符串和数组的基础运用："></a>关于字符串和数组的基础运用：</h2><a id="more"></a>
+<h3 id="什么是数据类型："><a href="#什么是数据类型：" class="headerlink" title="什么是数据类型："></a>什么是数据类型：</h3><ol>
+<li><h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><p> <strong>基本数据类型(不可分)</strong></p>
+<pre><code>string          字符串 
+number          数字     
+boolean         布尔值  
+undefined       未定义 
+object          对象(可分的)   object里面可以包数组也可以包对象
+function        函数 ?有争议        
+global   **        ES6  顶层对象
+typeof          是检测数据类型
+</code></pre><p> <strong>undefined什么时候会出现？</strong></p>
+<pre><code>&gt; 1.变量声明了，但是没有赋值.
+2.访问一个不存在的属性.
+3.当参数没有值
+</code></pre><p> <strong>关于字符串转成数字的一些用法：</strong></p>
+<pre><code>显式类型转换:   强制类型转换
+    parseInt(字符串)      把字符串转变成整数
+    &apos;12.5px&apos;      12
+    parseFloat(字符串)  把字符串转变成小数(浮点数)
+    &apos;12.5px&apos;      12.5
+    Number(字符串)         把字符串转变成数字  比较严格。
+    &apos;12.5px&apos;          非数字是NaN
+    isNaN(x) 函数用于检查其参数是否是非数字值。
+</code></pre><p> <code>如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值）返回的值就是 true。</code><br> <code>如果 x 是其他值,则返回 false。</code></p>
 </li>
-<li><p><strong>高级运动</strong></p>
-<ol>
-<li><p>自定动画(一些样式库：<code>csdn</code> <code>w3cplus</code> <code>daqianduan</code>)</p>
-<pre><code>@keyframes test{
-   from{}
-   to{}
-   0%{}
-   100%{}
-}
-animation:test linear 1s infinite;
-
-animation-duration:1s;                    运动时间
-animation-name:test;                      名字
-animation-timing-function:linear;         运动形式
-animation-iteration-count:2;              运动次数
-          infinite                        无限次数
-animation-delay:2s;                       延迟执行
-animation-play-state:paused;              暂停
-animate.css(样式文档)
-</code></pre><p> 文档：<a href="http://www.jq22.com/demo/animate-141106223642/" target="_blank" rel="external">http://www.jq22.com/demo/animate-141106223642/</a></p>
-</li>
-<li><p>地理信息</p>
-<ol>
-<li><strong>移动端的都有</strong>：<br> 社交    微信 微博 陌陌 QQ<br> 团购    美团 外卖 滴滴 优步<br> 大数据——分析</li>
-<li><p><strong>定位原理</strong><br> phone     GPS<br> pc         IP地址</p>
-</li>
-<li><p><strong>获取具体失败原因</strong></p>
-<pre><code>ev.code    错误代码
-    0     未知错误
-    1     用户拒绝
-    2     获取失败     goole api
-    3     超时
+<li><p><strong>字符串常用方法(函数)</strong></p>
+<pre><code>1. str.charAt(下标)获取某一位置的字符
+2. str.indexOf(字符串)从前往后找，字符串第一次出现的位置.                                                             
+    如果找到了，返回位置，如果没找到，返回-1.
+3. str.lastIndexOf(字符串)从后往前找，字符串第一次出现的位置.
+    如果找到了，返回位置， 如果没找到，返回-1.
+</code></pre><p> UA获取浏览器的信息:<br> 获取浏览器的信息 <code>window.navigator.userAgent</code></p>
+<p> <strong>如何使用<code>str.substring</code>  截取字符串</strong></p>
+<pre><code>1. substring(开始位置，结束位置(不包括结束位置));
+2. substring(开始位置); 从开始截取到最后
+3. str.toLowerCase()  把字符串转成小写
+&lt;script&gt;
+    var str=&apos;JHGJHGJHGJHGJ&apos;;
+    var s=str.toLowerCase();//字母转成小写
+        alert(s);
+&lt;/script&gt;
+4. str.toUpperCase()  把字符串转成大写
+&lt;script&gt;
+    var str=&apos;abcdefg&apos;;
+    var s=str.toUpperCase();//字母转成大写
+        alert(s);
+&lt;/script&gt;
+5. 截取文件后缀名
+str.split(&apos;特定的字符&apos;); 把字符串通过特定字符分割成数组
+&lt;script&gt;
+    var str=&apos;ab........txt&apos;;
+    document.write(str.substring(str.lastIndexOf(&apos;.&apos;)+1))
+&lt;/script&gt;
+6. 字符串转数组
+&lt;script&gt;
+    var str=&apos;123456&apos;;
+     alert(str.split(&apos;&apos;))
+&lt;/script&gt;
+7. 字符串首字母大写：
+&lt;script&gt;
+    var str=&apos;hello word ni hao&apos;; //Hello Word
+    var arr=str.split(&apos; &apos;);//空格 切成数组
+    for(var i=0;i&lt;arr.length;i++){
+        arr[i]=arr[i].charAt(0).toUpperCase()+arr[i].substring(1);
+    }
+    document.write(arr.join(&apos; &apos;))
+&lt;/script&gt;
+</code></pre><p> 字符串比较</p>
+<pre><code>&gt; 字符串大小写字母
+字典序:小写 大写  数字
+字符串字母  字典序排序
+字符串数字  字典序排序    
+字符串中文  乱来(编码)
 </code></pre></li>
-<li><p><strong><code>ev.message</code>     错误信息描述</strong></p>
-<pre><code> 1.**设备是否支持**
-   &gt;  if(navigator.geolocation){
-         alert(&apos;此设备支持&apos;);
-     }else{
-         alert(&apos;此设备不支持&apos;);
-     }
-
-2.**获取位置**
-   &gt;  if(navigator.geolocation){
-         navigator.geolocation.getCurrentPosition(fn,fn);
-     }else{
-         alert(&apos;此设备不支持&apos;);
-     }
+<li><p><strong>数组常用方法</strong>        </p>
+<ol>
+<li><p>关于数组的获取：</p>
+<pre><code>arr.length   个数
+arr.[]       下标
 </code></pre></li>
-<li><p>获取信息</p>
-<pre><code>&gt; alert(ev.coords);
- alert(ev.coords.longitude);           //经度
- alert(ev.coords.latitude);            //纬度
- alert(ev.coords.accuracy);            //精确度 少于60不可用
- alert(ev.coords.altitude);            //海拔高度
- alert(ev.coords.altitudeAccuracy);    //海拔精确度
- alert(ev.coords.heading);             //朝向
- alert(ev.coords.speed);              //速度
- clearwatch()                         //清除位置
+<li><p>如何内弄出来一个数组？</p>
+<pre><code>a.var  arr=[1,2,3,4];
+b.var  arr=new Array(1,2,3,4);
+小问题：
+        var arr=[3]； 
+        var arr=new Array(3)
+        ****不一样
+        var arr=Array.of(3);
+        **ES6新语法
 </code></pre></li>
 </ol>
 </li>
-</ol>
-</li>
-<li><p>####百度地图<br><strong>连接地址</strong>：<a href="http://lbsyun.baidu.com/" target="_blank" rel="external">http://lbsyun.baidu.com/</a><br><strong>百度地图秘钥</strong>：<code>EAc9690e060a06cfe50a260d491afd15</code><br><strong>地图<code>JS</code>部分写法</strong>：</p>
-<pre><code>window.onload=function (){
-    var oBox=document.getElementById(&apos;box&apos;);
-      if(navigator.geolocation){
-          navigator.geolocation.getCurrentPosition(function (ev){
-              //生成地图
-              var map=new BMap.Map(&apos;box&apos;);
-              //设置中心点 以及缩放
-              var point=new BMap.Point(ev.coords.longitude,ev.coords.latitude);
-              map.centerAndZoom(point,15);
-              //添加标注
-              var marker=new BMap.Marker(point);
-              map.addOverlay(marker);
-          },function (){
-              alert(&apos;获取失败&apos;);
-          });
-      }else{
-          alert(&apos;您的设备不支&apos;);
-      }
-  };
+<li><p><strong>数组相关的小方法：</strong></p>
+<ol>
+<li><p>添加：</p>
+<pre><code>1. arr.push() 在后面添加一个
+&lt;script&gt;
+    var arr=[1,2,3,4];
+        arr.push(5);//从后面添加一个
+        alert(arr)
+&lt;/script&gt;
+2. arr.unshift() 在前面添加一个
+&lt;script&gt;
+    var arr=[1,2,3,4];
+        arr.unshift(5);//从前面添加一个
+        alert(arr)
+&lt;/script&gt;
 </code></pre></li>
-<li><p><strong>多线程</strong>——<code>webWorker</code></p>
-<p> 1:单线程：前一个操作没做完，后一个没发开始<br> 2:多线程：可以同时进行多个操作. 好处：充分利用cpu资源</p>
-<p> 主线程：加载页面，渲染，css渲染，jsDOM树生成<br> 子线程：由webWorker创建出，进行一些计算</p>
-<pre><code>创建子线程
-    var oW=new Worker(&apos;文件名&apos;);
-给子级传数据
-    oW.postMessage(data);
-子级接收数据
-    this.onmessage=function (ev){
-        ev.data         接收到的数据
-        给父级传数据
-        this.postMessage(ev.data+5);
-    };
-父级接收
-    oW.onmessage=function (ev){
-        ev.data
-    };
-子线程里面不能操以下两个东西
-    DOM
-    BOM
-子线程里面不能再去创建子线程
-不能跨域
-主线程和子线程之间数据不是共享，每次都是复制一份数据
-
-结束子线程操作：oW.terminate();
+<li><p>删除：</p>
+<pre><code>arr.pop()  在后面删除一个
+&lt;script&gt;
+    var arr=[1,2,3,4];
+        arr.pop();//后面删除一个
+        alert(arr)
+&lt;/script&gt;
+arr.shift()  在前面删除一个
+&lt;script&gt;
+    var arr=[1,2,3,4];
+        arr.shift();//前面删除一个
+        alert(arr)
+&lt;/script&gt;
+  删除      有返回值  返回的是被删掉的东西
 </code></pre></li>
-<li><p><strong>webSql ——前端数据库</strong></p>
-<p> 数据库安全吗？ 数据库一点都不安全<br> webSql数据库 大小5M</p>
-</li>
-<li><p>开启一个数据</p>
-<pre><code>var db=openDatabase(数据库名,数据库版本,数据库描述,数据库申请容量);
+<li><p>万能的操作:<br>  arr.splice() 会改变原数组 有返回值<br> a. 删除</p>
+<pre><code>arr.splice(开始的位置,删除的个数) 
+&lt;script&gt;
+    var arr=[1,2,3,4,5];
+        arr.splice(0,3);
+        alert(arr);
+&lt;/script&gt;
+</code></pre><p> b.插入</p>
+<pre><code> arr.splice(开始的位置,0,要插入的东西1,要插入的东西2,要插入的东西3) 
+&lt;script&gt;
+    var arr=[1,2,3,4,5];
+        arr.splice(5,0,6,7);
+        alert(arr);
+&lt;/script&gt;
+</code></pre><p> c. 替换</p>
+<pre><code>arr.splice(开始的位置,长度,要替换的东西)
+&lt;script&gt;
+   var arr=[1,2,3,4,5];
+       arr.splice(1,2,&apos;a&apos;,&apos;b&apos;);
+       alert(arr);
+&lt;/script&gt;
 </code></pre></li>
-<li><p>开启事务<br>事务：原子性<br> 要么成功，要么失败</p>
+<li><p>数组转字符串：</p>
+<p>   arr.join(‘特殊的字符’)  通过特殊的字符把数组拼接成字符串<br>   有返回值  不改变原数组</p>
+   <script>
+      var arr=[1,2,3,4,5];
+          console.log(arr.join(''));//不改变原数组
+  </script>
 </li>
-<li><p>SQL语句</p>
-<blockquote>
-<p> CREATE  //创建<br> INSERT  //插入<br> SELECT  //删除</p>
-</blockquote>
-</li>
-<li><p>websql的代码写法如下：</p>
-<pre><code>var db=openDatabase(&apos;test&apos;,&apos;1.0.0&apos;,&apos;play and test&apos;,200);
-db.transaction(function (tx){
-      //tx     事务上下文
-    tx.executeSql(&apos;SELECT * FROM news&apos;,[],function (tx,result){
+<li><p>数组连接：</p>
+<pre><code>arr.concat()     arr.concat(arr1,arr2)
+&lt;script&gt;
+    var  arr=[1,2,3];
+    var  arr1=[4,5,6];
+    var  arr2=[7,8,9];
+    console.log(arr.concat(arr1,arr2));
+&lt;/script&gt;
+</code></pre></li>
+<li><p>数组反转：</p>
+<pre><code>arr.reverse() 
+&lt;script&gt;
+    var  arr=[1,2,3];
+        alert(arr.reverse())
+&lt;/script&gt;
+</code></pre></li>
+<li><p>数组排序：</p>
+<pre><code>arr.sort() 
+&lt;script&gt;
+    var arr=[1,2,4,3];
+        alert(arr.sort())// sort方法用于对数组的元素进行排序
+&lt;/script&gt;
+不能排数字，数字的排序，也会变成字符串的排序拿两个东西给人家。人家排序，告诉你结果
 
-         document.write(&apos;&lt;ul&gt;&apos;);
-
-           for(var i=0; i&lt;result.rows.length; i++){
-            document.write(&apos;&lt;li&gt;&lt;strong&gt;&apos;+result.rows[i].user+&apos;&lt;/strong&gt;&lt;span&gt;&apos;+result.rows[i].pass+&apos;&lt;/span&gt;&lt;/li&gt;&apos;);
-            }
-
-         document.write(&apos;&lt;/ul&gt;&apos;);
-
-    },function (tx,err){
-        console.log(err);
-    };
+1. 数组排序从小到大:
+arr.sort(function(n1,n2){
+     return n1-n2;
 });
+2. 数组排序从大到小
+arr.sort(function(n1,n2){
+    return n2-n1;
+});
+
+数组，里面理论上可以存任何东西但是：建议，以后数组里面最好只存储一个类型值
+注意：数组的length可以赋值
+        arr.length=10
+</code></pre></li>
+<li><p>快速清空一个数组的三种方法：</p>
+<pre><code>1. a.arr.length=0;// 可以直接让数组的length为零
+
+2. b.arr=[];// 可以给数组一个空值
+
+3. c.arr.splice(0,arr.length);
+    d.while(arr.length){
+        arr.pop();// 或者直接删除数组
+    }
+</code></pre></li>
+<li><p>关于数组去重的两种常见方法：</p>
+<blockquote>
+<p> 数组去除重复值是面试常考内容，也是很容易用到的一个技巧，下面就几种去重的方法进行介绍。<br>首先是最常见的方法，也就是添加一个临时数组，将原数组遍历，加入临时数组，每次加入时判断待加入的元素是否存在于临时数组中，代码如下：</p>
+</blockquote>
+<pre><code>// 对数组进行去重操作，只考虑数组中元素为数字或字符串，返回一个去重后的数组
+//第一种方法，遍历，将没有的插入临时数组
+function uniqArray1(arr) {
+  var n=[];
+  for(var i=0;i&lt;arr.length;i++){
+    //如果当前项已经保存到了临时数组，则跳过，否则加入
+    if(n.indexOf(arr[i])==-1){
+      n.push(arr[i]);
+    }
+  }
+  return n;
+}
+</code></pre><blockquote>
+<p>那么还有没有更好的办法呢？可以采用哈希表的思想，在JavaScript中，对象的查找比数组下标的查找要快很多倍。所以我们可以创建一个对象专门来存放已加入临时数组的元素，那么每次加入新的元素时就可以通过查找对象来判断是否重复了，代码如下：   </p>
+</blockquote>
+<pre><code>  //第二种方法，使用哈希表
+function uniqArray2(arr){
+  var n={},//哈希表
+    r=[];//零时数组
+  for(var i=0;i&lt;arr.length;i++){
+    if(n[arr[i]]==null){//如果哈希表中没有，则添加到哈希表，且进入临时数组
+      n[arr[i]]=true;
+      r.push(arr[i]);
+    }
+  }
+  return r;
+}
 </code></pre></li>
 </ol>
-<p>6.<strong>重力感应</strong> ————需要在手机端测试</p>
-<pre><code>window.DeviceMotionEvent
-方向有：x轴 y轴 z轴
-window.addEventListener(&apos;devicemotion&apos;,function (ev){
-    var acc=ev.accelerationIncludingGravity;
-    acc.x
-    acc.y
-    acc.z
-},false);
-简单的重力感应代码：
+</li>
+<li><p><strong>关于JSON</strong></p>
+<pre><code> json:(给变量打了一个包)
+     {a:12,b:5,c:6}   ***json 键值对
+加引号是标准写法。
+     {&apos;name&apos;:value,&apos;name&apos;:value}
+主要用来装东西、传输数据
+`**跟后台交互时，json必须用标准格式。`
+</code></pre><p>  数组JSON</p>
+<pre><code>下标    数字       字符串
+length   有         没有
+循环     for/while       for...in
+</code></pre><p> JSON循环</p>
+<pre><code>for...in... json专用
+    for(var i in json){
+    //i  下标
+    //json[i] 值
+}
+添加：
+     json.a=12;   键不能重名
+删除：
+     delete json.a
+</code></pre></li>
+</ol>
 
-CSS写法代码如下：
-      div{ width:200px; height:200px; background:#ccc; position:absolute; left:50%; top:50%; 
-            margin:-100px 0 0 -100px; color:#fff; text-align:center; line-height:66px; }    
-JS写法代码如下：    
-  window.onload=function (){
-      var oDiv=document.getElementById(&apos;div1&apos;);
-      if(window.DeviceMotionEvent){
-          window.addEventListener(&apos;devicemotion&apos;,function (ev){
-              var acc=ev.accelerationIncludingGravity;
-              oDiv.innerHTML=&apos;X:&apos;+acc.x+&apos;&lt;br /&gt;Y:&apos;+acc.y+&apos;&lt;br /&gt;Z:&apos;+acc.x;
-          },false);
-      }else{
-          alert(&apos;您的设备不支持重力感应&apos;);
-      }
-  };
-</code></pre>
       
       
         <div class="page-reward">
@@ -509,13 +593,13 @@ JS写法代码如下：
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a href="/2017/04/21/关于H5基础（4）/">关于H5基础（4）</a></p>
+        <p><span>本文标题:</span><a href="/2017/04/25/关于字符串和数组/">关于字符串和数组</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
-        <p><span>发布时间:</span>2017年04月21日 - 10时19分</p>
-        <p><span>最后更新:</span>2017年04月21日 - 10时54分</p>
+        <p><span>发布时间:</span>2017年04月25日 - 10时53分</p>
+        <p><span>最后更新:</span>2017年04月25日 - 17时05分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/04/21/关于H5基础（4）/" title="关于H5基础（4）">http://yoursite.com/2017/04/21/关于H5基础（4）/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/21/关于H5基础（4）/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/04/25/关于字符串和数组/" title="关于字符串和数组">http://yoursite.com/2017/04/25/关于字符串和数组/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/04/25/关于字符串和数组/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
             <script src="/js/clipboard.min.js"></script>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
@@ -528,18 +612,9 @@ JS写法代码如下：
 
 <nav id="article-nav">
   
-    <a href="/2017/04/21/JS知识点小整合/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          JS知识点小整合
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/04/21/关于H5基础（3）/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">关于H5基础（3）</div>
+    <a href="/2017/04/22/关于cookie于Ajax/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">关于cookie于Ajax</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -550,7 +625,7 @@ JS写法代码如下：
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于H5-CSS3-4"><span class="toc-number">1.</span> <span class="toc-text">关于H5-CSS3(4)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#关于H5-CSS3"><span class="toc-number">1.1.</span> <span class="toc-text">关于H5-CSS3</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#关于字符串和数组的基础运用："><span class="toc-number">1.</span> <span class="toc-text">关于字符串和数组的基础运用：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#什么是数据类型："><span class="toc-number">1.1.</span> <span class="toc-text">什么是数据类型：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数据类型"><span class="toc-number">1.1.1.</span> <span class="toc-text">数据类型</span></a></li></ol></li></ol></li></ol>
 </div>
 <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
 
@@ -670,7 +745,7 @@ JS写法代码如下：
     
       <div class="duoshuo" id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="2017/04/21/关于H5基础（4）/" data-title="关于H5基础（4）" data-url="http://yoursite.com/2017/04/21/关于H5基础（4）/"></div>
+    <div class="ds-thread" data-thread-key="2017/04/25/关于字符串和数组/" data-title="关于字符串和数组" data-url="http://yoursite.com/2017/04/25/关于字符串和数组/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
@@ -693,13 +768,11 @@ JS写法代码如下：
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/04/21/JS知识点小整合/" title="上一篇: JS知识点小整合">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a href="/2017/04/21/关于H5基础（3）/" title="下一篇: 关于H5基础（3）">
+            <a href="/2017/04/22/关于cookie于Ajax/" title="下一篇: 关于cookie于Ajax">
                 <i class="fa fa-angle-right"></i>
             </a>
         
