@@ -29,13 +29,15 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
   
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
   <!-- 加载特效 -->
     <script src="/js/pace.js"></script>
     <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
   <script>
       var yiliaConfig = {
           rootUrl: '/',
-          fancybox: false,
+          fancybox: true,
           animate: true,
           isHome: false,
           isPost: true,
@@ -63,10 +65,6 @@
         </hgroup>
 
         
-        
-            <form>
-                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
-            </form>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -118,7 +116,7 @@
                         
                             <li><a href="/Home">博客首页</a></li>
                         
-                            <li><a href="/https:/yangzai.pub/taobao_PC/">作品展示</a></li>
+                            <li><a href="/works">作品展示</a></li>
                         
                             <li><a href="/about">留言打卡</a></li>
                         
@@ -134,6 +132,8 @@
                                 <a class="fl github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
                             
                                 <a class="fl weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                            
+                                <a class="fl QQ" target="_blank" href="#" title="QQ">QQ</a>
                             
                         </ul>
                     </nav>
@@ -191,7 +191,7 @@
                 
                     <li><a href="/Home">博客首页</a></li>
                 
-                    <li><a href="/https:/yangzai.pub/taobao_PC/">作品展示</a></li>
+                    <li><a href="/works">作品展示</a></li>
                 
                     <li><a href="/about">留言打卡</a></li>
                 
@@ -209,6 +209,8 @@
                     
                         <a class="weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
                     
+                        <a class="QQ" target="_blank" href="#" title="QQ">QQ</a>
+                    
                 </div>
             </nav>
         </header>                
@@ -223,6 +225,8 @@
     </div>
   
   <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
     
     
       <header class="article-header">
@@ -438,7 +442,7 @@ JS写法代码如下：
               
                 <div class="pay_item checked" data-id="alipay">
                   <span class="radiobox"></span>
-                  <span class="pay_logo"><img src="/img/zhifubao.jpg" alt="支付宝" /></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
                 </div>
               
               
@@ -545,63 +549,18 @@ JS写法代码如下：
 
 
 
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
 
-    <link rel="stylesheet" type="text/css" href="/css/showshare.css"></head>
-    <div id="share" class="bdsharebuttonbox">
-        <button class="share-toggle-button"><i class="share-icon fa fa-share-alt"></i>
-        </button>
-        <ul class="share-items">
-            <li class="share-item"><a href="#" class="share-button fa fa-weibo" data-cmd="tsina" title="分享到新浪微博"></a></li>
-            <li class="share-item"><a href="#" class="share-button fa fa-weixin" data-cmd="weixin" title="分享到微信"></a></li>
-            <li class="share-item"><a href="#" class="share-button fa fa-qq" data-cmd="sqq" title="分享到QQ好友"></a></li>
-            <li class="share-item"><a href="#" class="share-button fa fa-facebook" data-cmd="fbook" title="分享到Facebook"></a></li>
-            <li class="share-item"><a href="#" class="share-button fa fa-twitter" data-cmd="twi" title="分享到Twitter"></a></li>
-            <li class="share-item"><a href="#" class="share-button fa fa-linkedin" data-cmd="linkedin" title="分享到linkedin"></a></li>
-        </ul>
-    </div>
-    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="800">
-        <defs>
-            <filter id="goo">
-                <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 35 -15" result="goo" />
-                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-            </filter>
-        </defs>
-    </svg>
-    <!-- 推荐开源CDN来选取需引用的外部JS //-->
-    <script type="text/javascript" src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
-    <script src="/js/TweenMax.min.js"></script>
-    <script src="/js/TweenMax.js"></script>
-<script>
-    window._bd_share_config = {
-    common : {
-                    bdText : '',
-                    //文本内容
-                    bdDesc : 'Luuman，90后，水瓶座普通男青年！爱折腾，爱运动，更爱游离于错综复杂的编码与逻辑中，无法自拔。相信编程是一门艺术，自诩为游弋在代码里的人生。',
-                    // 描述
-                    bdUrl : 'http://luuman.github.io/',
-                    // URL地址
-                    bdPic : 'https://hexo.io/build/screenshots/spfk-2b30506937.png'
-                    // 图片信息
-                },
-        share: [{
-            "bdSize": 24
-        }]
-    }
-    with(document) 0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion=' + ~ (-new Date() / 36e5)];
-    var _gaq = _gaq || [];
-    _gaq.push(['_setAccount', 'UA-33765729-1']);
-    _gaq.push(['_setDomainName', 'chuanke.com']);
-    _gaq.push(['_trackPageview']);
-    (function() {
-        var ga = document.createElement('script');
-        ga.type = 'text/javascript';
-        ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0];
-        s.parentNode.insertBefore(ga, s);
-    })();
-</script>
+
 
 
     
@@ -760,23 +719,6 @@ JS写法代码如下：
     });
 </script>
 
-
-    <script type="text/javascript">
-      window.onload = function(){
-        document.getElementById("search").onclick = function(){
-            console.log("search")
-            search();
-        }
-      }
-      function search(){
-        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
-      }
-    </script>
 
   </div>
 </body>

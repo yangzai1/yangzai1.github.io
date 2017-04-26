@@ -25,13 +25,15 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   
   
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
   <!-- 加载特效 -->
     <script src="/js/pace.js"></script>
     <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
   <script>
       var yiliaConfig = {
           rootUrl: '/',
-          fancybox: false,
+          fancybox: true,
           animate: true,
           isHome: false,
           isPost: false,
@@ -59,10 +61,6 @@
         </hgroup>
 
         
-        
-            <form>
-                <input type="text" class="st-default-search-input search" id="search" placeholder=" Search...">
-            </form>
         
         
             <div id="switch-btn" class="switch-btn">
@@ -114,7 +112,7 @@
                         
                             <li><a href="/Home">博客首页</a></li>
                         
-                            <li><a href="/https:/yangzai.pub/taobao_PC/">作品展示</a></li>
+                            <li><a href="/works">作品展示</a></li>
                         
                             <li><a href="/about">留言打卡</a></li>
                         
@@ -130,6 +128,8 @@
                                 <a class="fl github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
                             
                                 <a class="fl weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                            
+                                <a class="fl QQ" target="_blank" href="#" title="QQ">QQ</a>
                             
                         </ul>
                     </nav>
@@ -187,7 +187,7 @@
                 
                     <li><a href="/Home">博客首页</a></li>
                 
-                    <li><a href="/https:/yangzai.pub/taobao_PC/">作品展示</a></li>
+                    <li><a href="/works">作品展示</a></li>
                 
                     <li><a href="/about">留言打卡</a></li>
                 
@@ -204,6 +204,8 @@
                         <a class="github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
                     
                         <a class="weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                    
+                        <a class="QQ" target="_blank" href="#" title="QQ">QQ</a>
                     
                 </div>
             </nav>
@@ -359,23 +361,6 @@
     });
 </script>
 
-
-    <script type="text/javascript">
-      window.onload = function(){
-        document.getElementById("search").onclick = function(){
-            console.log("search")
-            search();
-        }
-      }
-      function search(){
-        (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-        (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-        e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-        })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-        _st('install','A1Pz-LKMXbrzcFg2FWi6','2.0.0');
-      }
-    </script>
 
   </div>
 </body>
