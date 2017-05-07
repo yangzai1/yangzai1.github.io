@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript2 | 洋仔</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="12.循环:自增:
+    i=i+1;
+    i+=1;
+    i++;
+
+while(条件){
+    语句
+}">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript2">
+<meta property="og:url" content="http://yoursite.com/2017/03/21/javascript2/index.html">
+<meta property="og:site_name" content="洋仔">
+<meta property="og:description" content="12.循环:自增:
+    i=i+1;
+    i+=1;
+    i++;
+
+while(条件){
+    语句
+}">
+<meta property="og:updated_time" content="2017-05-03T05:10:36.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript2">
+<meta name="twitter:description" content="12.循环:自增:
+    i=i+1;
+    i+=1;
+    i++;
+
+while(条件){
+    语句
+}">
+  
+    <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">洋仔</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                            
+                                <a class="fl QQ" target="_blank" href="#" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JS/" style="font-size: 20px;">JS</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/juqery/" style="font-size: 10px;">juqery</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://yangzai1.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">洋仔</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">洋仔</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                    
+                        <a class="QQ" target="_blank" href="#" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-javascript2" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/21/javascript2/" class="article-date">
+      <time datetime="2017-03-21T06:28:51.000Z" itemprop="datePublished">2017-03-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript2
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="12-循环"><a href="#12-循环" class="headerlink" title="12.循环:"></a>12.循环:</h3><pre><code>自增:
+    i=i+1;
+    i+=1;
+    i++;
+
+while(条件){
+    语句
+}
+</code></pre><a id="more"></a>
+<pre><code>for(初始值;条件;自增){
+    语句
+}
+</code></pre><h3 id="13-web分离-样式（css）-结构（html）-行为（js）"><a href="#13-web分离-样式（css）-结构（html）-行为（js）" class="headerlink" title="13.web分离  样式（css）  结构（html）  行为（js）"></a>13.web分离  样式（css）  结构（html）  行为（js）</h3><h3 id="14-操作表单元素"><a href="#14-操作表单元素" class="headerlink" title="14.操作表单元素:"></a>14.操作表单元素:</h3><pre><code>获取:元素.value
+设置:元素.value=&apos;值&apos;;
+</code></pre><h3 id="15-操作非表单元素"><a href="#15-操作非表单元素" class="headerlink" title="15.操作非表单元素:"></a>15.操作非表单元素:</h3><pre><code>获取:元素.innerHTML
+设置:元素.innerHTML=&apos;内容&apos;;  
+</code></pre><h3 id="16-字符串连接"><a href="#16-字符串连接" class="headerlink" title="16.字符串连接:"></a>16.字符串连接:</h3><pre><code>**字符串不能换行
+1.换行可以   加号 拼起来
+
+2. \  每换行尾部加
+
+3. ``引号 直接加    第一个ES6的语法(${加变量})
+</code></pre><p><code>asdasd</code> 模版字符串      ${变量}  占位符</p>
+<pre><code>()提高优先级   (this.index+1)
+
+
+秘诀:两个单引号    两个加号 里面放变量
+
+字符串和数字相加  会变成字符串  字符串不会运算 
+</code></pre><h3 id="17-字符串转成数字"><a href="#17-字符串转成数字" class="headerlink" title="17.字符串转成数字"></a>17.字符串转成数字</h3><pre><code>显式类型转换:   强制类型转换
+parseInt(字符串)          把字符串转变成整数
+        &apos;12.5px&apos;      12
+parseFloat(字符串)          把字符串转变成小数(浮点数)
+        &apos;12.5px&apos;      12.5
+Number(字符串)         把字符串转变成数字  比较严格。
+        &apos;12.5px&apos;          非数字是NaN（null空是数字）
+isNaN(x) 函数用于检查其参数是否是非数字值。
+如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值）返回的值就是 true。
+如果 x 是其他值,则返回 false。     
+</code></pre><h3 id="18-str-charAt-下标-获取某一位置的字符（ie自带标签"><a href="#18-str-charAt-下标-获取某一位置的字符（ie自带标签" class="headerlink" title="18.str.charAt(下标) 获取某一位置的字符（ie自带标签)"></a>18.str.charAt(下标) 获取某一位置的字符（ie自带标签)</h3><h3 id="19-数据类型"><a href="#19-数据类型" class="headerlink" title="19.数据类型:"></a>19.数据类型:</h3><pre><code>基本数据类型(不可分)
+string               字符串 
+number                数字     
+boolean                 布尔值  
+undefined            未定义 
+object              对象(可分的)   object里面可以包数组也可以包对象
+function                函数 ?有争议        
+global   **        ES6  顶层对象
+</code></pre><h3 id="20-typeof-检测数据类型"><a href="#20-typeof-检测数据类型" class="headerlink" title="20.typeof  检测数据类型"></a>20.typeof  检测数据类型</h3><h3 id="21-undefined什么时候会出现？"><a href="#21-undefined什么时候会出现？" class="headerlink" title="21.undefined什么时候会出现？"></a>21.undefined什么时候会出现？</h3><pre><code>1.变量声明了，但是没有赋值。    
+2.访问一个不存在的属性。    
+3.当参数没有值。
+</code></pre><p> 4.函数里return没有返回值。</p>
+<p>###22.隐式转换:</p>
+<pre><code>-   *   /   % ==   &gt;&lt;        隐式转换，尽量别用。
+
+alert(&apos;10&apos;*2)   (&apos;10&apos;+2)    加号 做了字符串 拼接
+</code></pre><h3 id="23-作用域："><a href="#23-作用域：" class="headerlink" title="23.作用域："></a>23.作用域：</h3><pre><code>局部变量：只能在函数内部使用
+全局变量：在哪里都能使用
+闭包：子函数可以去使用父函数局部变量（如果函数内部的变量和全局同名，不会覆盖）
+</code></pre><h3 id="24-匈牙利命名法-前面有类型前缀后面跟单词首字母大写"><a href="#24-匈牙利命名法-前面有类型前缀后面跟单词首字母大写" class="headerlink" title="24.匈牙利命名法:前面有类型前缀后面跟单词首字母大写"></a>24.匈牙利命名法:前面有类型前缀后面跟单词首字母大写</h3><pre><code>**必须要遵守
+    o           object             oBtn                一个对象
+    a           array                aBtn                 多个东西
+   可以遵守
+    i           int                iNum         整数
+    s           string            sName         字符串
+    b           boolean            bOk                 布尔值
+</code></pre><h3 id="25-return：返回值"><a href="#25-return：返回值" class="headerlink" title="25.return：返回值"></a>25.return：返回值</h3><pre><code>1.可以返回任何东西
+2.阻断后面的代码执行    
+</code></pre><h3 id="26-什么是真-什么是假"><a href="#26-什么是真-什么是假" class="headerlink" title="26.什么是真 | 什么是假"></a>26.什么是真 | 什么是假</h3><pre><code>真：true        非空对象        非0对象        非空字符串
+假：false        0        &apos;&apos;    null        undefined    NaN
+</code></pre><h3 id="27-获取行间样式：obj-style-xxx"><a href="#27-获取行间样式：obj-style-xxx" class="headerlink" title="27.获取行间样式：obj.style.xxx"></a>27.获取行间样式：obj.style.xxx</h3><pre><code>获取非行间样式（生效的样式）
+IE（低级浏览器）    obj.currentStyle.样式
+
+IE9+ chrome FF（高级浏览器）    getComputedStyle(obj,false).样式
+
+if(obj.currentStyle){
+          obj.currentStyle.样式
+  }else{
+          getComputedStyle(obj,false).样式
+       }
+
+条件使用的原因    未定义的属性undefind    未定义的函数报错  
+</code></pre><h3 id="28-随机数"><a href="#28-随机数" class="headerlink" title="28.随机数"></a>28.随机数</h3><pre><code>Math.random()  0-1的随机数不包括
+封装随机数
+function rnd(m.n){
+     return    parseInt(Math.random()*(m-n))+n;
+}
+</code></pre><h3 id="29-eval-注入攻击"><a href="#29-eval-注入攻击" class="headerlink" title="29.eval:注入攻击"></a>29.eval:注入攻击</h3><pre><code>eval把字符串解析成js能理解的程序
+</code></pre><h3 id="30-运算符"><a href="#30-运算符" class="headerlink" title="30.运算符:"></a>30.运算符:</h3><pre><code>算术运算：+ - * /
+莫  %  取余 
+</code></pre><h3 id="31-赋值运算符"><a href="#31-赋值运算符" class="headerlink" title="31.赋值运算符"></a>31.赋值运算符</h3><pre><code>=    +=     -=    *=    /=    %=
+</code></pre><h3 id="32-比较运算符"><a href="#32-比较运算符" class="headerlink" title="32.比较运算符"></a>32.比较运算符</h3><pre><code>&gt;     &lt;     &gt;=    &lt;=
+==     != 
+===    全等
+!==     不全等
+=         赋值
+==             判断是否相等，只要值一样就ok
+===          判断是否全等，值要一样，类型也要一样。
+</code></pre><h3 id="33-逻辑运算符"><a href="#33-逻辑运算符" class="headerlink" title="33.逻辑运算符"></a>33.逻辑运算符</h3><pre><code>&amp;&amp;         与（并且）    两边的条件必须都满足才算真的。
+||         或（或者）    两边的条件满足一个就是真的。
+!         非（取反） 
+</code></pre><h3 id="34-arr-push-往数组最后面添加"><a href="#34-arr-push-往数组最后面添加" class="headerlink" title="34.arr.push  往数组最后面添加"></a>34.arr.push  往数组最后面添加</h3><h3 id="35-找数组里面的重复的"><a href="#35-找数组里面的重复的" class="headerlink" title="35.找数组里面的重复的"></a>35.找数组里面的重复的</h3><pre><code>function findInArray(arr,aa){
+     for(var i=0; i&lt;arr.length; i++){
+         if(arr[i]==aa){
+                return trun;
+              }
+          }
+                return false;
+     }
+</code></pre>
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/21/javascript2/">javascript2</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
+        <p><span>发布时间:</span>2017年03月21日 - 14时28分</p>
+        <p><span>最后更新:</span>2017年05月03日 - 13时10分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/21/javascript2/" title="javascript2">http://yoursite.com/2017/03/21/javascript2/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/21/javascript2/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/03/21/javascript3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          javascript3
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/21/javascript/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#12-循环"><span class="toc-number">1.</span> <span class="toc-text">12.循环:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-web分离-样式（css）-结构（html）-行为（js）"><span class="toc-number">2.</span> <span class="toc-text">13.web分离  样式（css）  结构（html）  行为（js）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-操作表单元素"><span class="toc-number">3.</span> <span class="toc-text">14.操作表单元素:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-操作非表单元素"><span class="toc-number">4.</span> <span class="toc-text">15.操作非表单元素:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-字符串连接"><span class="toc-number">5.</span> <span class="toc-text">16.字符串连接:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#17-字符串转成数字"><span class="toc-number">6.</span> <span class="toc-text">17.字符串转成数字</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#18-str-charAt-下标-获取某一位置的字符（ie自带标签"><span class="toc-number">7.</span> <span class="toc-text">18.str.charAt(下标) 获取某一位置的字符（ie自带标签)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#19-数据类型"><span class="toc-number">8.</span> <span class="toc-text">19.数据类型:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#20-typeof-检测数据类型"><span class="toc-number">9.</span> <span class="toc-text">20.typeof  检测数据类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#21-undefined什么时候会出现？"><span class="toc-number">10.</span> <span class="toc-text">21.undefined什么时候会出现？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#23-作用域："><span class="toc-number">11.</span> <span class="toc-text">23.作用域：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#24-匈牙利命名法-前面有类型前缀后面跟单词首字母大写"><span class="toc-number">12.</span> <span class="toc-text">24.匈牙利命名法:前面有类型前缀后面跟单词首字母大写</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#25-return：返回值"><span class="toc-number">13.</span> <span class="toc-text">25.return：返回值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#26-什么是真-什么是假"><span class="toc-number">14.</span> <span class="toc-text">26.什么是真 | 什么是假</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#27-获取行间样式：obj-style-xxx"><span class="toc-number">15.</span> <span class="toc-text">27.获取行间样式：obj.style.xxx</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#28-随机数"><span class="toc-number">16.</span> <span class="toc-text">28.随机数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#29-eval-注入攻击"><span class="toc-number">17.</span> <span class="toc-text">29.eval:注入攻击</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#30-运算符"><span class="toc-number">18.</span> <span class="toc-text">30.运算符:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#31-赋值运算符"><span class="toc-number">19.</span> <span class="toc-text">31.赋值运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#32-比较运算符"><span class="toc-number">20.</span> <span class="toc-text">32.比较运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#33-逻辑运算符"><span class="toc-number">21.</span> <span class="toc-text">33.逻辑运算符</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#34-arr-push-往数组最后面添加"><span class="toc-number">22.</span> <span class="toc-text">34.arr.push  往数组最后面添加</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#35-找数组里面的重复的"><span class="toc-number">23.</span> <span class="toc-text">35.找数组里面的重复的</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/03/21/javascript2/" data-title="javascript2" data-url="http://yoursite.com/2017/03/21/javascript2/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/03/21/javascript3/" title="上一篇: javascript3">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/03/21/javascript/" title="下一篇: javascript">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/25/关于字符串和数组/">关于字符串和数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于cookie于Ajax/">关于cookie于Ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于HTML简单理解与应用/">关于HTML简单理解与应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于JQuery的一些简单用法/">关于JQuery的一些简单用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于JQuery一些东西/">关于JQuery一些东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/JS知识点小整合/">JS知识点小整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（4）/">关于H5基础（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（3）/">关于H5基础（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（2）/">关于H5基础（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/关于H5基础（1）/">关于H5（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/关于Node/">关于Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/angular/">angular</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/ES6/">ES6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/HTML-CSS/">HTML/CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript5/">javascript5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript4/">javascript4</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript3/">javascript3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript2/">javascript2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript/">javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/20/juqery/">juqery</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/我的第一次文章/">我的第一次文章</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 洋仔
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

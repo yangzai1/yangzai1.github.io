@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ES6 | 洋仔</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ES6：ES6 不是什么新语言，也不是新框架，它就是原生 JS，
+只不过是升过级的JS的一些写法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6">
+<meta property="og:url" content="http://yoursite.com/2017/03/25/ES6/index.html">
+<meta property="og:site_name" content="洋仔">
+<meta property="og:description" content="ES6：ES6 不是什么新语言，也不是新框架，它就是原生 JS，
+只不过是升过级的JS的一些写法。">
+<meta property="og:updated_time" content="2017-05-03T05:43:20.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6">
+<meta name="twitter:description" content="ES6：ES6 不是什么新语言，也不是新框架，它就是原生 JS，
+只不过是升过级的JS的一些写法。">
+  
+    <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">洋仔</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                            
+                                <a class="fl QQ" target="_blank" href="#" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JS/" style="font-size: 20px;">JS</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/juqery/" style="font-size: 10px;">juqery</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://yangzai1.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">洋仔</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">洋仔</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                    
+                        <a class="QQ" target="_blank" href="#" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-ES6" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/25/ES6/" class="article-date">
+      <time datetime="2017-03-25T10:25:13.000Z" itemprop="datePublished">2017-03-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ES6/">ES6</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="ES6："><a href="#ES6：" class="headerlink" title="ES6："></a>ES6：</h1><pre><code>ES6 不是什么新语言，也不是新框架，它就是原生 JS，
+只不过是升过级的JS的一些写法。
+</code></pre><a id="more"></a>
+<p>###1.let：定义变量<br>        特点：<br>            1）支持块作用域<br>            2）不允许在相同作用域重复定义<br>        块作用域：<br>            {}      let<br>            以前： 函数作用域</p>
+<h3 id="2-const-定义常量"><a href="#2-const-定义常量" class="headerlink" title="2.const: 定义常量"></a>2.const: 定义常量</h3><pre><code>常量： 一经定义，以后不可以再改变
+正是因为这个特性，要求常量在定义时，必须赋初始值，否则以后就没机会了。
+通常：约定，常量的名字全用大写字母
+const PI = 3.14159265;
+</code></pre><h3 id="3-字符串"><a href="#3-字符串" class="headerlink" title="3.字符串"></a>3.字符串</h3><pre><code>let str = ``;  //反单引号
+使用``来定义字符串的话，就可以用字符串模板： ${变量}
+</code></pre><h3 id="4-解构赋值"><a href="#4-解构赋值" class="headerlink" title="4.解构赋值"></a>4.解构赋值</h3><pre><code>//写法1： √
+    var a = 10;
+    var b = 12;
+    var c = 20;
+//写法2： √
+var a=10,b=12,c=20;
+概念：赋值等号 左边的结构和右边一模一样。
+[a,b,c] = [10,12,20]; //a = 10,b=12,c=20        
+[a,[b,e],c] = [100,[200,300],400];
+[a,{f,g},d]=[12,{90,98},4]  ×
+[a,{f,g},d]=[12,{f:90,g:98},4]   √
+let [a,{f,g},d]=[12,{f=90,g=98},4];   ×
+如果在解构赋值时，碰到json格式，那么右边必须是一个合法的json
+并且，json中的每一项名字是一一对应的，和顺序无关
+应用1：
+    用于函数的json参数初始化
+    function sum({a=0,b=0} = {}){
+        a++;
+        b++;
+        return a+b;
+    }
+</code></pre><h3 id="5-不定参数、扩展参数-…"><a href="#5-不定参数、扩展参数-…" class="headerlink" title="5.不定参数、扩展参数  …"></a>5.不定参数、扩展参数  …</h3><pre><code>原来：arguments
+现在： ...
+...args  是一个真正的数组。
+
+例1：代替arguments
+    function sum(...args)
+例2：扩展参数的作用
+    function sum(a,b,...agrs){
+        //args   除了a和b之外，其它参数的一个数组
+    }
+    ****...args  必须放在所有参数的最后
+例3：复制数组
+    1）循环每一项来复制
+    2）var arr2 = [...arr1];  不是引用
+    3）Array.from(arr1)  //不兼容IE  不是引用
+</code></pre><h3 id="6-for-of-循环"><a href="#6-for-of-循环" class="headerlink" title="6.for - of 循环"></a>6.for - of 循环</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">for</div><div class="line">while</div><div class="line">for...in</div><div class="line">for(var name of 要循环的东西)&#123;</div><div class="line">	</div><div class="line">&#125;</div><div class="line">要循环的东西，可以是数组，但是不能是json</div><div class="line">for-of循环，  不能用于循环json</div></pre></td></tr></table></figure>
+<h3 id="7、数据格式-map"><a href="#7、数据格式-map" class="headerlink" title="7、数据格式   map"></a>7、数据格式   map</h3><pre><code>    数据格式：
+        1）普通变量  var a = 12;
+        2）数组     var arr = [11,22];
+        3）JSON   var json = {name:1,age:2};
+        4）map
+    map: 和json非常像 的一种新的数据格式(键/值 对) 
+    1） 怎么弄一个map出来
+            map 是js中的一个对象 
+        var map = new Map();
+    2） 增加内容
+        map.set(&apos;key&apos;,&apos;value&apos;);
+            例：  
+                var map = new Map();
+                map.set(&apos;name&apos;,&apos;小红&apos;);
+                map.set(&apos;age&apos;,18);
+    3）获取内容    
+        map.get(&apos;key&apos;);
+        例：  
+            //建一个新对象
+            var map = new Map();
+            //设置值
+            map.set(&apos;name&apos;,&apos;小红&apos;);
+            map.set(&apos;age&apos;,18);
+            //获取值
+            map.get(&apos;name&apos;); -- 小红
+    4）删除一项
+        map.delete(&apos;key&apos;);
+用for-of循环，来循环map
+    1） 普通循环
+        for(var item of map){
+            item -&gt; 数组 
+                item[0]是map中的key
+                item[1] -&gt; map中的value
+        }
+    2）利用解构赋值的形式
+        for(var [key,value] of map ){
+              alert(key);
+              alert(value);
+        }
+    3）循环map 的 entries()
+    for(let item of map.entries())
+
+    *默认情况下就是循环的entries，也就是说，如果不写entries()，结果是一样的
+
+    4）只想循环map中的key
+        for(var item of map.keys() )
+         只想循环map中的value
+        for(var item of map.values())
+    for-of循环数组 ：  entries()   keys()  values()
+        entries():
+        item -&gt;  [索引,值]
+        keys():
+        item -&gt;  索引
+
+    values():  
+        item -&gt;  值
+循环map对象时：
+    map.entries()
+    map
+    以上两种写法是一个效果，得到的都是map对象的每一个item，包括key和value，是一个数组形式
+循环数组：
+    arr.entries()
+    得到的是数组中每一项：  [索引值,值]
+    arr.values()  ——  报错，不支持
+arr.keys() —— 得到的就是数组的索引值
+</code></pre><h3 id="8-函数"><a href="#8-函数" class="headerlink" title="8.函数"></a>8.函数</h3><pre><code>原来：
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">function show()&#123;...&#125;</div><div class="line">var show = new Function();</div><div class="line">show(); </div><div class="line">show(a);</div><div class="line">show(a,b);</div></pre></td></tr></table></figure>
+<pre><code>现在：
+    箭头函数：  =&gt;
+    省略了function，加了一个箭头=&gt;
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">1:</div><div class="line">	function show()&#123;</div><div class="line">		alert(1);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	let show = () =&gt; &#123;</div><div class="line">		alert(1);</div><div class="line">	&#125;;</div><div class="line">2:</div><div class="line">	function show(a)&#123;alert(a);&#125;</div><div class="line">	</div><div class="line">	let show = (a)=&gt;&#123;</div><div class="line">		alert(a);</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<pre><code>  箭头函数，只是在函数定义时，写法有区别，在调用的时候，和原来一样。
+
+
+*箭头函数里的this，固定化 自己没有去外边找  最大this是window
+*箭头函数里arguments不能用了
+*当参数正好有一个的时候，( ) 可以省略
+*当函数里面只有一句话，而且正好是return的时候，{ }和里面的return 可以省略
+</code></pre><h3 id="9-JSON-有了简写形式"><a href="#9-JSON-有了简写形式" class="headerlink" title="9.JSON 有了简写形式"></a>9.JSON 有了简写形式</h3><pre><code>当json中的name和变量名一模一样时，可以简写为以下形式：
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">	var a = 12;</div><div class="line">	var b = 18;</div><div class="line">var json = &#123;a:a,b:2&#125;;</div><div class="line">	json.a -&gt; 12</div><div class="line">	json.b -&gt; 18</div><div class="line">	var a = 12;</div><div class="line">	var b = 18;</div><div class="line">var json = &#123;a,b&#125;;</div></pre></td></tr></table></figure>
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/25/ES6/">ES6</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
+        <p><span>发布时间:</span>2017年03月25日 - 18时25分</p>
+        <p><span>最后更新:</span>2017年05月03日 - 13时43分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/25/ES6/" title="ES6">http://yoursite.com/2017/03/25/ES6/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/25/ES6/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/03/31/angular/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          angular
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/21/HTML-CSS/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML/CSS</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ES6："><span class="toc-number">1.</span> <span class="toc-text">ES6：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-const-定义常量"><span class="toc-number">1.0.1.</span> <span class="toc-text">2.const: 定义常量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-字符串"><span class="toc-number">1.0.2.</span> <span class="toc-text">3.字符串</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-解构赋值"><span class="toc-number">1.0.3.</span> <span class="toc-text">4.解构赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-不定参数、扩展参数-…"><span class="toc-number">1.0.4.</span> <span class="toc-text">5.不定参数、扩展参数  …</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-for-of-循环"><span class="toc-number">1.0.5.</span> <span class="toc-text">6.for - of 循环</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7、数据格式-map"><span class="toc-number">1.0.6.</span> <span class="toc-text">7、数据格式   map</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-函数"><span class="toc-number">1.0.7.</span> <span class="toc-text">8.函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-JSON-有了简写形式"><span class="toc-number">1.0.8.</span> <span class="toc-text">9.JSON 有了简写形式</span></a></li></ol></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/03/25/ES6/" data-title="ES6" data-url="http://yoursite.com/2017/03/25/ES6/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/03/31/angular/" title="上一篇: angular">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/03/21/HTML-CSS/" title="下一篇: HTML/CSS">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/25/关于字符串和数组/">关于字符串和数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于cookie于Ajax/">关于cookie于Ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于HTML简单理解与应用/">关于HTML简单理解与应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于JQuery的一些简单用法/">关于JQuery的一些简单用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于JQuery一些东西/">关于JQuery一些东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/JS知识点小整合/">JS知识点小整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（4）/">关于H5基础（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（3）/">关于H5基础（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（2）/">关于H5基础（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/关于H5基础（1）/">关于H5（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/关于Node/">关于Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/angular/">angular</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/ES6/">ES6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/HTML-CSS/">HTML/CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript5/">javascript5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript4/">javascript4</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript3/">javascript3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript2/">javascript2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript/">javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/20/juqery/">juqery</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/我的第一次文章/">我的第一次文章</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 洋仔
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

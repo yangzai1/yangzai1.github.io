@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>HTML/CSS | 洋仔</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="一、标签分类：
+       1.行内标签：
+        span,a,i,em,b,strong,
+        1)共处一行
+        2)不支持宽高
+        3)受空格和回车影响
+    2.块元素
+        p,div,h1-h6,ul,ol,dl,li,dt,dd
+        1)独占一行
+        2)支持宽高
+        3)不受空格和回车影响">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML/CSS">
+<meta property="og:url" content="http://yoursite.com/2017/03/21/HTML-CSS/index.html">
+<meta property="og:site_name" content="洋仔">
+<meta property="og:description" content="一、标签分类：
+       1.行内标签：
+        span,a,i,em,b,strong,
+        1)共处一行
+        2)不支持宽高
+        3)受空格和回车影响
+    2.块元素
+        p,div,h1-h6,ul,ol,dl,li,dt,dd
+        1)独占一行
+        2)支持宽高
+        3)不受空格和回车影响">
+<meta property="og:updated_time" content="2017-05-03T05:43:12.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML/CSS">
+<meta name="twitter:description" content="一、标签分类：
+       1.行内标签：
+        span,a,i,em,b,strong,
+        1)共处一行
+        2)不支持宽高
+        3)受空格和回车影响
+    2.块元素
+        p,div,h1-h6,ul,ol,dl,li,dt,dd
+        1)独占一行
+        2)支持宽高
+        3)不受空格和回车影响">
+  
+    <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">洋仔</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                            
+                                <a class="fl QQ" target="_blank" href="#" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JS/" style="font-size: 20px;">JS</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/juqery/" style="font-size: 10px;">juqery</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://yangzai1.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">洋仔</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">洋仔</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                    
+                        <a class="QQ" target="_blank" href="#" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-HTML-CSS" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/21/HTML-CSS/" class="article-date">
+      <time datetime="2017-03-21T13:57:04.000Z" itemprop="datePublished">2017-03-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      HTML/CSS
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML/">HTML</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="一、标签分类："><a href="#一、标签分类：" class="headerlink" title="一、标签分类："></a>一、标签分类：</h3><hr>
+<pre><code>       1.行内标签：
+        span,a,i,em,b,strong,
+        1)共处一行
+        2)不支持宽高
+        3)受空格和回车影响
+    2.块元素
+        p,div,h1-h6,ul,ol,dl,li,dt,dd
+        1)独占一行
+        2)支持宽高
+        3)不受空格和回车影响
+    3.行内块
+        img,input
+        1)共处一行
+        2)支持宽高
+        3)受空格和回车影响
+元素转换：
+    1)行内元素转成块元素    display:block;
+    2)块元素转成行内元素    display:inline;(尽量不用)
+    3)转行内块            display:inline-block;
+书写规范：
+    1)双标签必须闭合
+    2)单标签合理闭合(/)
+    3)合理嵌套和缩进
+        a.块元素可以包块和行内(p只能包行内，不能包块)
+        b.行内元素可以包行内(不要包自己)*(a可以包块,一般把a转化成块)*
+    4)所有字母都小写
+</code></pre><a id="more"></a>
+<h3 id="二、样式："><a href="#二、样式：" class="headerlink" title="二、样式："></a>二、样式：</h3><hr>
+<pre><code>    1)行内        &lt;div style=&quot;&quot;&gt;&lt;/div&gt;
+    2)内联样式    &lt;style&gt;&lt;/style&gt;
+    3)外联样式    &lt;link href=&quot;&quot; rel=&quot;stylesheet&quot;
+常见样式：width,height,border
+border:(重点)
+    1)合写：border:1px solid red;
+    2)分写：border-width:粗细
+            border-style:solid/dashed/dotted
+            border-color:颜色
+        border-top:上
+        border-right:右
+        border-bottom:下
+        border-left:左
+颜色表示法：
+    1)单词    red/blue/pink/yellow/green/black/gray
+    2)十六进制 a-f 0-9 
+            #000000;  #000; (缩写)
+    3)rgb(0-255,0-255,0-255)
+</code></pre><h3 id="三、背景样式"><a href="#三、背景样式" class="headerlink" title="三、背景样式"></a>三、背景样式</h3><hr>
+<pre><code>    background
+        分写：background-color:
+              background-image:url();
+              background-repeat:no-repeat/repeat-x/repeat-y
+              background-position:
+                  1)百分比
+                  2)像素 x轴 y轴
+                  3)单词 left/right/center/top/bottom
+                  4)混合 区分顺序
+        合写：background:url() no-repeat 0 0 #ccc;
+文字相关样式：
+    font-size:字体大小
+    font-family:字体类型  Microsoft Yahei
+    font-weight:bold/normal;字体加粗/不加粗
+    font-style:italic/normal;字体倾斜/不倾斜
+    color:颜色
+    合写：font: bold italic 30px/60px &apos;宋体&apos;；
+文本水平对齐方式：
+    text-align:center/left/right;
+    行高：line-height:height;
+    text-decoration:overline/line-through/underline/none;
+em单位
+    1)text-indent:2em;
+    2)text-indent:-999; 隐藏logo上文字
+    3)限制一行几个字符
+文字不折行
+    white-space:nowrap;    不折行
+    overflow:hidden;    溢出隐藏
+    text-overflow:ellipsis;    省略号
+</code></pre><h3 id="四、盒子模型"><a href="#四、盒子模型" class="headerlink" title="四、盒子模型"></a>四、盒子模型</h3><hr>
+<pre><code>    宽：width+padding*2+border*2
+    高: height+padding*2+border*2
+padding:
+    1个值    上下左右
+    2个值    上下 左右
+    3个值    上 左右 下
+    4个值    上右下左
+方向:
+    padding-left/right/top/bottom;
+margin(同上)
+margin负值-----热门单击游戏
+关于margin：
+    1)拖拽
+        解决：
+            给父级加overflow:hidden;
+            给父级加border;
+            给父级加padding；
+    2)塌陷    取得是margin-bottom或margin-top的最大值
+</code></pre><h3 id="五、清除浏览器默认样式"><a href="#五、清除浏览器默认样式" class="headerlink" title="五、清除浏览器默认样式"></a>五、清除浏览器默认样式</h3><hr>
+<pre><code>*{padding:0; margin:0; font-size:12px;}
+ul,ol,li,dl,dt,dd{ padding:0; margin:0;}
+li{ list-style:none;}
+h1,h2,h3,h4,h5,h6{ font-weight:normal;}
+a{ text-decoration:none; color:#000;}
+i,em{ font-style:normal;}
+b,strong{ font-weight:normal;}
+.clearfix:after{ display:block; content:&apos;&apos;; clear:both;}
+.clearfix{zoom:1;}
+.fl{ float:left;}
+.fr{ float:right;}
+img{display:block;}或者img{vertical-align:top;}
+a img{ border:none;}
+input,textarea{outline:none;}
+table{ border-collapse:collapse;}
+th,td{ border:1px solid #ccc; padding:0;}
+</code></pre><h3 id="六、属性："><a href="#六、属性：" class="headerlink" title="六、属性："></a>六、属性：</h3><hr>
+<pre><code>1)共有属性
+    title    鼠标移入时右下角显示
+2)私有属性
+    a
+        href=&quot;&quot;
+    img
+        src=&quot;&quot;
+        width=&quot;&quot;
+        height=&quot;&quot;
+        border=&quot;&quot;
+        alt=&quot;&quot;    挂了
+</code></pre><h3 id="七、选择器："><a href="#七、选择器：" class="headerlink" title="七、选择器："></a>七、选择器：</h3><hr>
+<pre><code>1)p{}
+2).class{}
+3)#box{}
+4)*{}
+优先级 *&lt;标签&lt;.class&lt;#box&lt;行内
+5)群组 div,p,.box{}
+6)嵌套 .box p{}
+7)筛选 p.box{}
+8)伪类
+    a:link{}  默认
+    a:visited{} 访问之后
+    a:hover{} 鼠标悬停
+    a:active{} 按下
+</code></pre><h3 id="八、浮动"><a href="#八、浮动" class="headerlink" title="八、浮动:"></a>八、浮动:</h3><hr>
+<pre><code>float:left/right;
+    作用：
+    放在一行
+特点：
+    1)脱离文档流(半脱离)
+    2)改变元素类型，使其支持宽高
+    3)顶对齐
+    4)文本环绕
+三要素(重点)
+    1)给父级清浮动
+    2)同级浮动，其他也要浮动
+    3)浮动元素尽量设置宽高
+清除浮动：
+    1)overflow:hidden;
+    2)在浮动元素后边加一个空的块元素
+        &lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;
+    3).clearfix:after{display:block; content:&apos;&apos;; clear:both;}
+       .clearfix{zoom:1;}
+</code></pre><h3 id="九、定位："><a href="#九、定位：" class="headerlink" title="九、定位："></a>九、定位：</h3><hr>
+<pre><code>1.绝对定位
+    position:absolute; left:0; right:0;
+    特点：
+        1)完全脱离文档流
+        2)改变元素类型支持宽高
+    参照物：
+        1)当父级没有定位的时候，参照物是body
+        2)当父级有定位的时候，参照物是父级
+2.相对定位
+    position:relative;
+    特点：
+        1)不脱离文档流
+        2)不改变元素类型
+    参照物：
+        本身原来的位置---自己
+3.固定定位
+    position:fixed;
+    特点:
+        1)完全脱离文档流
+        2)改变元素类型，支持宽高
+    参照物：
+        屏幕可视区
+层级：
+    z-index:999;
+    普通元素&lt;浮动元素&lt;定位元素&lt;定位+z-index;
+    *z-index 只能应用在定位元素上
+    *父级的层级永远不会发生变化
+让一个已知宽高的div垂直水平居中
+    div{
+        width:300px;
+        height:300px;
+        position:absolute;
+        left:50%;
+        top:50%;
+        margin-left:-150px;
+        margin-top:-150px;
+    }
+让一个图片在块里面垂直水平居中
+    &lt;div&gt;
+        &lt;img src=&quot;&quot; /&gt;
+        &lt;span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+    div{
+        width:300px;
+        height:500px;
+        border:1px solid red;
+        text-align:center;
+    }
+    img{
+        vertical-align:middle;
+    }
+    span{
+        display:inline-block;
+        vertical-align:middle;
+        height:100%;
+    }
+雪碧图/精灵图/图片拼接技术
+</code></pre><h3 id="十、透明层"><a href="#十、透明层" class="headerlink" title="十、透明层"></a>十、透明层</h3><hr>
+<pre><code>opacity:0.3;                0-1;
+filter:alpha(opacity:30);    0-100
+*必须写兼容 filter:---
+*透明层非常强悍，可以把里面的东西全部变透明
+</code></pre><h3 id="十一、常见兼容"><a href="#十一、常见兼容" class="headerlink" title="十一、常见兼容"></a>十一、常见兼容</h3><hr>
+<pre><code> 1.行高
+     解决：line-height:100%;或者line-height:字体大小；
+ 2.双边距
+     浮动的方向和margin的方向一致时
+     解决：
+         给浮动元素加display:inline;
+ 3.img 3像素bug
+     解决：
+         display:block;/vertical-align:top;
+ 4.透明层
+     filter:alpha(opacity:40);
+ 5.a img IE 下出现蓝色边框
+     解决：
+         a img{border:0;}
+6.margin负值 改变元素位置多余的在IE下不显示
+ 解决：给它加 position:relative;
+</code></pre><h3 id="十二、表单"><a href="#十二、表单" class="headerlink" title="十二、表单"></a>十二、表单</h3><hr>
+<pre><code>    &lt;form action=&quot;地址&quot; method=&quot;get/post&quot;&gt;
+        &lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;&quot; /&gt;
+        &lt;input type=&quot;password&quot; name=&quot;&quot; value=&quot;&quot; /&gt;
+        &lt;input type=&quot;radio&quot; name=&quot;&quot; value=&quot;&quot; id=&quot;&quot; /&gt;
+        &lt;label for=&quot;&quot;&gt;&lt;/label&gt;
+        &lt;input type=&quot;checkbox&quot; name=&quot;&quot; value=&quot;&quot; /&gt;
+        &lt;select name=&quot;&quot;&gt;
+            &lt;option value=&quot;&quot;&gt;&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;input type=&quot;file&quot; /&gt;
+        &lt;input type=&quot;button&quot; /&gt;
+        &lt;input type=&quot;submit&quot; /&gt;
+        &lt;input type=&quot;reset&quot; /&gt;
+        &lt;textarea&gt;&lt;/textarea&gt;
+    &lt;/form&gt;
+&lt;form action=&quot;模拟百度.html&quot; method=&quot;get&quot;&gt;&lt;/form&gt;
+action    数据提交的地址
+method    提交的方式
+get    地址栏    不安全
+post    后台    相对安全一点
+&lt;input type=&quot;password&quot; name=&quot;num&quot;/&gt;     （密文输入框）密码框
+&lt;input type=&quot;text&quot; name=&quot;num&quot;/&gt;   文本框
+name---------想提交必须给它一个名字
+&lt;input type=&quot;radio&quot; name=&quot;sex&quot; id=&quot;id&quot;/&gt;单选框
+*（用相同的name才可以单选）
+&lt;label for=&quot;nv&quot;&gt;女&lt;/label&gt;
+for=&quot;ID&quot;文字可以选择
+&lt;select&gt;下拉框
+    &lt;option&gt;下拉框内容&lt;/option&gt;
+&lt;/select&gt;
+input         输入框                 &lt;input type=&quot;&quot; /&gt;
+type         类型
+radio         单选                 &lt;input type=&quot;radio&quot; /&gt;
+checkbox     多选                 &lt;input type=&quot;checkbox&quot; /&gt;
+text         文本                 &lt;input type=&quot;text&quot; /&gt;
+    textarea                   文本域                                                       &lt;textarea&gt;&lt;/textarea&gt;
+password     密码                 &lt;input type=&quot;password&quot; /&gt;
+submit         提交                 &lt;input type=&quot;submit&quot; /&gt;
+button         按钮                 &lt;input type=&quot;button&quot; /&gt;
+reset         重置                 &lt;input type=&quot;reset&quot; /&gt;
+vertical-align:    垂直对齐方式
+middle;        居中
+top；        上边
+bottom        下边            
+outline:none;    取消焦点(取消表单边框)
+resize:none;    取消文本域拖拽
+    *清除默认样式
+        input,textarea{outline:none;}
+        textarea{resize:none;}
+    *单选、多选、下拉框不要设置样式
+</code></pre><h3 id="十三、表格"><a href="#十三、表格" class="headerlink" title="十三、表格"></a>十三、表格</h3><hr>
+<pre><code>&lt;table&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;th&gt;&lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+
+table{ border-collapse:collapse;}
+th,td{ border:1px solid #ccc; padding:0;}
+align=&quot;left/center/right&quot;
+valign=&quot;top/middle/bottom&quot;
+colspan=&quot;&quot; 合并列
+rowspan=&quot;&quot; 合并行
+</code></pre><h3 id="十四、框架、框架集"><a href="#十四、框架、框架集" class="headerlink" title="十四、框架、框架集"></a>十四、框架、框架集</h3><hr>
+<pre><code>&lt;iframe src=&quot;&quot;&gt;&lt;/iframe&gt;
+&lt;frameset row=&quot;200px,*,200px&quot;&gt;
+    &lt;frame /&gt;
+&lt;/frameset&gt;
+row=&quot;&quot; col=&quot;&quot;
+frameborder=&quot;0&quot;
+scrolling=&quot;&quot;
+*出现框架集的时候要把body干掉
+锚点：
+    1.跳转到同一个页面对应的位置
+        跳转&lt;a href=&quot;#box&quot;&gt;&lt;/a&gt;
+        内容&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+    2.跳转不同页面的对应位置
+        跳转&lt;a href=&quot;index.html#box&quot;&gt;&lt;/a&gt;
+        内容&lt;div id=&quot;box&quot;&gt;&lt;/div&gt;
+</code></pre>
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/21/HTML-CSS/">HTML/CSS</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
+        <p><span>发布时间:</span>2017年03月21日 - 21时57分</p>
+        <p><span>最后更新:</span>2017年05月03日 - 13时43分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/21/HTML-CSS/" title="HTML/CSS">http://yoursite.com/2017/03/21/HTML-CSS/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/21/HTML-CSS/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/03/25/ES6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ES6
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/21/javascript5/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript5</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#一、标签分类："><span class="toc-number">1.</span> <span class="toc-text">一、标签分类：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#二、样式："><span class="toc-number">2.</span> <span class="toc-text">二、样式：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#三、背景样式"><span class="toc-number">3.</span> <span class="toc-text">三、背景样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#四、盒子模型"><span class="toc-number">4.</span> <span class="toc-text">四、盒子模型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#五、清除浏览器默认样式"><span class="toc-number">5.</span> <span class="toc-text">五、清除浏览器默认样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#六、属性："><span class="toc-number">6.</span> <span class="toc-text">六、属性：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#七、选择器："><span class="toc-number">7.</span> <span class="toc-text">七、选择器：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#八、浮动"><span class="toc-number">8.</span> <span class="toc-text">八、浮动:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#九、定位："><span class="toc-number">9.</span> <span class="toc-text">九、定位：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十、透明层"><span class="toc-number">10.</span> <span class="toc-text">十、透明层</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十一、常见兼容"><span class="toc-number">11.</span> <span class="toc-text">十一、常见兼容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十二、表单"><span class="toc-number">12.</span> <span class="toc-text">十二、表单</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十三、表格"><span class="toc-number">13.</span> <span class="toc-text">十三、表格</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#十四、框架、框架集"><span class="toc-number">14.</span> <span class="toc-text">十四、框架、框架集</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/03/21/HTML-CSS/" data-title="HTML/CSS" data-url="http://yoursite.com/2017/03/21/HTML-CSS/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/03/25/ES6/" title="上一篇: ES6">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/03/21/javascript5/" title="下一篇: javascript5">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/25/关于字符串和数组/">关于字符串和数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于cookie于Ajax/">关于cookie于Ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于HTML简单理解与应用/">关于HTML简单理解与应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于JQuery的一些简单用法/">关于JQuery的一些简单用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于JQuery一些东西/">关于JQuery一些东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/JS知识点小整合/">JS知识点小整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（4）/">关于H5基础（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（3）/">关于H5基础（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（2）/">关于H5基础（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/关于H5基础（1）/">关于H5（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/关于Node/">关于Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/angular/">angular</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/ES6/">ES6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/HTML-CSS/">HTML/CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript5/">javascript5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript4/">javascript4</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript3/">javascript3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript2/">javascript2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript/">javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/20/juqery/">juqery</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/我的第一次文章/">我的第一次文章</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 洋仔
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

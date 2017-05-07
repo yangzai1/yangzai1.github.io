@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>angular | 洋仔</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Angular简介:框架：    对程序员的限制高
+库：    jquery，bootstrap —— 使用灵活，对程序员的限制少
+它是MVC框架 精确定义是MVVM框架 mv*
+SPA (single page application) 移动端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="angular">
+<meta property="og:url" content="http://yoursite.com/2017/03/31/angular/index.html">
+<meta property="og:site_name" content="洋仔">
+<meta property="og:description" content="Angular简介:框架：    对程序员的限制高
+库：    jquery，bootstrap —— 使用灵活，对程序员的限制少
+它是MVC框架 精确定义是MVVM框架 mv*
+SPA (single page application) 移动端">
+<meta property="og:updated_time" content="2017-05-03T05:43:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="angular">
+<meta name="twitter:description" content="Angular简介:框架：    对程序员的限制高
+库：    jquery，bootstrap —— 使用灵活，对程序员的限制少
+它是MVC框架 精确定义是MVVM框架 mv*
+SPA (single page application) 移动端">
+  
+    <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">洋仔</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                            
+                                <a class="fl QQ" target="_blank" href="#" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JS/" style="font-size: 20px;">JS</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/juqery/" style="font-size: 10px;">juqery</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://yangzai1.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">洋仔</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">洋仔</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                    
+                        <a class="QQ" target="_blank" href="#" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-angular" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/31/angular/" class="article-date">
+      <time datetime="2017-03-31T14:03:05.000Z" itemprop="datePublished">2017-03-31</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      angular
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/angular/">angular</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="Angular简介"><a href="#Angular简介" class="headerlink" title="Angular简介:"></a>Angular简介:</h3><pre><code>框架：    对程序员的限制高
+库：    jquery，bootstrap —— 使用灵活，对程序员的限制少
+它是MVC框架 精确定义是MVVM框架 mv*
+SPA (single page application) 移动端
+</code></pre><a id="more"></a>
+<h3 id="MVC"><a href="#MVC" class="headerlink" title="MVC:"></a>MVC:</h3><pre><code>M:    Model               模型，数据——现在的例子中： 输入框
+V:    View            视图——现在的例子中： div
+C:    Controller        控制器
+
+MVC 分离:
+    1.数据、逻辑、 表现层代码的分离
+    2.分工
+    **学好:它最核心的核心的东西就是数据
+</code></pre><h4 id="以前写JS-存在大量的重复劳动-window-事件-…"><a href="#以前写JS-存在大量的重复劳动-window-事件-…" class="headerlink" title="以前写JS:存在大量的重复劳动    window 事件 ….."></a>以前写JS:存在大量的重复劳动    window 事件 …..</h4><h4 id="Angular：避免了重复劳动，让程序员更加关注需求的本质和实现。"><a href="#Angular：避免了重复劳动，让程序员更加关注需求的本质和实现。" class="headerlink" title="Angular：避免了重复劳动，让程序员更加关注需求的本质和实现。"></a>Angular：避免了重复劳动，让程序员更加关注需求的本质和实现。</h4><h3 id="版本：官网：https-angularjs-org"><a href="#版本：官网：https-angularjs-org" class="headerlink" title="版本：官网：https://angularjs.org/"></a>版本：官网：<a href="https://angularjs.org/" target="_blank" rel="external">https://angularjs.org/</a></h3><h3 id="基本用法："><a href="#基本用法：" class="headerlink" title="基本用法："></a>基本用法：</h3><h4 id="Angular指令："><a href="#Angular指令：" class="headerlink" title="Angular指令："></a>Angular指令：</h4><pre><code>以 ng 开头。
+是否需要服务器环境——最好
+oninput是input值改变的时候触发
+1、ng-app
+angular管辖的范围
+2、ng-model
+数据，数据模型——  数据从哪来
+3、ng-bind
+数据绑定 —— 数据到哪去
+</code></pre><h4 id="Angular特性："><a href="#Angular特性：" class="headerlink" title="Angular特性："></a>Angular特性：</h4><pre><code>    1).双向绑定
+    ng-bind:  不好 一开始清空内容    {{a}}接替ng-bind
+&lt;input type=&quot;text&quot; ng-model=&quot;a&quot;&gt;
+    &lt;div&gt;asdasd{{a}}&lt;/div&gt;
+    *Angular——接管了 UI
+    *Angular——扩展了html
+</code></pre><h4 id="4、表达式"><a href="#4、表达式" class="headerlink" title="4、表达式"></a>4、表达式</h4><pre><code>*Angular 和 原生的JS——不互通（事件、函数），可以解决。
+</code></pre><h4 id="5、ng-click"><a href="#5、ng-click" class="headerlink" title="5、ng-click"></a>5、ng-click</h4><pre><code>事件：  ng-mouseover  ....
+* 只关注数据
+</code></pre><h4 id="6、ng-init"><a href="#6、ng-init" class="headerlink" title="6、ng-init"></a>6、ng-init</h4><pre><code>数据初始化
+</code></pre><h4 id="7、ng-repeat-循环"><a href="#7、ng-repeat-循环" class="headerlink" title="7、ng-repeat  循环"></a>7、ng-repeat  循环</h4><pre><code>循环数组：
+    ng-repeat=&quot;item in arr&quot; 
+        {{item}}  —— 数组中的每一项
+循环JSON：
+    ng-repeat=&quot;(key,value) in json&quot;
+        {{key}} —— json中的key 
+        {{value}} —— json中的value
+</code></pre><p>####ng-repeat:<br>    数组:<br>        (key,value) in arr<br>            key—— 索引<br>            value —— 每一项<br>    json:<br>        (key,value) in json<br>            key 键名<br>            value 键值</p>
+<p>####8、数组的索引：  $index  获取本元素的索引<br>    *在数组里，默认情况下不允许出现重复的数字 如果有重复的会报错<br>        track by  重新指定数组中的key<br>        以前:(key,value) in arr<br>        现在:item in arr track by $index    track by 跟踪; 追踪;</p>
+<p>####9、过滤器   filter<br>    currency : 货币的filter<br>        参数： currency:’￥’<br>    date:<br>        date:’yyyy MM dd HH(hh) mm ss’<br>    放 | 后面</p>
+<p>####10、ng-show    ng-hide</p>
+<p>###Angular:<br>    1、和原生的JS 是不互通 —— 可以得解决<br>    2、和传统的开发方式完全不同——只要盯住数据，数据是核心</p>
+<p>####不互通：<br>    1）函数不互通<br>        Number 示例<br>    2）变量不互通<br>        全局变量示例<br>    3）事件不互通</p>
+<h3 id="MVC——-C"><a href="#MVC——-C" class="headerlink" title="MVC——  C"></a>MVC——  C</h3><h4 id="控制器：-Controller"><a href="#控制器：-Controller" class="headerlink" title="控制器：  Controller"></a>控制器：  Controller</h4><pre><code>1）定义模块 
+    angular.module(模块名,所依赖的其它模块);
+    let mod =  angular.module(&apos;mod1&apos;,[]);
+2）引用模块
+    ng-app=&quot;模块名&quot;
+3）定义Controller
+    mod.controller(&apos;控制器名&apos;,回调函数($scope){ 
+        //控制器的代码
+    });
+4）引用controller
+    ng-controller=&quot;ctr1&quot;
+
+*所有的数据都放在$scope 
+
+$scope ：  依赖项
+</code></pre><h3 id="Angular"><a href="#Angular" class="headerlink" title="Angular:"></a>Angular:</h3><pre><code>1）双向绑定
+2）依赖注入
+</code></pre><p>####Controller:<br>    1）放代码<br>    2）原生和angular之间的桥梁 —— 在controller中可以使用原生代码<br>    <em>一个页面中，可以有多个模块
+    </em>在一个模块中，可以有多个控制器<br>    *为什么不互通：因为angular的东西都在$scope身上。</p>
+<h4 id="怎么知道一个变量发生了改变？"><a href="#怎么知道一个变量发生了改变？" class="headerlink" title="怎么知道一个变量发生了改变？"></a>怎么知道一个变量发生了改变？</h4><pre><code>1.添加一个方法(set()) 设置变量的值 set 被调用时候 比较一下
+2.一般脏检查，将对象复制一份快照，在某个时间  比较现在对象与快照的值
+       如果不一样就表明发生变化 这个策略要保留两份变量 而且要遍历对象
+       比较属性 这样会有 一定性能问题
+3.它的策略
+    1.不会脏检查所有对象  当对象被绑定到html中 这个对象添加为检查对象
+    2.不会脏检查所有的属性，同样当属性被绑定后 这个属性会被列为检查的属性
+        在它初始化时 会将绑定的对象的属性添加为监听对象 也就是说一个对象绑定N个属性
+        就会添加N个watcher (意思是  绑定一个name属性 然后n个地方用  就会添加n个                                        watcher)；
+</code></pre><h4 id="什么时候去脏检查"><a href="#什么时候去脏检查" class="headerlink" title="什么时候去脏检查"></a>什么时候去脏检查</h4><pre><code>angular所系统的方法中都会触发比较事件    
+比如：controller初始化的时候 所有ng-开头的事件执行后 都会触发脏检查
+</code></pre><h4 id="不要在conroller中做以下事情"><a href="#不要在conroller中做以下事情" class="headerlink" title="不要在conroller中做以下事情"></a>不要在conroller中做以下事情</h4><pre><code>1.不要在controller中做DOM操作  大大影响了应用逻辑的可测试性  可以把表现逻辑抽取到directive(指令中)；
+2.输入格式化  使用angular form controls代替 (去看)
+3.输出格式化  使用angular filter 代替
+4.执行无状态或者有状态的、controller共享的代码  angular service(去看)代替
+</code></pre><h4 id="文本框中输入图片地址，img标签加载图片"><a href="#文本框中输入图片地址，img标签加载图片" class="headerlink" title="文本框中输入图片地址，img标签加载图片"></a>文本框中输入图片地址，img标签加载图片</h4><pre><code>&lt;img src=&quot;{{a}}&quot; alt=&quot;&quot;&gt;
+</code></pre><h4 id="过程："><a href="#过程：" class="headerlink" title="过程："></a>过程：</h4><pre><code>浏览器看到img标签，试图去加载src里的图片文件 
+现在给的图片文件地址：  {{a}}
+    —— 404 错
+Angular 出来了 —— 开始干活： 它认识： {{a}}
+    —— 翻译成文本框中输入的真实的图片地址
+</code></pre><p>####解决方案：<br>    ng-src    因为：浏览器只认识 ng-src</p>
+<h4 id="交互："><a href="#交互：" class="headerlink" title="交互："></a>交互：</h4><pre><code>1、请求一个文本文件，内容显示到页面
+发现问题：
+    jquery的ajax请求数据——正常
+    请求回来的数据放到 $scope.arr —— 正常
+    问题： 没有显示在页面
+因为：  angular 比较封闭，和其它框架、库配合不好。
+
+2、angular提供了自己的做数据交互的方式：
+$http —— 依赖项
+依赖项： $scope   $http
+
+用法：
+    $http.get();
+    $http.post();
+    $http.jsonp();
+
+$http.get(&apos;请求地址&apos;).then(成功的回调，失败的回调);
+
+$http.get(&apos;a.txt&apos;).then(r=&gt;{
+    //r 就是成功后的返回对象  ***r完整的angular http返回对象
+    // r.data 才是数据
+},err=&gt;{
+    //err 失败信息对象
+});
+</code></pre><h3 id="小总结"><a href="#小总结" class="headerlink" title="小总结:"></a>小总结:</h3><pre><code>ng-src    
+$http.get(&apos;接口/地址&apos;).then((r)=&gt;{
+  r//完整的对象
+  //{data: Array[4], status: 200, config: Object, statusText: &quot;OK&quot;}
+  r.data
+},(r)=&gt;{
+  console.log(r)
+})
+</code></pre><h4 id="3、Promise"><a href="#3、Promise" class="headerlink" title="3、Promise"></a>3、Promise</h4><pre><code>回调函数 —— 恶梦 噩梦
+2015年，ES6——Promise
+
+1）用法——基本用法：
+    resolve: 成功
+    reject: 失败
+    let pro = new Promise((resolve,reject)=&gt;{
+        $.ajax({
+            url:&apos;&apos;,
+            dataType:&apos;json&apos;,
+            success:r=&gt;{
+                resolve(r);
+            }，
+            error:err=&gt;{
+                reject(err);
+            }
+        });
+    });
+
+    pro.then(成功的回调，失败的回调);
+    pro.then((r)=&gt;{
+        //r 成功后返回结果 ，处理成功的数据信息
+    },(err)=&gt;{
+        //err  失败对象，处理失败信息
+    });
+
+2）用法 —— 常规用法
+    Promise.all();
+    批量处理异步请求，统一处理成功的回调
+    Promise.all([
+        //请求1 的 Promise
+        //请求2 的 Promise
+    ]).then(成功回调，失败回调);
+    全部成功才算成功，有一个失败就是整体失败。
+
+3）发现 jquery 的 $.ajax 返回值，返回一个Promise对象
+angular.module(&apos;app&apos;,[])
+    .controller(&apos;mctrl&apos;,($scope,$http)=&gt;{
+        Promise.all([
+            $.ajax({url:&apos;1&apos;,dataType:&apos;json&apos;}),
+            $.ajax({url:&apos;2&apos;,dataType:&apos;json&apos;}),
+            $.ajax({url:&apos;3&apos;,dataType:&apos;json&apos;}),
+        ]).then(r=&gt;{
+            //r : 数组，多次请求返回结果的数组
+            //单独处理每次请求的结果
+            let [arr1,arr2,arr3] = r;
+            console.log(arr1); —— 第一个请求的返回值 
+            ...
+        },err=&gt;{});
+</code></pre><p>｝</p>
+<pre><code>angular.module(&apos;app&apos;,[])
+   .controller(&apos;list&apos;,($scope,$q,$http)=&gt;{
+       $q.all([
+               $http.get(&apos;data/a.txt&apos;),
+               $http.get(&apos;data/b.txt&apos;),
+               $http.get(&apos;data/c.txt&apos;)
+       ]).then((r)=&gt;{
+           console.log(r);
+           $scope.arr=r[0].data;
+       },(r)=&gt;{
+           console.log(r);
+       })
+   })
+</code></pre><h4 id="在Angular-中使用-Promise"><a href="#在Angular-中使用-Promise" class="headerlink" title="在Angular 中使用 Promise:"></a>在Angular 中使用 Promise:</h4><pre><code>1、angular中，使用原生的 Promise，出问题了
+    在then里处理数据的时候，$scope.nums = arr1 生效，但是页面无法使用
+    Promise是原生不触发脏检查，$q是angular里默认的Promise自动脏检查
+2、angular 自己提供了一个  Promise， 
+    新的依赖项：   $q 
+
+4）只请求最快的
+    Promise.race([
+        $.ajax(),
+        $.ajax()....
+    ]).then(r=&gt;{
+        r —— 以上所有的请求，最快的那个
+        本地是第一个，服务器上按文件大小走
+    },err=&gt;{});
+</code></pre><p>####jQuery Ajax另几种写法：<br>        1、$.get(‘data/a.txt’,{a:1},r=&gt;{<br>                console.log(typeof r);<br>            });<br>            返回值是string类型<br>        2、$.post(‘data/a.txt’,{a:1},r=&gt;{<br>                console.log(typeof r);<br>            });<br>            返回值是string类型<br>        3、$.getJSON()…..<br>            返回值是 json 对象</p>
+<h4 id="Angular和其它库或原生的很多东西不通用："><a href="#Angular和其它库或原生的很多东西不通用：" class="headerlink" title="Angular和其它库或原生的很多东西不通用："></a>Angular和其它库或原生的很多东西不通用：</h4><pre><code>1） $.ajax            jquery
+2） Promise                原生   $q
+3）定时器
+原理：因为函数，在Angular中，它认为所有的东西都应该出现在自己的controller函数                                          
+               里，对于其它地方回调函数里的值的处理，不认
+</code></pre><h4 id="定时器："><a href="#定时器：" class="headerlink" title="定时器："></a>定时器：</h4><pre><code>    $interval
+    $timeout
+解决以上问题的另外一个方法：
+    $scope.$apply();
+    ——通俗地说： 告诉、通知 Angular ， 来看一下数据是不是变了
+</code></pre><h4 id="模块化"><a href="#模块化" class="headerlink" title="模块化"></a>模块化</h4><pre><code>Angular中的模块化 —— 比较弱
+let mod = angular.module(&apos;mod&apos;,[]);
+例1：
+    1） 在一个新的JS文件里定义了一个模块
+        let mod1 = angular.module(&apos;mod1&apos;,[]);
+        mod1.controller(&apos;mod1_ctr1&apos;,($scope)=&gt;{
+            $scope.a = 200;
+        });
+    2）在我的html文件中，自身的模块依赖于以上定义的模块： mod1
+    3）在html文件中，可以同时使用自己的controlloer和模块中的controller：mod1_ctr1
+</code></pre><h4 id="依赖注入"><a href="#依赖注入" class="headerlink" title="依赖注入"></a>依赖注入</h4><pre><code>把决定权交给消费者。
+函数参数：由调用者来决定 —— 被动的地位
+    function show(a,b){
+        alert(arguments.length);
+    }
+Angular：函数的拯救者
+
+let mod = .....;
+mod.controller(&apos;ctr1&apos;,($scope,$q)=&gt;{
+    $scope.a=12;
+});
+想用谁，就把谁注入到函数。
+</code></pre><h4 id="过滤器"><a href="#过滤器" class="headerlink" title="过滤器"></a>过滤器</h4><pre><code>系统的过滤器： date  currency
+    time|date:&apos;yyyy-MM-dd&apos;
+    price|currency  —— $
+        |currency:&apos;￥&apos; —— ￥
+要求：
+    给定一个数字，显示一下是中文的星期几。
+    let n = 3;
+    {{n|cnDay}} —— 星期三
+</code></pre><h4 id="自定义过滤器："><a href="#自定义过滤器：" class="headerlink" title="自定义过滤器："></a>自定义过滤器：</h4><pre><code>angular.module(&apos;app&apos;,[])
+.filter(&apos;cnDay&apos;,function(){
+    return function(input){
+        //input 就是要处理的输入的数据
+        //输入的数据——要对谁使用这个过滤器
+        //对input进行处理
+        return &apos;返回值——就是最终要使用的内容&apos;;
+    };
+});
+</code></pre><h4 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h4><pre><code>指令： ng-bind ng-model....
+以ng-开头的都是系统提供的指令
+</code></pre><h4 id="自定义一个指令：hehe-haha"><a href="#自定义一个指令：hehe-haha" class="headerlink" title="自定义一个指令：hehe-haha"></a>自定义一个指令：hehe-haha</h4><pre><code>angular.module(&apos;myapp&apos;,[])
+.directive(&apos;heheHaha&apos;,()=&gt;{
+    return {
+        template:&apos;&lt;span&gt;欢迎你&lt;/span&gt;&apos;
+    };
+})
+</code></pre><h4 id="指令名称："><a href="#指令名称：" class="headerlink" title="指令名称："></a>指令名称：</h4><pre><code>驼峰命名法：  第一个字母小写，以后每个单词首字母大写
+</code></pre><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">angular.module(&apos;app&apos;,[])</div><div class="line">        .controller(&apos;cl&apos;,()=&gt;&#123;&#125;)</div><div class="line">        .directive(&apos;aaBb&apos;,()=&gt;&#123;</div><div class="line">            return&#123;</div><div class="line">                restrict:&apos;ECMA&apos;,</div><div class="line">                template:&apos;&lt;span&gt;明天哥哥上班&lt;/span&gt;&apos;,</div><div class="line">                replace:true</div><div class="line">            &#125;</div><div class="line">        &#125;)</div></pre></td></tr></table></figure>
+<h4 id="限制选项：restrict-——-默认值-A-E"><a href="#限制选项：restrict-——-默认值-A-E" class="headerlink" title="限制选项：restrict —— 默认值 A E"></a>限制选项：restrict —— 默认值 A E</h4><pre><code>restrict：字符串
+    A:    Attribute        属性
+    E:    Element        元素
+    C:    Class        类，样式中的class
+    M:    coMment    注释 ： 需要配合 replace:true
+        ***M的时候  两边要留空格
+</code></pre><h4 id="自定义指令中常用的几个选项："><a href="#自定义指令中常用的几个选项：" class="headerlink" title="自定义指令中常用的几个选项："></a>自定义指令中常用的几个选项：</h4><pre><code>template：    输出的模板
+restrict:        限制、约束
+    ECMA
+replace:        默认是false，
+                设置true，替换原有的标签 
+</code></pre>
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/31/angular/">angular</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
+        <p><span>发布时间:</span>2017年03月31日 - 22时03分</p>
+        <p><span>最后更新:</span>2017年05月03日 - 13时43分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/31/angular/" title="angular">http://yoursite.com/2017/03/31/angular/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/31/angular/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/04/19/关于Node/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/25/ES6/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular简介"><span class="toc-number">1.</span> <span class="toc-text">Angular简介:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MVC"><span class="toc-number">2.</span> <span class="toc-text">MVC:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#以前写JS-存在大量的重复劳动-window-事件-…"><span class="toc-number">2.1.</span> <span class="toc-text">以前写JS:存在大量的重复劳动    window 事件 …..</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Angular：避免了重复劳动，让程序员更加关注需求的本质和实现。"><span class="toc-number">2.2.</span> <span class="toc-text">Angular：避免了重复劳动，让程序员更加关注需求的本质和实现。</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#版本：官网：https-angularjs-org"><span class="toc-number">3.</span> <span class="toc-text">版本：官网：https://angularjs.org/</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本用法："><span class="toc-number">4.</span> <span class="toc-text">基本用法：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Angular指令："><span class="toc-number">4.1.</span> <span class="toc-text">Angular指令：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Angular特性："><span class="toc-number">4.2.</span> <span class="toc-text">Angular特性：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、表达式"><span class="toc-number">4.3.</span> <span class="toc-text">4、表达式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、ng-click"><span class="toc-number">4.4.</span> <span class="toc-text">5、ng-click</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、ng-init"><span class="toc-number">4.5.</span> <span class="toc-text">6、ng-init</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、ng-repeat-循环"><span class="toc-number">4.6.</span> <span class="toc-text">7、ng-repeat  循环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#MVC——-C"><span class="toc-number">5.</span> <span class="toc-text">MVC——  C</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#控制器：-Controller"><span class="toc-number">5.1.</span> <span class="toc-text">控制器：  Controller</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Angular"><span class="toc-number">6.</span> <span class="toc-text">Angular:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#怎么知道一个变量发生了改变？"><span class="toc-number">6.1.</span> <span class="toc-text">怎么知道一个变量发生了改变？</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#什么时候去脏检查"><span class="toc-number">6.2.</span> <span class="toc-text">什么时候去脏检查</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#不要在conroller中做以下事情"><span class="toc-number">6.3.</span> <span class="toc-text">不要在conroller中做以下事情</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文本框中输入图片地址，img标签加载图片"><span class="toc-number">6.4.</span> <span class="toc-text">文本框中输入图片地址，img标签加载图片</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#过程："><span class="toc-number">6.5.</span> <span class="toc-text">过程：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#交互："><span class="toc-number">6.6.</span> <span class="toc-text">交互：</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#小总结"><span class="toc-number">7.</span> <span class="toc-text">小总结:</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3、Promise"><span class="toc-number">7.1.</span> <span class="toc-text">3、Promise</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#在Angular-中使用-Promise"><span class="toc-number">7.2.</span> <span class="toc-text">在Angular 中使用 Promise:</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Angular和其它库或原生的很多东西不通用："><span class="toc-number">7.3.</span> <span class="toc-text">Angular和其它库或原生的很多东西不通用：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#定时器："><span class="toc-number">7.4.</span> <span class="toc-text">定时器：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#模块化"><span class="toc-number">7.5.</span> <span class="toc-text">模块化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#依赖注入"><span class="toc-number">7.6.</span> <span class="toc-text">依赖注入</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#过滤器"><span class="toc-number">7.7.</span> <span class="toc-text">过滤器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自定义过滤器："><span class="toc-number">7.8.</span> <span class="toc-text">自定义过滤器：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自定义指令"><span class="toc-number">7.9.</span> <span class="toc-text">自定义指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自定义一个指令：hehe-haha"><span class="toc-number">7.10.</span> <span class="toc-text">自定义一个指令：hehe-haha</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#指令名称："><span class="toc-number">7.11.</span> <span class="toc-text">指令名称：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#限制选项：restrict-——-默认值-A-E"><span class="toc-number">7.12.</span> <span class="toc-text">限制选项：restrict —— 默认值 A E</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#自定义指令中常用的几个选项："><span class="toc-number">7.13.</span> <span class="toc-text">自定义指令中常用的几个选项：</span></a></li></ol></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/03/31/angular/" data-title="angular" data-url="http://yoursite.com/2017/03/31/angular/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/04/19/关于Node/" title="上一篇: ">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/03/25/ES6/" title="下一篇: ES6">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/25/关于字符串和数组/">关于字符串和数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于cookie于Ajax/">关于cookie于Ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于HTML简单理解与应用/">关于HTML简单理解与应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于JQuery的一些简单用法/">关于JQuery的一些简单用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于JQuery一些东西/">关于JQuery一些东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/JS知识点小整合/">JS知识点小整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（4）/">关于H5基础（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（3）/">关于H5基础（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（2）/">关于H5基础（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/关于H5基础（1）/">关于H5（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/关于Node/">关于Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/angular/">angular</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/ES6/">ES6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/HTML-CSS/">HTML/CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript5/">javascript5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript4/">javascript4</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript3/">javascript3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript2/">javascript2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript/">javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/20/juqery/">juqery</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/我的第一次文章/">我的第一次文章</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 洋仔
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>

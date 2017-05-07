@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>javascript5 | 洋仔</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="66.获取html标签右下角富媒体:
+    1.position:absolute; right:0; bottom:0;
+    2.position:fixed; right:0; bottom:0; 不兼容ie6
+自己写:
+onscroll  当页面滚动时触发。
+    滚动距离(页面滚了多少它就是多少)
+         document.documentElement.scrollTo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript5">
+<meta property="og:url" content="http://yoursite.com/2017/03/21/javascript5/index.html">
+<meta property="og:site_name" content="洋仔">
+<meta property="og:description" content="66.获取html标签右下角富媒体:
+    1.position:absolute; right:0; bottom:0;
+    2.position:fixed; right:0; bottom:0; 不兼容ie6
+自己写:
+onscroll  当页面滚动时触发。
+    滚动距离(页面滚了多少它就是多少)
+         document.documentElement.scrollTo">
+<meta property="og:updated_time" content="2017-05-03T05:10:18.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript5">
+<meta name="twitter:description" content="66.获取html标签右下角富媒体:
+    1.position:absolute; right:0; bottom:0;
+    2.position:fixed; right:0; bottom:0; 不兼容ie6
+自己写:
+onscroll  当页面滚动时触发。
+    滚动距离(页面滚了多少它就是多少)
+         document.documentElement.scrollTo">
+  
+    <link rel="alternative" href="/atom.xml" title="洋仔" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/img/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+      <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <!-- 加载特效 -->
+    <script src="/js/pace.js"></script>
+    <link href="/css/pace/pace-theme-flash.css" rel="stylesheet" />
+  <script>
+      var yiliaConfig = {
+          rootUrl: '/',
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false
+      }
+  </script>
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            
+            <img lazy-src="/img/head.jpg" class="js-avatar">
+            
+        </a>
+
+        <hgroup>
+          <h1 class="header-author"><a href="/" title="Hi Mate">洋仔</a></h1>
+        </hgroup>
+
+        
+        
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/Home">博客首页</a></li>
+                        
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/tags">静心阅读</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fl mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                            
+                                <a class="fl github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                            
+                                <a class="fl weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                            
+                                <a class="fl QQ" target="_blank" href="#" title="QQ">QQ</a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/CSS/" style="font-size: 10px;">CSS</a> <a href="/tags/ES6/" style="font-size: 10px;">ES6</a> <a href="/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/tags/JS/" style="font-size: 20px;">JS</a> <a href="/tags/angular/" style="font-size: 10px;">angular</a> <a href="/tags/juqery/" style="font-size: 10px;">juqery</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://yangzai1.github.io/">name</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">纯海迷、爱运动、爱交友、爱旅行、喜欢接触新鲜事物、迎接新的挑战，更爱游离于错综复杂的编码与逻辑中</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="Me">洋仔</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                
+                    <img lazy-src="/img/head.jpg" class="js-avatar">
+                
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="Me">洋仔</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/Home">博客首页</a></li>
+                
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/tags">静心阅读</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a class="mail" target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=EyAmIycqIiYrKlNiYj1wfH4" title="mail">mail</a>
+                    
+                        <a class="github" target="_blank" href="https://github.com/yangzai1" title="github">github</a>
+                    
+                        <a class="weibo" target="_blank" href="https://weibo.com" title="weibo">weibo</a>
+                    
+                        <a class="QQ" target="_blank" href="#" title="QQ">QQ</a>
+                    
+                </div>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-javascript5" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2017/03/21/javascript5/" class="article-date">
+      <time datetime="2017-03-21T07:25:59.000Z" itemprop="datePublished">2017-03-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      javascript5
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习/">学习</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JS/">JS</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h3 id="66-获取html标签"><a href="#66-获取html标签" class="headerlink" title="66.获取html标签"></a>66.获取html标签</h3><pre><code>右下角富媒体:
+    1.position:absolute; right:0; bottom:0;
+    2.position:fixed; right:0; bottom:0; 不兼容ie6
+自己写:
+onscroll  当页面滚动时触发。
+    滚动距离(页面滚了多少它就是多少)
+         document.documentElement.scrollTop;
+    不兼容chrome
+         document.body.scrollTop;
+    兼容chrome
+</code></pre><a id="more"></a>
+<h3 id="67-页面滚动事件"><a href="#67-页面滚动事件" class="headerlink" title="67.页面滚动事件"></a>67.页面滚动事件</h3><pre><code>onscroll
+  兼容写法：document.documentElement.scrollTop||document.body.scrollTop;
+</code></pre><h3 id="68-改变窗口大小事件-onresize"><a href="#68-改变窗口大小事件-onresize" class="headerlink" title="68.改变窗口大小事件    onresize"></a>68.改变窗口大小事件    onresize</h3><h3 id="69-滚动距离"><a href="#69-滚动距离" class="headerlink" title="69.滚动距离"></a>69.滚动距离</h3><pre><code>document.documentElement.scrollTop||document.body.scrollTop; 获取上下滚动距离
+document.documentElement.scrollLeft||document.body.scrollLeft; 获取左右滚动距离
+</code></pre><h3 id="70-获取可视区的宽高"><a href="#70-获取可视区的宽高" class="headerlink" title="70.获取可视区的宽高"></a>70.获取可视区的宽高</h3><pre><code>获取可视区高度    document.documentElement.clientHeight
+获取可视区宽度    document.documentElement.clientWidth
+</code></pre><h3 id="71-获取-失去焦点事件"><a href="#71-获取-失去焦点事件" class="headerlink" title="71.获取\失去焦点事件"></a>71.获取\失去焦点事件</h3><pre><code>onfocus:
+事件，获取焦点的事件
+onblur：
+事件，失去焦点的事件
+</code></pre><h3 id="72-获取元素"><a href="#72-获取元素" class="headerlink" title="72.获取元素"></a>72.获取元素</h3><pre><code>结构：parentNode    document      结构父级
+定位：offsetParent  body          定位父级
+    **offsetLeft 物体到有定位父级的一个左边距离
+obj.getBoundingClientRect(); 获取绝对位置;
+    .left        左边距离页面左边的距离
+    .top        上边距离页面上边的距离
+    .right    右边距离页面左边的距离
+    .bottom    下边距离页面上边的距离
+</code></pre><h3 id="73-操作属性"><a href="#73-操作属性" class="headerlink" title="73.操作属性"></a>73.操作属性</h3><pre><code>正常和自定义的都行
+获取自定义属性
+     obj.getAttribute(&apos;属性名&apos;); 
+设置自定义属性
+     obj.setAttribute(&apos;属性名&apos;,&apos;属性值&apos;);
+删除自定义属性
+     obj.removeAttribute(名)
+     成对出现   不能和自定义属性混用
+</code></pre><h3 id="74-图片延迟加载（懒加载）"><a href="#74-图片延迟加载（懒加载）" class="headerlink" title="74.图片延迟加载（懒加载）"></a>74.图片延迟加载（懒加载）</h3><pre><code>你看的东西加载，不看的不加载。
+节约资源，带宽，流量。 用户体验.钱
+</code></pre><h3 id="75-物体高度："><a href="#75-物体高度：" class="headerlink" title="75.物体高度："></a>75.物体高度：</h3><pre><code>obj.offsetHeight    物体盒子模型高度
+obj.scrollHeight    内容高度
+如果内容小于offsetHeight,取得offsetHeight
+如果内容大于offsetHeight,内容高度
+</code></pre><h3 id="76-瀑布流"><a href="#76-瀑布流" class="headerlink" title="76.瀑布流"></a>76.瀑布流</h3><pre><code>每块的高度不同
+最后每列的高度都差不多。
+每次往高度最小的里面加东西。
+</code></pre><h3 id="77-innerHTML的问题"><a href="#77-innerHTML的问题" class="headerlink" title="77.innerHTML的问题:"></a>77.innerHTML的问题:</h3><pre><code>innerHTML加等于的话:会清空之前身上事件
+</code></pre><h3 id="78-图片对象"><a href="#78-图片对象" class="headerlink" title="78.图片对象:"></a>78.图片对象:</h3><pre><code>new Fuction()
+new Oject()
+new Image()  创建一个图片对象
+这个东西跟在html中手写的img标签一模一样。
+img.onload   当图片加载成功触发这个事件。
+img.onerror  当图片加载失败触发这个事件。
+</code></pre><h3 id="79-图片预加载"><a href="#79-图片预加载" class="headerlink" title="79.图片预加载:"></a>79.图片预加载:</h3><pre><code>提前悄悄的加载
+   目的：用户体验稍微好一些
+   现在 用的越来越少
+</code></pre><h3 id="80-文字提示"><a href="#80-文字提示" class="headerlink" title="80.文字提示:"></a>80.文字提示:</h3><pre><code>事件
+    获取焦点事件
+         onfocus
+    失去焦点事件
+         onblur
+    获取焦点函数
+让一个文本框上来就获取焦点
+    .focus() 让一个元素获取焦点
+    .blur()  让一个元素失去焦点
+</code></pre><h3 id="81-事件对象-event-包含了事件的详细信息。"><a href="#81-事件对象-event-包含了事件的详细信息。" class="headerlink" title="81.事件对象(event) 包含了事件的详细信息。"></a>81.事件对象(event) 包含了事件的详细信息。</h3><pre><code>ev参数         事件对象    兼容chrome FF IE8 9 10 但是得传参
+event         事件对象    兼容Chrome和IE系列
+var oEvent = ev||event;(他们俩个不能换位置)  
+平时注意写上window.onload 
+只能获取到鼠标和键盘的操作。
+</code></pre><h3 id="82-获取鼠标在可视区中的坐标"><a href="#82-获取鼠标在可视区中的坐标" class="headerlink" title="82.获取鼠标在可视区中的坐标:"></a>82.获取鼠标在可视区中的坐标:</h3><pre><code> 事件对象.clientX;        获取可视区中X轴坐标
+ 事件对象.clientY;        获取可视区中Y轴坐标
+**以后只要是操作clientX和clientY就加上滚动距离。
+</code></pre><h3 id="83-div跟随鼠标移动"><a href="#83-div跟随鼠标移动" class="headerlink" title="83.div跟随鼠标移动:"></a>83.div跟随鼠标移动:</h3><pre><code>****出现滚动的时候加上滚动距离
+var scrollTop=document.documentElement.scrollTop||document.body.scrollTop;
+</code></pre><h3 id="84-事件冒泡"><a href="#84-事件冒泡" class="headerlink" title="84.事件冒泡:"></a>84.事件冒泡:</h3><pre><code>子级会去找父级相同的事件执行 
+就算当前元素没什么没有这个事件 也会往上冒 
+冒泡跟结构有关  (没事不要取消)
+  取消事件冒泡:
+var oEvent=ev||event; 
+oEvent.cancelBubble=true     取消事件冒泡.  IE chrome照顾IE
+oEvent.stopPropagation();   取消事件冒泡.  W3C规定
+</code></pre><h3 id="85-键盘的事件"><a href="#85-键盘的事件" class="headerlink" title="85.键盘的事件:"></a>85.键盘的事件:</h3><pre><code>onkeydown        当键盘按下时触发
+onkeyup            当键盘抬起时触发
+</code></pre><h3 id="86-js不能使用组合按键的编码"><a href="#86-js不能使用组合按键的编码" class="headerlink" title="86.js不能使用组合按键的编码:"></a>86.js不能使用组合按键的编码:</h3><pre><code>oEvent.ctrlKey        当ctrl按下时是true
+oEvent.shiftKey    当shift按下时是true
+oEvent.altKey         当alt按下时是true
+</code></pre><h3 id="87-右键菜单事件"><a href="#87-右键菜单事件" class="headerlink" title="87.右键菜单事件:"></a>87.右键菜单事件:</h3><pre><code>oncontextmenu  (鼠标右键事件)
+浏览器自带的一些功能是默认事件
+阻止默认事件: return false;    
+        只能输入数字的 输入框有问题 输入法的问题
+注意：输入法的问题
+输入框中只能输入字母:
+复制文字:
+另存为:
+</code></pre><h3 id="88-拖拽"><a href="#88-拖拽" class="headerlink" title="88.拖拽:"></a>88.拖拽:</h3><pre><code>    onmosuedown  当鼠标按下的时候
+            存储一段小距离
+    onmousemove  当鼠标移动的时候
+            改变 left top
+    onmouseup      当鼠标抬起的时候
+            干掉 mousemove mouseup
+拖拽快的时候出事了
+            事件加给document
+在拖拽的例子中ie8-下return false;不好使
+</code></pre><h3 id="89-事件捕获"><a href="#89-事件捕获" class="headerlink" title="89.事件捕获"></a>89.事件捕获</h3><pre><code>obj.setCapture();    
+把所有的浏览器默认的事件都给抓住了。只能执行我当前这个元素的事件。
+释放捕获
+obj.releaseCapture();
+</code></pre><h3 id="90-事件绑定"><a href="#90-事件绑定" class="headerlink" title="90.事件绑定"></a>90.事件绑定</h3><pre><code>作用：给同一个元素加同一个事件加多次。
+    obj.addEventListener(sEv,fn,false);
+    兼容：IE9+，chrome，firefox
+    obj.attachEvent(&apos;on&apos;+sEv,fn);
+    兼容：IE10-
+</code></pre><h3 id="91-事件绑定"><a href="#91-事件绑定" class="headerlink" title="91.事件绑定"></a>91.事件绑定</h3><pre><code>作用：给同一个元素加同一个事件加多次。
+    obj.addEventListener(sEv,fn,false);
+    兼容：IE9+，chrome，firefox
+    obj.attachEvent(&apos;on&apos;+sEv,fn);
+    兼容：IE10-
+事件绑定兼容写法
+if(obj.addEventListener){
+    obj.addEventListener(sEv,fn,false);
+}else{
+    obj.attachEvent(&apos;on&apos;+sEv,fn);
+}
+</code></pre><h3 id="92-解除事件绑定"><a href="#92-解除事件绑定" class="headerlink" title="92.解除事件绑定"></a>92.解除事件绑定</h3><pre><code>obj.removeEventListener(sEv,fn,false);
+    兼容：IE9+，chrome，firefox
+obj.detachEvent(&apos;on&apos;+sEv,fn);
+    兼容：IE10-
+解除事件绑定兼容写法
+if(obj.removeEventListener){
+    obj.removeEventListener(sEv,fn,false);
+}else{
+    obj.detachEvent(&apos;on&apos;+sEv,fn);
+}
+解除事件绑定，解除不了匿名函数
+因为两个函数不想等
+因为函数的真正写法是
+new Function();
+
+**往后只要加事件就加上事件绑定
+</code></pre><h3 id="94-this的错误用法"><a href="#94-this的错误用法" class="headerlink" title="94.this的错误用法:"></a>94.this的错误用法:</h3><pre><code>1.定时器中不能使用this
+2.事件中套了一层函数
+3.行间事件套了一层
+4.attachEvent中不能使用this
+</code></pre>
+      
+      
+        <div class="page-reward">
+          <p><a href="javascript:void(0)" onclick="dashangToggle()" class="dashang" title="打赏，支持一下">赏</a></p>
+          <div class="hide_box"></div>
+          <div class="shang_box">
+            <a class="shang_close" href="javascript:void(0)" onclick="dashangToggle()" title="关闭">×</a>
+            <div class="shang_tit">
+              <p>纯属好玩</p>
+            </div>
+            <div class="shang_payimg">
+              <img src="/img/alipayimg.jpg" alt="扫码支持" title="扫一扫" />
+            </div>
+              <div class="pay_explain">扫码打赏，你说多少就多少</div>
+            <div class="shang_payselect">
+              
+                <div class="pay_item checked" data-id="alipay">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/alipay.png" alt="支付宝" /></span>
+                </div>
+              
+              
+                <div class="pay_item" data-id="wechat">
+                  <span class="radiobox"></span>
+                  <span class="pay_logo"><img src="/img/weixin.png" alt="微信" /></span>
+                </div>
+              
+            </div>
+            <div class="shang_info">
+              <p>打开<span id="shang_pay_txt">支付宝</span>扫一扫，即可进行扫码打赏哦</p>
+            </div>
+          </div>
+        </div>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/zepto/1.2.0/zepto.min.js"></script>
+        <script type="text/javascript">
+          $(".pay_item").click(function(){
+            $(this).addClass('checked').siblings('.pay_item').removeClass('checked');
+            var dataid=$(this).attr('data-id');
+            $(".shang_payimg img").attr("src","/img/"+dataid+"img.jpg");
+            $("#shang_pay_txt").text(dataid=="alipay"?"支付宝":"微信");
+          });
+          function dashangToggle(){
+            $(".hide_box").fadeToggle();
+            $(".shang_box").fadeToggle();
+          }
+        </script>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/21/javascript5/">javascript5</a></p>
+        <p><span>文章作者:</span><a href="/" title="访问 洋仔 的个人博客">洋仔</a></p>
+        <p><span>发布时间:</span>2017年03月21日 - 15时25分</p>
+        <p><span>最后更新:</span>2017年05月03日 - 13时10分</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/21/javascript5/" title="javascript5">http://yoursite.com/2017/03/21/javascript5/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/21/javascript5/　　作者: 洋仔" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+<nav id="article-nav">
+  
+    <a href="/2017/03/21/HTML-CSS/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          HTML/CSS
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/21/javascript4/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">javascript4</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#66-获取html标签"><span class="toc-number">1.</span> <span class="toc-text">66.获取html标签</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#67-页面滚动事件"><span class="toc-number">2.</span> <span class="toc-text">67.页面滚动事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#68-改变窗口大小事件-onresize"><span class="toc-number">3.</span> <span class="toc-text">68.改变窗口大小事件    onresize</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#69-滚动距离"><span class="toc-number">4.</span> <span class="toc-text">69.滚动距离</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#70-获取可视区的宽高"><span class="toc-number">5.</span> <span class="toc-text">70.获取可视区的宽高</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#71-获取-失去焦点事件"><span class="toc-number">6.</span> <span class="toc-text">71.获取\失去焦点事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#72-获取元素"><span class="toc-number">7.</span> <span class="toc-text">72.获取元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#73-操作属性"><span class="toc-number">8.</span> <span class="toc-text">73.操作属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#74-图片延迟加载（懒加载）"><span class="toc-number">9.</span> <span class="toc-text">74.图片延迟加载（懒加载）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#75-物体高度："><span class="toc-number">10.</span> <span class="toc-text">75.物体高度：</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#76-瀑布流"><span class="toc-number">11.</span> <span class="toc-text">76.瀑布流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#77-innerHTML的问题"><span class="toc-number">12.</span> <span class="toc-text">77.innerHTML的问题:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#78-图片对象"><span class="toc-number">13.</span> <span class="toc-text">78.图片对象:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#79-图片预加载"><span class="toc-number">14.</span> <span class="toc-text">79.图片预加载:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#80-文字提示"><span class="toc-number">15.</span> <span class="toc-text">80.文字提示:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#81-事件对象-event-包含了事件的详细信息。"><span class="toc-number">16.</span> <span class="toc-text">81.事件对象(event) 包含了事件的详细信息。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#82-获取鼠标在可视区中的坐标"><span class="toc-number">17.</span> <span class="toc-text">82.获取鼠标在可视区中的坐标:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#83-div跟随鼠标移动"><span class="toc-number">18.</span> <span class="toc-text">83.div跟随鼠标移动:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#84-事件冒泡"><span class="toc-number">19.</span> <span class="toc-text">84.事件冒泡:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#85-键盘的事件"><span class="toc-number">20.</span> <span class="toc-text">85.键盘的事件:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#86-js不能使用组合按键的编码"><span class="toc-number">21.</span> <span class="toc-text">86.js不能使用组合按键的编码:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#87-右键菜单事件"><span class="toc-number">22.</span> <span class="toc-text">87.右键菜单事件:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#88-拖拽"><span class="toc-number">23.</span> <span class="toc-text">88.拖拽:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#89-事件捕获"><span class="toc-number">24.</span> <span class="toc-text">89.事件捕获</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#90-事件绑定"><span class="toc-number">25.</span> <span class="toc-text">90.事件绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#91-事件绑定"><span class="toc-number">26.</span> <span class="toc-text">91.事件绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#92-解除事件绑定"><span class="toc-number">27.</span> <span class="toc-text">92.解除事件绑定</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#94-this的错误用法"><span class="toc-number">28.</span> <span class="toc-text">94.this的错误用法:</span></a></li></ol>
+</div>
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+<script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+        }
+    })
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+    }
+</script>
+
+
+
+
+
+<div class="bdsharebuttonbox">
+	<a href="#" class="fx fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+	<a href="#" class="fx fa-weixin bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+	<a href="#" class="fx fa-qq bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a>
+	<a href="#" class="fx fa-facebook-official bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+	<a href="#" class="fx fa-twitter bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+	<a href="#" class="fx fa-linkedin bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+	<a href="#" class="fx fa-files-o bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+</div>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="2017/03/21/javascript5/" data-title="javascript5" data-url="http://yoursite.com/2017/03/21/javascript5/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"null"};
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = '/js/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+    <!-- 多说公共JS代码 end -->
+</div>
+
+    
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/2017/03/21/HTML-CSS/" title="上一篇: HTML/CSS">
+                <i class="fa fa-angle-left"></i>
+            </a>
+        
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+        
+            <a href="/2017/03/21/javascript4/" title="下一篇: javascript4">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/04/25/关于字符串和数组/">关于字符串和数组</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于cookie于Ajax/">关于cookie于Ajax</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于HTML简单理解与应用/">关于HTML简单理解与应用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/22/关于JQuery的一些简单用法/">关于JQuery的一些简单用法</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于JQuery一些东西/">关于JQuery一些东西</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/JS知识点小整合/">JS知识点小整合</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（4）/">关于H5基础（4）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（3）/">关于H5基础（3）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/21/关于H5基础（2）/">关于H5基础（2）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/20/关于H5基础（1）/">关于H5（1）</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/04/19/关于Node/">关于Node</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/31/angular/">angular</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/25/ES6/">ES6</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/HTML-CSS/">HTML/CSS</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript5/">javascript5</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript4/">javascript4</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript3/">javascript3</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript2/">javascript2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/21/javascript/">javascript</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/20/juqery/">juqery</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/03/13/我的第一次文章/">我的第一次文章</a></li></ul>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+    <script>
+        $(".post-list").addClass("toc-article");
+        $(".post-list-item a").attr("target","_blank");
+        $("#post-nav-button > a:nth-child(2)").click(function() {
+            $(".fa-bars, .fa-times").toggle();
+            $(".post-list").toggle(300);
+            if ($(".toc").length > 0) {
+                $("#toc, #tocButton").toggle(200, function() {
+                    if ($(".switch-area").is(":visible")) {
+                        $("#tocButton").attr("value", valueHide);
+                        }
+                    })
+            }
+            else {
+            }
+        })
+    </script>
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2017 洋仔
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/luuman/hexo-theme-spfk" target="_blank">spfk</a> by luuman
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >海贼到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+
+    </div>
+    <script src="https://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var backgroundnum = 24;
+            var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+            $("#mobile-nav").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+            $(".left-col").css({"background-image": backgroundimg,"background-size": "cover","background-position": "center"});
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    $(document).ready(function() {
+        if ($("#comments").length < 1) {
+            $("#scroll > a:nth-child(2)").hide();
+        };
+    })
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+  <script language="javascript">
+    $(function() {
+        $("a[title]").each(function() {
+            var a = $(this);
+            var title = a.attr('title');
+            if (title == undefined || title == "") return;
+            a.data('title', title).removeAttr('title').hover(
+
+            function() {
+                var offset = a.offset();
+                $("<div id=\"anchortitlecontainer\"></div>").appendTo($("body")).html(title).css({
+                    top: offset.top - a.outerHeight() - 15,
+                    left: offset.left + a.outerWidth()/2 + 1
+                }).fadeIn(function() {
+                    var pop = $(this);
+                    setTimeout(function() {
+                        pop.remove();
+                    }, pop.text().length * 800);
+                });
+            }, function() {
+                $("#anchortitlecontainer").remove();
+            });
+        });
+    });
+</script>
+
+
+  </div>
+</body>
+</html>
